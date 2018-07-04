@@ -1,0 +1,746 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1CCC57D2366DBA4EE0D4C5B0 /* libPods-HSFCircleMenuDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 430B98C0DD29CE4DAD855A31 /* libPods-HSFCircleMenuDemoUITests.a */; };
+		5103C37E20EC6379006A63B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5103C37D20EC6379006A63B4 /* AppDelegate.m */; };
+		5103C38120EC6379006A63B4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5103C38020EC6379006A63B4 /* ViewController.m */; };
+		5103C38420EC6379006A63B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5103C38220EC6379006A63B4 /* Main.storyboard */; };
+		5103C38620EC637D006A63B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5103C38520EC637D006A63B4 /* Assets.xcassets */; };
+		5103C38920EC637D006A63B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5103C38720EC637D006A63B4 /* LaunchScreen.storyboard */; };
+		5103C38C20EC637D006A63B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5103C38B20EC637D006A63B4 /* main.m */; };
+		5103C39620EC637D006A63B4 /* HSFCircleMenuDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5103C39520EC637D006A63B4 /* HSFCircleMenuDemoTests.m */; };
+		5103C3A120EC637D006A63B4 /* HSFCircleMenuDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5103C3A020EC637D006A63B4 /* HSFCircleMenuDemoUITests.m */; };
+		5103C3B320EC6399006A63B4 /* HSFCircleMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5103C3B120EC6398006A63B4 /* HSFCircleMenuItem.m */; };
+		5103C3B420EC6399006A63B4 /* HSFCircleMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 5103C3B220EC6398006A63B4 /* HSFCircleMenu.m */; };
+		5103C3BB20EC6704006A63B4 /* 头戴式耳机.png in Resources */ = {isa = PBXBuildFile; fileRef = 5103C3BA20EC6704006A63B4 /* 头戴式耳机.png */; };
+		5103C3BD20EC670C006A63B4 /* 风车.png in Resources */ = {isa = PBXBuildFile; fileRef = 5103C3BC20EC670C006A63B4 /* 风车.png */; };
+		5103C3BF20EC6713006A63B4 /* 风筝.png in Resources */ = {isa = PBXBuildFile; fileRef = 5103C3BE20EC6713006A63B4 /* 风筝.png */; };
+		5103C3C120EC671A006A63B4 /* 话筒.png in Resources */ = {isa = PBXBuildFile; fileRef = 5103C3C020EC671A006A63B4 /* 话筒.png */; };
+		5103C3C320EC6721006A63B4 /* 魔方.png in Resources */ = {isa = PBXBuildFile; fileRef = 5103C3C220EC6721006A63B4 /* 魔方.png */; };
+		5103C3C520EC6728006A63B4 /* 气球.png in Resources */ = {isa = PBXBuildFile; fileRef = 5103C3C420EC6728006A63B4 /* 气球.png */; };
+		5103C3C720EC672E006A63B4 /* 手柄.png in Resources */ = {isa = PBXBuildFile; fileRef = 5103C3C620EC672E006A63B4 /* 手柄.png */; };
+		5103C3C920EC6734006A63B4 /* 摇杆.png in Resources */ = {isa = PBXBuildFile; fileRef = 5103C3C820EC6734006A63B4 /* 摇杆.png */; };
+		8F419C139596D9EF08A47AD1 /* libPods-HSFCircleMenuDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FE9890E618EB61864F426B /* libPods-HSFCircleMenuDemo.a */; };
+		FDADB612F6995DCA64124E55 /* libPods-HSFCircleMenuDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3CDB1AEDDF860D3F0FFD8E2 /* libPods-HSFCircleMenuDemoTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5103C39220EC637D006A63B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5103C37120EC6379006A63B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5103C37820EC6379006A63B4;
+			remoteInfo = HSFCircleMenuDemo;
+		};
+		5103C39D20EC637D006A63B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5103C37120EC6379006A63B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5103C37820EC6379006A63B4;
+			remoteInfo = HSFCircleMenuDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A9211CEDEDEEFD031ECB063 /* Pods-HSFCircleMenuDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSFCircleMenuDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HSFCircleMenuDemo/Pods-HSFCircleMenuDemo.release.xcconfig"; sourceTree = "<group>"; };
+		430B98C0DD29CE4DAD855A31 /* libPods-HSFCircleMenuDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HSFCircleMenuDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5103C37920EC6379006A63B4 /* HSFCircleMenuDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSFCircleMenuDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5103C37C20EC6379006A63B4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5103C37D20EC6379006A63B4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5103C37F20EC6379006A63B4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5103C38020EC6379006A63B4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5103C38320EC6379006A63B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5103C38520EC637D006A63B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5103C38820EC637D006A63B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5103C38A20EC637D006A63B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5103C38B20EC637D006A63B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5103C39120EC637D006A63B4 /* HSFCircleMenuDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HSFCircleMenuDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5103C39520EC637D006A63B4 /* HSFCircleMenuDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSFCircleMenuDemoTests.m; sourceTree = "<group>"; };
+		5103C39720EC637D006A63B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5103C39C20EC637D006A63B4 /* HSFCircleMenuDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HSFCircleMenuDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5103C3A020EC637D006A63B4 /* HSFCircleMenuDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSFCircleMenuDemoUITests.m; sourceTree = "<group>"; };
+		5103C3A220EC637D006A63B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5103C3AF20EC6398006A63B4 /* HSFCircleMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSFCircleMenu.h; sourceTree = "<group>"; };
+		5103C3B020EC6398006A63B4 /* HSFCircleMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSFCircleMenuItem.h; sourceTree = "<group>"; };
+		5103C3B120EC6398006A63B4 /* HSFCircleMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSFCircleMenuItem.m; sourceTree = "<group>"; };
+		5103C3B220EC6398006A63B4 /* HSFCircleMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSFCircleMenu.m; sourceTree = "<group>"; };
+		5103C3B520EC63E5006A63B4 /* HSFTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSFTool.h; sourceTree = "<group>"; };
+		5103C3BA20EC6704006A63B4 /* 头戴式耳机.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "头戴式耳机.png"; sourceTree = "<group>"; };
+		5103C3BC20EC670C006A63B4 /* 风车.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "风车.png"; sourceTree = "<group>"; };
+		5103C3BE20EC6713006A63B4 /* 风筝.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "风筝.png"; sourceTree = "<group>"; };
+		5103C3C020EC671A006A63B4 /* 话筒.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "话筒.png"; sourceTree = "<group>"; };
+		5103C3C220EC6721006A63B4 /* 魔方.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "魔方.png"; sourceTree = "<group>"; };
+		5103C3C420EC6728006A63B4 /* 气球.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "气球.png"; sourceTree = "<group>"; };
+		5103C3C620EC672E006A63B4 /* 手柄.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "手柄.png"; sourceTree = "<group>"; };
+		5103C3C820EC6734006A63B4 /* 摇杆.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "摇杆.png"; sourceTree = "<group>"; };
+		513A390CCFADC8CED3DE71CF /* Pods-HSFCircleMenuDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSFCircleMenuDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HSFCircleMenuDemoUITests/Pods-HSFCircleMenuDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		58FE9890E618EB61864F426B /* libPods-HSFCircleMenuDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HSFCircleMenuDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		638A21A0F57024B308E6B8C6 /* Pods-HSFCircleMenuDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSFCircleMenuDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HSFCircleMenuDemo/Pods-HSFCircleMenuDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		9591262611412EEAC0144B19 /* Pods-HSFCircleMenuDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSFCircleMenuDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HSFCircleMenuDemoTests/Pods-HSFCircleMenuDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B3CDB1AEDDF860D3F0FFD8E2 /* libPods-HSFCircleMenuDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HSFCircleMenuDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1EA6B0B6304862FB544EA28 /* Pods-HSFCircleMenuDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSFCircleMenuDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HSFCircleMenuDemoTests/Pods-HSFCircleMenuDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		F5CAFD3D3915B080884192FA /* Pods-HSFCircleMenuDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSFCircleMenuDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HSFCircleMenuDemoUITests/Pods-HSFCircleMenuDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5103C37620EC6379006A63B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F419C139596D9EF08A47AD1 /* libPods-HSFCircleMenuDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5103C38E20EC637D006A63B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDADB612F6995DCA64124E55 /* libPods-HSFCircleMenuDemoTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5103C39920EC637D006A63B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CCC57D2366DBA4EE0D4C5B0 /* libPods-HSFCircleMenuDemoUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5103C37020EC6379006A63B4 = {
+			isa = PBXGroup;
+			children = (
+				5103C37B20EC6379006A63B4 /* HSFCircleMenuDemo */,
+				5103C39420EC637D006A63B4 /* HSFCircleMenuDemoTests */,
+				5103C39F20EC637D006A63B4 /* HSFCircleMenuDemoUITests */,
+				5103C37A20EC6379006A63B4 /* Products */,
+				CF907E6BFD6FE99702F17803 /* Pods */,
+				8B9E4148D4A9C4A228B814CD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5103C37A20EC6379006A63B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5103C37920EC6379006A63B4 /* HSFCircleMenuDemo.app */,
+				5103C39120EC637D006A63B4 /* HSFCircleMenuDemoTests.xctest */,
+				5103C39C20EC637D006A63B4 /* HSFCircleMenuDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5103C37B20EC6379006A63B4 /* HSFCircleMenuDemo */ = {
+			isa = PBXGroup;
+			children = (
+				5103C3AE20EC6398006A63B4 /* HSFCircleView(圆形菜单) */,
+				5103C37C20EC6379006A63B4 /* AppDelegate.h */,
+				5103C37D20EC6379006A63B4 /* AppDelegate.m */,
+				5103C37F20EC6379006A63B4 /* ViewController.h */,
+				5103C38020EC6379006A63B4 /* ViewController.m */,
+				5103C38220EC6379006A63B4 /* Main.storyboard */,
+				5103C38520EC637D006A63B4 /* Assets.xcassets */,
+				5103C38720EC637D006A63B4 /* LaunchScreen.storyboard */,
+				5103C38A20EC637D006A63B4 /* Info.plist */,
+				5103C38B20EC637D006A63B4 /* main.m */,
+			);
+			path = HSFCircleMenuDemo;
+			sourceTree = "<group>";
+		};
+		5103C39420EC637D006A63B4 /* HSFCircleMenuDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				5103C39520EC637D006A63B4 /* HSFCircleMenuDemoTests.m */,
+				5103C39720EC637D006A63B4 /* Info.plist */,
+			);
+			path = HSFCircleMenuDemoTests;
+			sourceTree = "<group>";
+		};
+		5103C39F20EC637D006A63B4 /* HSFCircleMenuDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5103C3A020EC637D006A63B4 /* HSFCircleMenuDemoUITests.m */,
+				5103C3A220EC637D006A63B4 /* Info.plist */,
+			);
+			path = HSFCircleMenuDemoUITests;
+			sourceTree = "<group>";
+		};
+		5103C3AE20EC6398006A63B4 /* HSFCircleView(圆形菜单) */ = {
+			isa = PBXGroup;
+			children = (
+				5103C3B520EC63E5006A63B4 /* HSFTool.h */,
+				5103C3AF20EC6398006A63B4 /* HSFCircleMenu.h */,
+				5103C3B220EC6398006A63B4 /* HSFCircleMenu.m */,
+				5103C3B020EC6398006A63B4 /* HSFCircleMenuItem.h */,
+				5103C3B120EC6398006A63B4 /* HSFCircleMenuItem.m */,
+				5103C3B920EC66E5006A63B4 /* resource */,
+			);
+			path = "HSFCircleView(圆形菜单)";
+			sourceTree = "<group>";
+		};
+		5103C3B920EC66E5006A63B4 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				5103C3BA20EC6704006A63B4 /* 头戴式耳机.png */,
+				5103C3C620EC672E006A63B4 /* 手柄.png */,
+				5103C3C820EC6734006A63B4 /* 摇杆.png */,
+				5103C3BC20EC670C006A63B4 /* 风车.png */,
+				5103C3BE20EC6713006A63B4 /* 风筝.png */,
+				5103C3C020EC671A006A63B4 /* 话筒.png */,
+				5103C3C220EC6721006A63B4 /* 魔方.png */,
+				5103C3C420EC6728006A63B4 /* 气球.png */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		8B9E4148D4A9C4A228B814CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58FE9890E618EB61864F426B /* libPods-HSFCircleMenuDemo.a */,
+				B3CDB1AEDDF860D3F0FFD8E2 /* libPods-HSFCircleMenuDemoTests.a */,
+				430B98C0DD29CE4DAD855A31 /* libPods-HSFCircleMenuDemoUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF907E6BFD6FE99702F17803 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				638A21A0F57024B308E6B8C6 /* Pods-HSFCircleMenuDemo.debug.xcconfig */,
+				0A9211CEDEDEEFD031ECB063 /* Pods-HSFCircleMenuDemo.release.xcconfig */,
+				9591262611412EEAC0144B19 /* Pods-HSFCircleMenuDemoTests.debug.xcconfig */,
+				F1EA6B0B6304862FB544EA28 /* Pods-HSFCircleMenuDemoTests.release.xcconfig */,
+				F5CAFD3D3915B080884192FA /* Pods-HSFCircleMenuDemoUITests.debug.xcconfig */,
+				513A390CCFADC8CED3DE71CF /* Pods-HSFCircleMenuDemoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5103C37820EC6379006A63B4 /* HSFCircleMenuDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5103C3A520EC637D006A63B4 /* Build configuration list for PBXNativeTarget "HSFCircleMenuDemo" */;
+			buildPhases = (
+				13A881559551B68E8F479887 /* [CP] Check Pods Manifest.lock */,
+				5103C37520EC6379006A63B4 /* Sources */,
+				5103C37620EC6379006A63B4 /* Frameworks */,
+				5103C37720EC6379006A63B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HSFCircleMenuDemo;
+			productName = HSFCircleMenuDemo;
+			productReference = 5103C37920EC6379006A63B4 /* HSFCircleMenuDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5103C39020EC637D006A63B4 /* HSFCircleMenuDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5103C3A820EC637D006A63B4 /* Build configuration list for PBXNativeTarget "HSFCircleMenuDemoTests" */;
+			buildPhases = (
+				FC833DFF54D6B0D723465E7B /* [CP] Check Pods Manifest.lock */,
+				5103C38D20EC637D006A63B4 /* Sources */,
+				5103C38E20EC637D006A63B4 /* Frameworks */,
+				5103C38F20EC637D006A63B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5103C39320EC637D006A63B4 /* PBXTargetDependency */,
+			);
+			name = HSFCircleMenuDemoTests;
+			productName = HSFCircleMenuDemoTests;
+			productReference = 5103C39120EC637D006A63B4 /* HSFCircleMenuDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5103C39B20EC637D006A63B4 /* HSFCircleMenuDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5103C3AB20EC637D006A63B4 /* Build configuration list for PBXNativeTarget "HSFCircleMenuDemoUITests" */;
+			buildPhases = (
+				1CFA44863E2C17CEE4050E09 /* [CP] Check Pods Manifest.lock */,
+				5103C39820EC637D006A63B4 /* Sources */,
+				5103C39920EC637D006A63B4 /* Frameworks */,
+				5103C39A20EC637D006A63B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5103C39E20EC637D006A63B4 /* PBXTargetDependency */,
+			);
+			name = HSFCircleMenuDemoUITests;
+			productName = HSFCircleMenuDemoUITests;
+			productReference = 5103C39C20EC637D006A63B4 /* HSFCircleMenuDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5103C37120EC6379006A63B4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "黄山锋";
+				TargetAttributes = {
+					5103C37820EC6379006A63B4 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					5103C39020EC637D006A63B4 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 5103C37820EC6379006A63B4;
+					};
+					5103C39B20EC637D006A63B4 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 5103C37820EC6379006A63B4;
+					};
+				};
+			};
+			buildConfigurationList = 5103C37420EC6379006A63B4 /* Build configuration list for PBXProject "HSFCircleMenuDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5103C37020EC6379006A63B4;
+			productRefGroup = 5103C37A20EC6379006A63B4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5103C37820EC6379006A63B4 /* HSFCircleMenuDemo */,
+				5103C39020EC637D006A63B4 /* HSFCircleMenuDemoTests */,
+				5103C39B20EC637D006A63B4 /* HSFCircleMenuDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5103C37720EC6379006A63B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5103C3C720EC672E006A63B4 /* 手柄.png in Resources */,
+				5103C3BF20EC6713006A63B4 /* 风筝.png in Resources */,
+				5103C3C120EC671A006A63B4 /* 话筒.png in Resources */,
+				5103C3BD20EC670C006A63B4 /* 风车.png in Resources */,
+				5103C3C920EC6734006A63B4 /* 摇杆.png in Resources */,
+				5103C3BB20EC6704006A63B4 /* 头戴式耳机.png in Resources */,
+				5103C38920EC637D006A63B4 /* LaunchScreen.storyboard in Resources */,
+				5103C38620EC637D006A63B4 /* Assets.xcassets in Resources */,
+				5103C3C320EC6721006A63B4 /* 魔方.png in Resources */,
+				5103C38420EC6379006A63B4 /* Main.storyboard in Resources */,
+				5103C3C520EC6728006A63B4 /* 气球.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5103C38F20EC637D006A63B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5103C39A20EC637D006A63B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13A881559551B68E8F479887 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HSFCircleMenuDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1CFA44863E2C17CEE4050E09 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HSFCircleMenuDemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC833DFF54D6B0D723465E7B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HSFCircleMenuDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5103C37520EC6379006A63B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5103C38120EC6379006A63B4 /* ViewController.m in Sources */,
+				5103C3B420EC6399006A63B4 /* HSFCircleMenu.m in Sources */,
+				5103C3B320EC6399006A63B4 /* HSFCircleMenuItem.m in Sources */,
+				5103C38C20EC637D006A63B4 /* main.m in Sources */,
+				5103C37E20EC6379006A63B4 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5103C38D20EC637D006A63B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5103C39620EC637D006A63B4 /* HSFCircleMenuDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5103C39820EC637D006A63B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5103C3A120EC637D006A63B4 /* HSFCircleMenuDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5103C39320EC637D006A63B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5103C37820EC6379006A63B4 /* HSFCircleMenuDemo */;
+			targetProxy = 5103C39220EC637D006A63B4 /* PBXContainerItemProxy */;
+		};
+		5103C39E20EC637D006A63B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5103C37820EC6379006A63B4 /* HSFCircleMenuDemo */;
+			targetProxy = 5103C39D20EC637D006A63B4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5103C38220EC6379006A63B4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5103C38320EC6379006A63B4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5103C38720EC637D006A63B4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5103C38820EC637D006A63B4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5103C3A320EC637D006A63B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5103C3A420EC637D006A63B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5103C3A620EC637D006A63B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 638A21A0F57024B308E6B8C6 /* Pods-HSFCircleMenuDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2Z99AY6JF7;
+				INFOPLIST_FILE = HSFCircleMenuDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HSFClub.HSFCircleMenuDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5103C3A720EC637D006A63B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A9211CEDEDEEFD031ECB063 /* Pods-HSFCircleMenuDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2Z99AY6JF7;
+				INFOPLIST_FILE = HSFCircleMenuDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HSFClub.HSFCircleMenuDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5103C3A920EC637D006A63B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9591262611412EEAC0144B19 /* Pods-HSFCircleMenuDemoTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HSFCircleMenuDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HSFClub.HSFCircleMenuDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HSFCircleMenuDemo.app/HSFCircleMenuDemo";
+			};
+			name = Debug;
+		};
+		5103C3AA20EC637D006A63B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1EA6B0B6304862FB544EA28 /* Pods-HSFCircleMenuDemoTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HSFCircleMenuDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HSFClub.HSFCircleMenuDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HSFCircleMenuDemo.app/HSFCircleMenuDemo";
+			};
+			name = Release;
+		};
+		5103C3AC20EC637D006A63B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5CAFD3D3915B080884192FA /* Pods-HSFCircleMenuDemoUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HSFCircleMenuDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HSFClub.HSFCircleMenuDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HSFCircleMenuDemo;
+			};
+			name = Debug;
+		};
+		5103C3AD20EC637D006A63B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 513A390CCFADC8CED3DE71CF /* Pods-HSFCircleMenuDemoUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HSFCircleMenuDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HSFClub.HSFCircleMenuDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HSFCircleMenuDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5103C37420EC6379006A63B4 /* Build configuration list for PBXProject "HSFCircleMenuDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5103C3A320EC637D006A63B4 /* Debug */,
+				5103C3A420EC637D006A63B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5103C3A520EC637D006A63B4 /* Build configuration list for PBXNativeTarget "HSFCircleMenuDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5103C3A620EC637D006A63B4 /* Debug */,
+				5103C3A720EC637D006A63B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5103C3A820EC637D006A63B4 /* Build configuration list for PBXNativeTarget "HSFCircleMenuDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5103C3A920EC637D006A63B4 /* Debug */,
+				5103C3AA20EC637D006A63B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5103C3AB20EC637D006A63B4 /* Build configuration list for PBXNativeTarget "HSFCircleMenuDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5103C3AC20EC637D006A63B4 /* Debug */,
+				5103C3AD20EC637D006A63B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5103C37120EC6379006A63B4 /* Project object */;
+}
