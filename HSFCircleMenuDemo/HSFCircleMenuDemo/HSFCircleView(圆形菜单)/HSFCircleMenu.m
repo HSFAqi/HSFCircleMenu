@@ -12,12 +12,11 @@
 #import "HSFCircleMenuItem.h"
 //tool
 #import "HSFTool.h"
+//config
+#import "HSFCircleMenuConfig.h"
 
 
 @interface HSFCircleMenu ()
-
-
-
 
 //辅助
 @property (nonatomic,strong) CALayer *maskLayer;
@@ -30,104 +29,20 @@
 
 
 #pragma mark 初始化方法
-/**
- 默认none动画 + 顺时针 + during=0.5f + repeatCount=1 + space = 10.f + itemW=40.f + bgColor=orangeColor
- */
--(instancetype)initWithCenter:(CGPoint)center
-                        icons:(NSArray *)icons
-                       radius:(CGFloat)radius
-                       titles:(NSArray *)titles{
-    self = [self initWithCenter:center icons:icons radius:radius titles:titles bgColor:[UIColor orangeColor]];
-    return self;
++(instancetype)menuWithConfig:(HSFCircleMenuConfig *)config{
+    HSFCircleMenu *menu = [[HSFCircleMenu alloc]init];
+    menu.config = config;
+    //设置self的frame和center
+    menu.backgroundColor = [UIColor clearColor];
+    menu.hidden = YES;
+    menu.frame = CGRectMake(0, 0, config.radius * 2, config.radius * 2);
+    menu.center = CGPointMake(config.radius, config.radius);
+  
+    //setUp
+    [menu setUp];
+    
+    return menu;
 }
-
-/**
- 默认none动画 + 顺时针 + during=0.5f + repeatCount=1 + space = 10.f + itemW=40.f
- */
--(instancetype)initWithCenter:(CGPoint)center
-                        icons:(NSArray *)icons
-                       radius:(CGFloat)radius
-                       titles:(NSArray *)titles
-                      bgColor:(UIColor *)bgColor{
-    self = [self initWithCenter:center icons:icons radius:radius titles:titles bgColor:bgColor itemW:40.f];
-    return self;
-}
-
-/**
- 默认none动画 + 顺时针 + during=0.5f + repeatCount=1 + space = 10.f
- */
--(instancetype)initWithCenter:(CGPoint)center
-                        icons:(NSArray *)icons
-                       radius:(CGFloat)radius
-                       titles:(NSArray *)titles
-                      bgColor:(UIColor *)bgColor
-                        itemW:(CGFloat)itemW{
-    self = [self initWithCenter:center icons:icons radius:radius titles:titles bgColor:bgColor itemW:itemW space:10.f];
-    return self;
-}
-
-/**
- 默认none动画 + 顺时针 + during=0.5f + repeatCount=1
- */
--(instancetype)initWithCenter:(CGPoint)center
-                        icons:(NSArray *)icons
-                       radius:(CGFloat)radius
-                       titles:(NSArray *)titles
-                      bgColor:(UIColor *)bgColor
-                        itemW:(CGFloat)itemW
-                        space:(CGFloat)space{
-    self = [self initWithCenter:center icons:icons radius:radius titles:titles bgColor:bgColor itemW:itemW space:space repeatCount:1];
-    return self;
-}
-
-/**
- 默认none动画 + 顺时针 + during=0.5f
-*/
--(instancetype)initWithCenter:(CGPoint)center
-                        icons:(NSArray *)icons
-                       radius:(CGFloat)radius
-                       titles:(NSArray *)titles
-                      bgColor:(UIColor *)bgColor
-                        itemW:(CGFloat)itemW
-                        space:(CGFloat)space
-                  repeatCount:(NSInteger)repeatCount{
-    self = [self initWithCenter:center icons:icons radius:radius titles:titles bgColor:bgColor itemW:itemW space:space repeatCount:repeatCount during:0.5];
-    return self;
-}
-
-/**
- 默认none动画 + 顺时针
-*/
--(instancetype)initWithCenter:(CGPoint)center
-                        icons:(NSArray *)icons
-                       radius:(CGFloat)radius
-                       titles:(NSArray *)titles
-                      bgColor:(UIColor *)bgColor
-                        itemW:(CGFloat)itemW
-                        space:(CGFloat)space
-                  repeatCount:(NSInteger)repeatCount
-                       during:(CGFloat)during{
-    self = [self initWithCenter:center icons:icons radius:radius titles:titles bgColor:bgColor itemW:itemW space:space repeatCount:repeatCount during:during direction:HSFCircleDirection_clockwise];
-    return self;
-}
-
-/**
- 默认none动画
- */
--(instancetype)initWithCenter:(CGPoint)center
-                        icons:(NSArray *)icons
-                       radius:(CGFloat)radius
-                       titles:(NSArray *)titles
-                      bgColor:(UIColor *)bgColor
-                        itemW:(CGFloat)itemW
-                        space:(CGFloat)space
-                  repeatCount:(NSInteger)repeatCount
-                       during:(CGFloat)during
-                    direction:(HSFCircleDirection)direction{
-    self = [self initWithCenter:center icons:icons radius:radius titles:titles bgColor:bgColor itemW:itemW space:space repeatCount:repeatCount during:during direction:direction animation:HSFCircleAnimation_none];
-    return self;
-}
-
 /**
  指定初始化方法
  */
@@ -150,16 +65,16 @@
         self.center = center;
         
         //赋值
-        self.radius = radius;
-        self.bgColor = bgColor;
-        self.repeatCount = repeatCount;
-        self.during = during;
-        self.titles = titles;
-        self.icons = icons;
-        self.space = space;
-        self.itemW = itemW;
-        self.direction = direction;
-        self.animation = animation;
+        self.config.radius = radius;
+        self.config.bgColor = bgColor;
+        self.config.repeatCount = repeatCount;
+        self.config.during = during;
+        self.config.titles = titles;
+        self.config.icons = icons;
+        self.config.space = space;
+        self.config.itemW = itemW;
+        self.config.direction = direction;
+        self.config.animation = animation;
         
         //遮罩
         [self setUp];
@@ -170,28 +85,29 @@
 #pragma mark 不推荐初始化方法：初始化后在对所有属性逐一赋值，最后setUp
 -(void)setUp{
     //仅用于HSFCircleAnimation_circleOpen
-    if (self.animation == HSFCircleAnimation_circleOpen) {
+    if (self.config.animation == HSFCircleAnimation_circleOpen) {
         if (self.openLayerArr.count > 0) {
             [self.openLayerArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                 [obj removeFromSuperlayer];
             }];
         }
         
-        NSInteger count = self.icons.count;
+        NSInteger count = self.config.icons.count;
         CGFloat perAngle = (M_PI * 2)/count;
+        CGFloat startAngel = -perAngle/2.f;
         NSMutableArray *layerArr = [NSMutableArray array];
         for (int i = 0; i < count; i++) {
             UIBezierPath *path_layer;
-            if (self.direction == HSFCircleDirection_clockwise) {//顺时针
-                path_layer = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.radius, self.radius) radius:self.radius/2.f startAngle:perAngle*i endAngle:perAngle*(i+1.1) clockwise:YES];
+            if (self.config.direction == HSFCircleDirection_clockwise) {//顺时针
+                path_layer = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.config.radius, self.config.radius) radius:self.config.radius/2.f startAngle:perAngle*i+startAngel endAngle:perAngle*(i+1.1)+startAngel clockwise:YES];
             }else{//逆时针
-                path_layer = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.radius, self.radius) radius:self.radius/2.f startAngle:perAngle*i endAngle:perAngle*(i+1.1) clockwise:NO];
+                path_layer = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.config.radius, self.config.radius) radius:self.config.radius/2.f startAngle:perAngle*i+startAngel endAngle:perAngle*(i+1.1)+startAngel clockwise:NO];
             }
             CAShapeLayer *layer = [CAShapeLayer layer];
             layer.path = path_layer.CGPath;
             layer.fillColor = [UIColor clearColor].CGColor;
-            layer.strokeColor = self.bgColor.CGColor;
-            layer.lineWidth = self.radius;
+            layer.strokeColor = self.config.bgColor.CGColor;
+            layer.lineWidth = self.config.radius;
             [layerArr addObject:layer];
             [self.layer addSublayer:layer];
         }
@@ -203,42 +119,42 @@
     
     //遮罩
     UIBezierPath *path;
-    if (self.direction == HSFCircleDirection_clockwise) {//顺时针
-        path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.radius, self.radius) radius:self.radius/2.f startAngle:-M_PI/2.f endAngle:M_PI * 3/2 clockwise:YES];
+    if (self.config.direction == HSFCircleDirection_clockwise) {//顺时针
+        path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.config.radius, self.config.radius) radius:self.config.radius/2.f startAngle:-M_PI/2.f endAngle:M_PI * 3/2 clockwise:YES];
     }else{//逆时针
-        path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.radius, self.radius) radius:self.radius/2.f startAngle:M_PI * 3/2 endAngle:-M_PI/2.f clockwise:NO];
+        path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.config.radius, self.config.radius) radius:self.config.radius/2.f startAngle:M_PI * 3/2 endAngle:-M_PI/2.f clockwise:NO];
     }
     CAShapeLayer *maskLayer = [CAShapeLayer layer];
     maskLayer.path = path.CGPath;
     maskLayer.fillColor = [UIColor clearColor].CGColor;
-    maskLayer.strokeColor = self.bgColor.CGColor;
-    maskLayer.lineWidth = self.radius;
+    maskLayer.strokeColor = self.config.bgColor.CGColor;
+    maskLayer.lineWidth = self.config.radius;
     self.layer.mask = maskLayer;
     self.maskLayer = maskLayer;
 }
 
 #pragma mark 添加item
 -(void)addItemBtns{
-    CGFloat w = self.itemW;
+    CGFloat w = self.config.itemW;
     CGFloat h = w;
-    CGFloat space = self.space;
-    NSInteger count = self.icons.count;
+    CGFloat space = self.config.space;
+    NSInteger count = self.config.icons.count;
     CGFloat perAngle = 360.f/count;
-    CGFloat radius_item = self.radius - w/2.f;
+    CGFloat radius_item = self.config.radius - w/2.f;
     CGFloat angle = 0.f;
     for (int i = 0; i < count; i++) {
         HSFCircleMenuItem *item;
-        if (self.titles.count == self.icons.count) {
-            item = [[HSFCircleMenuItem alloc]initWithTitle:self.titles[i] titleColor:[UIColor whiteColor] icon:self.icons[i]];
+        if (self.config.titles.count == self.config.icons.count) {
+            item = [[HSFCircleMenuItem alloc]initWithTitle:self.config.titles[i] titleColor:[UIColor whiteColor] icon:self.config.icons[i]];
         }else{
-            item = [[HSFCircleMenuItem alloc]initWithTitle:@"" titleColor:[UIColor whiteColor] icon:self.icons[i]];
+            item = [[HSFCircleMenuItem alloc]initWithTitle:@"" titleColor:[UIColor whiteColor] icon:self.config.icons[i]];
         }
-        if (self.direction == HSFCircleDirection_clockwise) {
+        if (self.config.direction == HSFCircleDirection_clockwise) {
             angle = -perAngle*i + 90.f;
         }else{
             angle = perAngle*i + 90.f;
         }
-        CGPoint center_item = [self calcCircleCoordinateWithCenter:CGPointMake(self.radius, self.radius) andWithAngle:angle andWithRadius:(radius_item-space)];
+        CGPoint center_item = [self calcCircleCoordinateWithCenter:CGPointMake(self.config.radius, self.config.radius) andWithAngle:angle andWithRadius:(radius_item-space)];
         item.frame = CGRectMake(0, 0, w, h);
         item.center = center_item;
         //圆角
@@ -269,43 +185,27 @@
 
 #pragma mark 更改样式-重置
 -(HSFCircleMenu *)reset{
-    
-    //必须
-    NSArray *icons = self.icons;//图标数组
-    CGFloat radius = self.radius;//圆半径
-    
-    //可选
-    NSArray *titles = self.titles;//标题数组 （默认：@[]）
-    UIColor *bgColor = self.bgColor;//背景色 （默认：[UIColor orangeColor]）
-    CGFloat space = self.space;//item距离圆周边的距离 （默认：10.f）
-    CGFloat itemW = self.itemW;//item宽度 宽=高 （默认：40.f）
-    HSFCircleDirection direction = self.direction;//动画方向 （默认：顺时针）
-    NSInteger repeatCount = self.repeatCount;//动画次数 （默认：1）
-    CGFloat during = self.during;//动画时间 （默认：0.5f）
-    HSFCircleAnimation animation = self.animation;//动画方式 （默认：无）
-    
-    
-    HSFCircleMenu *menu = [[HSFCircleMenu alloc]initWithCenter:CGPointMake(radius, radius) icons:icons radius:radius titles:titles bgColor:bgColor itemW:itemW space:space repeatCount:repeatCount during:during direction:direction animation:animation];
+    HSFCircleMenu *menu = [HSFCircleMenu menuWithConfig:self.config];
     return menu;
 }
 
 
 #pragma mark 动画
 -(void)startAnimaiton {
-    self.backgroundColor = self.bgColor;
+    self.backgroundColor = self.config.bgColor;
     self.hidden = NO;
     //开始执行动画
-    if (self.animation == HSFCircleAnimation_bgCircleMove) {
+    if (self.config.animation == HSFCircleAnimation_bgCircleMove) {
         [self animationACTION_bgCircleMove];
     }
-    else if (self.animation == HSFCircleAnimation_itemCircleMove) {
+    else if (self.config.animation == HSFCircleAnimation_itemCircleMove) {
         [self animationACTION_itemCircleMove];
     }
-    else if (self.animation == HSFCircleAnimation_followMove) {
+    else if (self.config.animation == HSFCircleAnimation_followMove) {
         [self animationACTION_bgCircleMove];
         [self animationACTION_itemCircleMove];
     }
-    else if (self.animation == HSFCircleAnimation_circleOpen) {
+    else if (self.config.animation == HSFCircleAnimation_circleOpen) {
         [self animationACTION_circleOpen];
     }
 }
@@ -315,9 +215,9 @@
     CABasicAnimation *animation_normal = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
     animation_normal.fromValue = @0;
     animation_normal.toValue = @1;
-    animation_normal.duration = self.during;
+    animation_normal.duration = self.config.during;
     animation_normal.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    animation_normal.repeatCount = self.repeatCount;
+    animation_normal.repeatCount = self.config.repeatCount;
     animation_normal.removedOnCompletion = NO;
     animation_normal.fillMode = kCAFillModeForwards;
     [self.maskLayer addAnimation:animation_normal forKey:@"ani"];
@@ -325,16 +225,16 @@
 -(void)animationACTION_itemCircleMove{
     CABasicAnimation *animation_follow = [CABasicAnimation new];
     animation_follow.keyPath = @"transform.rotation.z";
-    if (self.direction == HSFCircleDirection_clockwise) {
+    if (self.config.direction == HSFCircleDirection_clockwise) {
         animation_follow.fromValue = @(0);
         animation_follow.toValue = @(M_PI*2);
     }else{
         animation_follow.fromValue = @(0);
         animation_follow.toValue = @(-M_PI*2);
     }
-    animation_follow.duration = self.during;
+    animation_follow.duration = self.config.during;
     animation_follow.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    animation_follow.repeatCount = self.repeatCount;
+    animation_follow.repeatCount = self.config.repeatCount;
     animation_follow.removedOnCompletion = NO;
     animation_follow.fillMode = kCAFillModeForwards;
     [self.layer addAnimation:animation_follow forKey:@"rotation"];
@@ -347,9 +247,9 @@
         CABasicAnimation *animation_normal = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
         animation_normal.fromValue = @0;
         animation_normal.toValue = @1;
-        animation_normal.duration = self.during;
+        animation_normal.duration = self.config.during;
         animation_normal.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-        animation_normal.repeatCount = self.repeatCount;
+        animation_normal.repeatCount = self.config.repeatCount;
         animation_normal.removedOnCompletion = NO;
         animation_normal.fillMode = kCAFillModeForwards;
         [layer addAnimation:animation_normal forKey:nil];
