@@ -16,19 +16,46 @@
 
 @property (nonatomic,strong) TYAlertController *alertC;
 @property (nonatomic,strong) HSFCircleMenu *circleView;
+@property (nonatomic,strong) HSFCircleMenuConfig *config;
+
+//btns
+@property (weak, nonatomic) IBOutlet UIButton *btn100;
+@property (weak, nonatomic) IBOutlet UIButton *btn101;
+@property (weak, nonatomic) IBOutlet UIButton *btn102;
+@property (weak, nonatomic) IBOutlet UIButton *btn103;
+@property (weak, nonatomic) IBOutlet UIButton *btn104;
+@property (weak, nonatomic) IBOutlet UIButton *btn105;
+@property (weak, nonatomic) IBOutlet UIButton *btn106;
+@property (weak, nonatomic) IBOutlet UIButton *btn107;
+@property (weak, nonatomic) IBOutlet UIButton *btn108;
+@property (weak, nonatomic) IBOutlet UIButton *btn109;
+
 
 @end
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.btn100.backgroundColor = [UIColor orangeColor];
+    self.btn101.backgroundColor = [UIColor orangeColor];
+    self.btn102.backgroundColor = [UIColor orangeColor];
+    self.btn103.backgroundColor = [UIColor orangeColor];
+    self.btn104.backgroundColor = [UIColor orangeColor];
+    self.btn105.backgroundColor = [UIColor orangeColor];
+    self.btn106.backgroundColor = [UIColor orangeColor];
+    self.btn107.backgroundColor = [UIColor orangeColor];
+    self.btn108.backgroundColor = [UIColor orangeColor];
+    self.btn109.backgroundColor = [UIColor orangeColor];
+    
+    
     //@[@"风车", @"风筝", @"话筒", @"魔方", @"摇杆"]
-    HSFCircleMenuConfig *config = [[HSFCircleMenuConfig alloc]init];
-    config.icons = @[@"风车", @"风筝", @"话筒", @"魔方", @"摇杆"];
-    config.animation = HSFCircleAnimation_circleOpen;
-    self.circleView = [HSFCircleMenu menuWithConfig:config];
+    self.config = [[HSFCircleMenuConfig alloc]init];
+    self.config.icons = @[@"风车", @"风筝", @"话筒", @"魔方", @"摇杆", @"气球"];
+    self.btn100.backgroundColor = [[UIColor orangeColor] colorWithAlphaComponent:0.5];
+    self.circleView = [HSFCircleMenu menuWithConfig:self.config];
 
     //弹框
     self.alertC = [TYAlertController alertControllerWithAlertView:self.circleView];
@@ -42,10 +69,105 @@
     
 }
 
+//更换动画方式
+- (IBAction)changeAnimation:(UIButton *)sender {
+    
+    self.btn100.backgroundColor = [UIColor orangeColor];
+    self.btn101.backgroundColor = [UIColor orangeColor];
+    self.btn102.backgroundColor = [UIColor orangeColor];
+    self.btn103.backgroundColor = [UIColor orangeColor];
+    self.btn104.backgroundColor = [UIColor orangeColor];
+    self.btn105.backgroundColor = [UIColor orangeColor];
+    self.btn106.backgroundColor = [UIColor orangeColor];
+    self.btn107.backgroundColor = [UIColor orangeColor];
+    self.btn108.backgroundColor = [UIColor orangeColor];
+    self.btn109.backgroundColor = [UIColor orangeColor];
+    sender.backgroundColor = [[UIColor orangeColor] colorWithAlphaComponent:0.5];
+    
+    self.config = [[HSFCircleMenuConfig alloc]init];
+    self.config.icons = @[@"风车", @"风筝", @"话筒", @"魔方", @"摇杆", @"气球"];
+    switch (sender.tag) {
+        case 100:
+        {
+            self.config.animation = HSFCircleAnimation_none;
+        }
+            break;
+        case 101:
+        {
+            self.config.animation = HSFCircleAnimation_bgCircleMove;
+        }
+            break;
+        case 102:
+        {
+            self.config.animation = HSFCircleAnimation_itemCircleMove;
+        }
+            break;
+        case 103:
+        {
+            self.config.animation = HSFCircleAnimation_followMove;
+        }
+            break;
+        case 104:
+        {
+            self.config.animation = HSFCircleAnimation_bgCircleOpen;
+        }
+            break;
+        case 105:
+        {
+            self.config.animation = HSFCircleAnimation_itemShoot;
+        }
+            break;
+        case 106:
+        {
+            self.config.animation = HSFCircleAnimation_itemShootBy;
+        }
+            break;
+        case 107:
+        {
+            self.config.animation = HSFCircleAnimation_none;
+            
+        }
+            break;
+        case 108:
+        {
+            self.config.animation = HSFCircleAnimation_none;
+            
+        }
+            break;
+        case 109:
+        {
+            self.config.animation = HSFCircleAnimation_none;
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
+    self.circleView = [HSFCircleMenu menuWithConfig:self.config];
+    [self.circleView setCenterImg:@"world" size:CGSizeMake(100.f, 100.f)];
+    
+    //弹框
+    self.alertC = [TYAlertController alertControllerWithAlertView:self.circleView];
+    self.alertC.backgoundTapDismissEnable = YES;
+    
+    //点击item
+    __block typeof(self) weakSelf = self;
+    self.circleView.HSFCircleMenuClickItemBlock = ^(NSInteger tag) {
+        [weakSelf.alertC dismissViewControllerAnimated:YES completion:nil];
+    };
+}
+
+
+//show
 - (IBAction)show:(id)sender {
     [self.circleView startAnimaiton];
     [self presentViewController:self.alertC animated:YES completion:nil];
 }
+
+
+
+
 
 
 - (void)didReceiveMemoryWarning {

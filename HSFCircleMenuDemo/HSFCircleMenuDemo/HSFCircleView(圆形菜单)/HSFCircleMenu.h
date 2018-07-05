@@ -24,14 +24,15 @@
 #pragma mark 初始化方法
 +(instancetype)menuWithConfig:(HSFCircleMenuConfig *)config;
 
-#pragma mark 更改样式-重置
--(HSFCircleMenu *)reset;
 
 
 #pragma mark 方法
 -(void)startAnimaiton;
 -(void)puaseAnimation;
 
+
+#pragma mark 设置中心图片centerImgView
+-(void)setCenterImg:(NSString *)imgName size:(CGSize)size;
 
 
 

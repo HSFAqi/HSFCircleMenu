@@ -16,12 +16,14 @@
 #import "HSFCircleMenuConfig.h"
 
 
-@interface HSFCircleMenu ()
+@interface HSFCircleMenu ()<CAAnimationDelegate>
 
 //辅助
 @property (nonatomic,strong) CALayer *maskLayer;
-@property (nonatomic,strong) NSMutableArray *openLayerArr;//HSFCircleAnimation_circleOpen时才会用到
+@property (nonatomic,strong) NSMutableArray *openLayerArr;//HSFCircleAnimation_bgCircleOpen时才会用到
 @property (nonatomic,strong) NSMutableArray *items;
+@property (nonatomic,strong) NSMutableArray *itemCenterPointArr;
+@property (nonatomic,strong) UIImageView *centerImgView;
 
 @end
 
@@ -43,49 +45,11 @@
     
     return menu;
 }
-/**
- 指定初始化方法
- */
--(instancetype)initWithCenter:(CGPoint)center
-                        icons:(NSArray *)icons
-                       radius:(CGFloat)radius
-                       titles:(NSArray *)titles
-                      bgColor:(UIColor *)bgColor
-                        itemW:(CGFloat)itemW
-                        space:(CGFloat)space
-                  repeatCount:(NSInteger)repeatCount
-                       during:(CGFloat)during
-                    direction:(HSFCircleDirection)direction
-                    animation:(HSFCircleAnimation)animation{
-    if (self = [super init]) {
-        //设置self的frame和center
-        self.backgroundColor = [UIColor clearColor];
-        self.hidden = YES;
-        self.frame = CGRectMake(0, 0, radius * 2, radius * 2);
-        self.center = center;
-        
-        //赋值
-        self.config.radius = radius;
-        self.config.bgColor = bgColor;
-        self.config.repeatCount = repeatCount;
-        self.config.during = during;
-        self.config.titles = titles;
-        self.config.icons = icons;
-        self.config.space = space;
-        self.config.itemW = itemW;
-        self.config.direction = direction;
-        self.config.animation = animation;
-        
-        //遮罩
-        [self setUp];
-    }
-    return self;
-}
 
 #pragma mark 不推荐初始化方法：初始化后在对所有属性逐一赋值，最后setUp
 -(void)setUp{
-    //仅用于HSFCircleAnimation_circleOpen
-    if (self.config.animation == HSFCircleAnimation_circleOpen) {
+    //仅用于HSFCircleAnimation_bgCircleOpen
+    if (self.config.animation == HSFCircleAnimation_bgCircleOpen) {
         if (self.openLayerArr.count > 0) {
             [self.openLayerArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                 [obj removeFromSuperlayer];
@@ -117,6 +81,12 @@
     //添加item
     [self addItemBtns];
     
+    //添加中心图片
+    self.centerImgView = [[UIImageView alloc]initWithFrame:CGRectZero];
+    [self addSubview:self.centerImgView];
+    self.centerImgView.contentMode = UIViewContentModeScaleAspectFit;
+    self.centerImgView.hidden = YES;
+    
     //遮罩
     UIBezierPath *path;
     if (self.config.direction == HSFCircleDirection_clockwise) {//顺时针
@@ -142,6 +112,7 @@
     CGFloat perAngle = 360.f/count;
     CGFloat radius_item = self.config.radius - w/2.f;
     CGFloat angle = 0.f;
+    self.itemCenterPointArr = nil;
     for (int i = 0; i < count; i++) {
         HSFCircleMenuItem *item;
         if (self.config.titles.count == self.config.icons.count) {
@@ -157,6 +128,8 @@
         CGPoint center_item = [self calcCircleCoordinateWithCenter:CGPointMake(self.config.radius, self.config.radius) andWithAngle:angle andWithRadius:(radius_item-space)];
         item.frame = CGRectMake(0, 0, w, h);
         item.center = center_item;
+        [self.itemCenterPointArr addObject:[NSValue valueWithCGPoint:center_item]];
+        [self.items addObject:item];
         //圆角
         item.layer.masksToBounds = YES;
         item.layer.cornerRadius = w/2.f;
@@ -168,6 +141,7 @@
         [item setTag:(100+i)];
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapItemACTION:)];
         [item addGestureRecognizer:tap];
+        
     }
 }
 
@@ -182,12 +156,6 @@
     }
 }
 
-
-#pragma mark 更改样式-重置
--(HSFCircleMenu *)reset{
-    HSFCircleMenu *menu = [HSFCircleMenu menuWithConfig:self.config];
-    return menu;
-}
 
 
 #pragma mark 动画
@@ -205,8 +173,14 @@
         [self animationACTION_bgCircleMove];
         [self animationACTION_itemCircleMove];
     }
-    else if (self.config.animation == HSFCircleAnimation_circleOpen) {
-        [self animationACTION_circleOpen];
+    else if (self.config.animation == HSFCircleAnimation_bgCircleOpen) {
+        [self animationACTION_bgCircleOpen];
+    }
+    else if (self.config.animation == HSFCircleAnimation_itemShoot) {
+        [self animationACTION_itemShoot];
+    }
+    else if (self.config.animation == HSFCircleAnimation_itemShootBy) {
+        [self animationACTION_itemShootBy];
     }
 }
 
@@ -239,7 +213,7 @@
     animation_follow.fillMode = kCAFillModeForwards;
     [self.layer addAnimation:animation_follow forKey:@"rotation"];
 }
--(void)animationACTION_circleOpen{
+-(void)animationACTION_bgCircleOpen{
     self.backgroundColor = [UIColor clearColor];
     [self.openLayerArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         CALayer *layer = (CALayer *)obj;
@@ -255,6 +229,108 @@
         [layer addAnimation:animation_normal forKey:nil];
     }];
 }
+-(void)animationACTION_itemShoot{
+    //复位
+//    [self resetItemPosition];
+    //动画
+    __block typeof(self) weakSelf = self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        for (int i = 0; i < weakSelf.items.count; i++) {
+            NSValue *toValue = weakSelf.itemCenterPointArr[i];
+            __block CGPoint toPoint = toValue.CGPointValue;
+            __block HSFCircleMenuItem *item = weakSelf.items[i];
+            
+            //方法一：需要打开复位代码
+//            [UIView animateWithDuration:weakSelf.config.during animations:^{
+//                [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+//                item.frame = CGRectMake(toPoint.x-item.frame.size.width/2.f, toPoint.y-item.frame.size.height/2.f, item.frame.size.width, item.frame.size.height);
+//            }];
+            
+            
+            //方法二：
+            CABasicAnimation *animation_normal = [CABasicAnimation animationWithKeyPath:@"position"];
+            animation_normal.fromValue = [NSValue valueWithCGPoint:CGPointMake(weakSelf.config.radius, weakSelf.config.radius)];
+            animation_normal.toValue = toValue;
+            animation_normal.duration = self.config.during;
+            animation_normal.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+            animation_normal.repeatCount = self.config.repeatCount;
+            animation_normal.removedOnCompletion = NO;
+            animation_normal.fillMode = kCAFillModeForwards;
+            [item.layer addAnimation:animation_normal forKey:@"ani"];
+        }
+    });
+}
+-(void)animationACTION_itemShootBy{
+    __block typeof(self) weakSelf = self;
+    //复位
+//    [self resetItemPosition];
+    
+    
+//    //方法一：需要打开复位代码
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [weakSelf itemShootBy:0];
+//    });
+    
+    //方法二：
+    [self.items enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        HSFCircleMenuItem *item = (HSFCircleMenuItem *)obj;
+        item.hidden = YES;
+    }];
+    for (int i = 0; i < self.items.count; i++) {
+        NSValue *toValue = self.itemCenterPointArr[i];
+        __block CGPoint toPoint = toValue.CGPointValue;
+        __block HSFCircleMenuItem *item = self.items[i];
+        
+        CGFloat perDuring = self.config.during/self.items.count;
+//        CGFloat aheadDuring = perDuring/3.f;
+        CGFloat aheadDuring = 0.f;
+        CGFloat startTime = (perDuring*i-aheadDuring);
+        if (i == 0) {
+            startTime = 0.f;
+        }
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(startTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            item.hidden = NO;
+            CABasicAnimation *animation_normal = [CABasicAnimation animationWithKeyPath:@"position"];
+            animation_normal.fromValue = [NSValue valueWithCGPoint:CGPointMake(weakSelf.config.radius, weakSelf.config.radius)];
+            animation_normal.toValue = toValue;
+            animation_normal.duration = self.config.during;
+            animation_normal.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+            animation_normal.repeatCount = self.config.repeatCount;
+            animation_normal.removedOnCompletion = NO;
+            animation_normal.fillMode = kCAFillModeForwards;
+            [item.layer addAnimation:animation_normal forKey:@"ani"];
+        });
+    }
+}
+//复位
+-(void)resetItemPosition{
+    __block typeof(self) weakSelf = self;
+    [self.items enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        HSFCircleMenuItem *item = (HSFCircleMenuItem *)obj;
+        item.center = CGPointMake(weakSelf.config.radius, weakSelf.config.radius);
+    }];
+}
+-(void)itemShootBy:(NSInteger)i{
+    NSValue *toValue = self.itemCenterPointArr[i];
+    __block CGPoint toPoint = toValue.CGPointValue;
+    __block HSFCircleMenuItem *item = self.items[i];
+    __block typeof(self) weakSelf = self;
+    __block NSInteger index = i;
+    [UIView animateWithDuration:self.config.during/self.items.count animations:^{
+        //方法一：需要打开复位代码
+        [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
+        item.frame = CGRectMake(toPoint.x-item.frame.size.width/2.f, toPoint.y-item.frame.size.height/2.f, item.frame.size.width, item.frame.size.height);
+    }completion:^(BOOL finished) {
+        if (index < weakSelf.items.count-1) {
+            index++;
+            [weakSelf itemShootBy:index];
+        }
+    }];
+    
+    
+    
+    
+}
 
 
 //停止动画
@@ -264,6 +340,24 @@
     [self.maskLayer removeAllAnimations];
 }
 
+
+#pragma mark CAAnimationDelegate
+- (void)animationDidStart:(CAAnimation *)anim{
+    
+}
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
+    
+}
+
+
+
+#pragma mark 设置中心图片centerImgView
+-(void)setCenterImg:(NSString *)imgName size:(CGSize)size{
+    self.centerImgView.frame = CGRectMake(0, 0, size.width, size.height);
+    self.centerImgView.center = self.center;
+    self.centerImgView.image = [UIImage imageNamed:imgName];
+    self.centerImgView.hidden = NO;
+}
 
 
 #pragma mark 辅助方法
@@ -288,7 +382,12 @@
     }
     return _openLayerArr;
 }
-
+-(NSMutableArray *)itemCenterPointArr{
+    if (!_itemCenterPointArr) {
+        _itemCenterPointArr = [NSMutableArray array];
+    }
+    return _itemCenterPointArr;
+}
 
 
 @end

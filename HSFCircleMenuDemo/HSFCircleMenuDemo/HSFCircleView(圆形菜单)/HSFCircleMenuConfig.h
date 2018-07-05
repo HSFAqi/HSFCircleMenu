@@ -18,8 +18,10 @@ typedef NS_ENUM(NSInteger, HSFCircleAnimation) {
     HSFCircleAnimation_none = 0,//无动画
     HSFCircleAnimation_bgCircleMove,//背景圆形动画
     HSFCircleAnimation_itemCircleMove,//item圆形动画
-    HSFCircleAnimation_followMove,//背景+item跟随效果
-    HSFCircleAnimation_circleOpen//圆形展开
+    HSFCircleAnimation_followMove,//背景+item跟随动画
+    HSFCircleAnimation_bgCircleOpen,//圆形展开动画
+    HSFCircleAnimation_itemShoot,//item从中心向四周发射动画
+    HSFCircleAnimation_itemShootBy//item从中心向四周依次发射动画
     //待添加更多的动画特效。。。敬请期待
 };
 
