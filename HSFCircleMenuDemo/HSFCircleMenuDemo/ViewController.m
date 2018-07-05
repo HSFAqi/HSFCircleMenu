@@ -23,8 +23,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.circleView = [[HSFCircleMenu alloc]initWithCenter:self.view.center icons:@[@"风车", @"风筝", @"话筒", @"魔方"] radius:100.f titles:@[]];
-    self.circleView.animation = HSFCircleAnimation_follow;//更改动画样式
+    self.circleView = [[HSFCircleMenu alloc]initWithCenter:self.view.center icons:@[@"风车", @"风筝", @"话筒", @"魔方", @"摇杆"] radius:150.f titles:@[]];
+    
+    //初始化好后，如果需要更改属性，需要reset
+//    self.circleView.animation = HSFCircleAnimation_followMove;//更改动画样式
+//    self.circleView.space = 30.f;
+//    self.circleView = [self.circleView reset];
     
     self.alertC = [TYAlertController alertControllerWithAlertView:self.circleView];
     self.alertC.backgoundTapDismissEnable = YES;

@@ -13,10 +13,15 @@ typedef NS_ENUM(NSInteger, HSFCircleDirection) {
     HSFCircleDirection_anticlockwise//逆时针
 };
 typedef NS_ENUM(NSInteger, HSFCircleAnimation) {
-    HSFCircleAnimation_normal = 0,//静态
-    HSFCircleAnimation_follow//跟随效果
+    HSFCircleAnimation_none = 0,//无动画
+    HSFCircleAnimation_bgCircleMove,//背景圆形动画
+    HSFCircleAnimation_itemCircleMove,//item圆形动画
+    HSFCircleAnimation_followMove,//背景+item跟随效果
+    HSFCircleAnimation_circleOpen//圆形展开
     //待添加更多的动画特效。。。敬请期待
 };
+
+@class HSFCircleMenuConfig;
 
 @interface HSFCircleMenu : UIView
 
@@ -25,18 +30,15 @@ typedef NS_ENUM(NSInteger, HSFCircleAnimation) {
 @property (nonatomic,assign) CGFloat radius;//圆半径
 
 //可选
-@property (nonatomic,strong) NSArray *titles;//标题数组
-@property (nonatomic,assign) NSInteger repeatCount;//动画次数
-@property (nonatomic,strong) UIColor *bgColor;//背景色
-@property (nonatomic,assign) CGFloat during;//动画时间
-@property (nonatomic,assign) CGFloat space;//item距离圆周边的距离
-@property (nonatomic,assign) CGFloat itemW;//item宽度 宽=高
-@property (nonatomic,assign) HSFCircleDirection direction;//动画方向
-@property (nonatomic,assign) HSFCircleAnimation animation;//动画方式
+@property (nonatomic,strong) NSArray *titles;//标题数组 （默认：@[]）
+@property (nonatomic,strong) UIColor *bgColor;//背景色 （默认：[UIColor orangeColor]）
+@property (nonatomic,assign) CGFloat space;//item距离圆周边的距离 （默认：10.f）
+@property (nonatomic,assign) CGFloat itemW;//item宽度 宽=高 （默认：40.f）
+@property (nonatomic,assign) HSFCircleDirection direction;//动画方向 （默认：顺时针）
+@property (nonatomic,assign) NSInteger repeatCount;//动画次数 （默认：1）
+@property (nonatomic,assign) CGFloat during;//动画时间 （默认：0.5f）
+@property (nonatomic,assign) HSFCircleAnimation animation;//动画方式 （默认：无）
 
-//待开发。。。敬请期待
-//@property (nonatomic,assign) CGFloat startAngle;//开始角度
-//@property (nonatomic,assign) CGFloat endAngle;//结束角度
 
 //单击item回调
 @property (nonatomic, copy) void (^HSFCircleMenuClickItemBlock)(NSInteger tag);
@@ -49,7 +51,7 @@ typedef NS_ENUM(NSInteger, HSFCircleAnimation) {
 //注意：如果只需要显示icon则titles可以不用设置，传@[]即可
 #pragma mark 初始化方法(推荐)
 /**
- 默认normal动画 + 顺时针 + during=0.5f + repeatCount=1 + space = 10.f + itemW=40.f + bgColor=orangeColor
+ 默认none动画 + 顺时针 + during=0.5f + repeatCount=1 + space = 10.f + itemW=40.f + bgColor=orangeColor
  */
 -(instancetype)initWithCenter:(CGPoint)center
                         icons:(NSArray *)icons
@@ -57,7 +59,7 @@ typedef NS_ENUM(NSInteger, HSFCircleAnimation) {
                        titles:(NSArray *)titles;
 
 /**
- 默认normal动画 + 顺时针 + during=0.5f + repeatCount=1 + space = 10.f + itemW=40.f
+ 默认none动画 + 顺时针 + during=0.5f + repeatCount=1 + space = 10.f + itemW=40.f
  */
 -(instancetype)initWithCenter:(CGPoint)center
                         icons:(NSArray *)icons
@@ -66,7 +68,7 @@ typedef NS_ENUM(NSInteger, HSFCircleAnimation) {
                       bgColor:(UIColor *)bgColor;
 
 /**
- 默认normal动画 + 顺时针 + during=0.5f + repeatCount=1 + space = 10.f
+ 默认none动画 + 顺时针 + during=0.5f + repeatCount=1 + space = 10.f
  */
 -(instancetype)initWithCenter:(CGPoint)center
                         icons:(NSArray *)icons
@@ -76,7 +78,7 @@ typedef NS_ENUM(NSInteger, HSFCircleAnimation) {
                         itemW:(CGFloat)itemW;
 
 /**
- 默认normal动画 + 顺时针 + during=0.5f + repeatCount=1
+ 默认none动画 + 顺时针 + during=0.5f + repeatCount=1
  */
 -(instancetype)initWithCenter:(CGPoint)center
                         icons:(NSArray *)icons
@@ -87,7 +89,7 @@ typedef NS_ENUM(NSInteger, HSFCircleAnimation) {
                         space:(CGFloat)space;
 
 /**
- 默认normal动画 + 顺时针 + during=0.5f
+ 默认none动画 + 顺时针 + during=0.5f
  */
 -(instancetype)initWithCenter:(CGPoint)center
                         icons:(NSArray *)icons
@@ -99,7 +101,7 @@ typedef NS_ENUM(NSInteger, HSFCircleAnimation) {
                   repeatCount:(NSInteger)repeatCount;
 
 /**
- 默认normal动画 + 顺时针
+ 默认none动画 + 顺时针
  */
 -(instancetype)initWithCenter:(CGPoint)center
                         icons:(NSArray *)icons
@@ -112,7 +114,7 @@ typedef NS_ENUM(NSInteger, HSFCircleAnimation) {
                        during:(CGFloat)during;
 
 /**
- 默认normal动画
+ 默认none动画
  */
 -(instancetype)initWithCenter:(CGPoint)center
                         icons:(NSArray *)icons
@@ -148,7 +150,8 @@ typedef NS_ENUM(NSInteger, HSFCircleAnimation) {
 
 
 
-
+#pragma mark 更改样式-重置
+-(HSFCircleMenu *)reset;
 
 
 
