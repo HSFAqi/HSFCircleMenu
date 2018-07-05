@@ -26,15 +26,15 @@
         self.titleColor = titleColor;
         self.icon = icon;
         if (!kStringIsEmpty(self.title)) {
-            self.iconView.image = [UIImage imageNamed:icon];
             self.titleLabel.text = title;
             self.titleLabel.textColor = titleColor;
-            [self addSubview:self.iconView];
             [self addSubview:self.titleLabel];
-        }else{
+        }
+        if (!kStringIsEmpty(self.icon)) {
             self.iconView.image = [UIImage imageNamed:icon];
             [self addSubview:self.iconView];
         }
+        
         self.userInteractionEnabled = YES;
     }
     return self;
@@ -45,7 +45,7 @@
 -(void)layoutSubviews{
     __block typeof(self) weakSelf = self;
     
-    if (!kStringIsEmpty(self.title)) {
+    if ((!kStringIsEmpty(self.title)) && (!kStringIsEmpty(self.icon))) {
         [self.iconView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.left.right.equalTo(weakSelf);
         }];
@@ -54,12 +54,18 @@
             make.height.mas_equalTo(20.f);
             make.left.right.bottom.equalTo(weakSelf);
         }];
-    }else{
+    }
+    else if ((kStringIsEmpty(self.title)) && (!kStringIsEmpty(self.icon))){
         [self.iconView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.left.right.bottom.equalTo(weakSelf);
         }];
     }
-    
+    else if ((!kStringIsEmpty(self.title)) && (kStringIsEmpty(self.icon))){
+        [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.left.right.bottom.equalTo(weakSelf);
+        }];
+    }
+    //最后
     [super layoutSubviews];
 }
 

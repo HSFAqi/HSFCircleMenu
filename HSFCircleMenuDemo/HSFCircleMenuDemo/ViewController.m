@@ -54,6 +54,7 @@
     //@[@"风车", @"风筝", @"话筒", @"魔方", @"摇杆"]
     self.config = [[HSFCircleMenuConfig alloc]init];
     self.config.icons = @[@"风车", @"风筝", @"话筒", @"魔方", @"摇杆", @"气球"];
+    self.config.titles = @[@"风车", @"风筝", @"话筒", @"魔方", @"摇杆", @"气球"];
     self.btn100.backgroundColor = [[UIColor orangeColor] colorWithAlphaComponent:0.5];
     self.circleView = [HSFCircleMenu menuWithConfig:self.config];
 
@@ -85,7 +86,8 @@
     sender.backgroundColor = [[UIColor orangeColor] colorWithAlphaComponent:0.5];
     
     self.config = [[HSFCircleMenuConfig alloc]init];
-    self.config.icons = @[@"风车", @"风筝", @"话筒", @"魔方", @"摇杆", @"气球"];
+    self.config.icons = @[@"风车", @"风筝"];
+    self.config.titles = @[@"风车", @"风筝", @"话筒", @"魔方", @"摇杆", @"气球"];
     switch (sender.tag) {
         case 100:
         {
@@ -144,6 +146,8 @@
         default:
             break;
     }
+//    self.config.direction = HSFCircleDirection_anticlockwise;
+    self.config.isCircleLayout = YES;
     self.circleView = [HSFCircleMenu menuWithConfig:self.config];
     [self.circleView setCenterImg:@"world" size:CGSizeMake(100.f, 100.f)];
     

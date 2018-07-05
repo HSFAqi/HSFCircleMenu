@@ -56,7 +56,7 @@
             }];
         }
         
-        NSInteger count = self.config.icons.count;
+        NSInteger count = [self getSafeCountOfAllItems];
         CGFloat perAngle = (M_PI * 2)/count;
         CGFloat startAngel = -perAngle/2.f;
         NSMutableArray *layerArr = [NSMutableArray array];
@@ -108,23 +108,39 @@
     CGFloat w = self.config.itemW;
     CGFloat h = w;
     CGFloat space = self.config.space;
-    NSInteger count = self.config.icons.count;
+    NSInteger count = [self getSafeCountOfAllItems];
     CGFloat perAngle = 360.f/count;
     CGFloat radius_item = self.config.radius - w/2.f;
     CGFloat angle = 0.f;
     self.itemCenterPointArr = nil;
     for (int i = 0; i < count; i++) {
         HSFCircleMenuItem *item;
-        if (self.config.titles.count == self.config.icons.count) {
-            item = [[HSFCircleMenuItem alloc]initWithTitle:self.config.titles[i] titleColor:[UIColor whiteColor] icon:self.config.icons[i]];
+        NSString *title = @"";
+        NSString *icon = @"";
+        if (i >= self.config.titles.count) {
+            title = @"";
         }else{
-            item = [[HSFCircleMenuItem alloc]initWithTitle:@"" titleColor:[UIColor whiteColor] icon:self.config.icons[i]];
+            title = self.config.titles[i];
         }
+        if (i >= self.config.icons.count) {
+            icon = @"";
+        }else{
+            icon = self.config.icons[i];
+        }
+        item = [[HSFCircleMenuItem alloc]initWithTitle:title titleColor:[UIColor whiteColor] icon:icon];
+        
+//        if (self.config.titles.count == self.config.icons.count) {
+//            item = [[HSFCircleMenuItem alloc]initWithTitle:self.config.titles[i] titleColor:[UIColor whiteColor] icon:self.config.icons[i]];
+//        }else{
+//            item = [[HSFCircleMenuItem alloc]initWithTitle:@"" titleColor:[UIColor whiteColor] icon:self.config.icons[i]];
+//        }
         if (self.config.direction == HSFCircleDirection_clockwise) {
             angle = -perAngle*i + 90.f;
         }else{
             angle = perAngle*i + 90.f;
         }
+        
+        //添加
         CGPoint center_item = [self calcCircleCoordinateWithCenter:CGPointMake(self.config.radius, self.config.radius) andWithAngle:angle andWithRadius:(radius_item-space)];
         item.frame = CGRectMake(0, 0, w, h);
         item.center = center_item;
@@ -142,6 +158,19 @@
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapItemACTION:)];
         [item addGestureRecognizer:tap];
         
+        //是否圆形布局
+        [self rotateItemIfIsCircleLayout:item angle:angle];
+    }
+}
+
+//是否圆形布局
+-(void)rotateItemIfIsCircleLayout:(HSFCircleMenuItem *)item angle:(CGFloat)angle{
+    if (self.config.isCircleLayout) {
+        if (self.config.direction == HSFCircleDirection_clockwise){
+            item.transform = CGAffineTransformRotate(item.transform,(-2*M_PI)*((angle-90.f)/360.f));
+        }else{
+            item.transform = CGAffineTransformRotate(item.transform,(2*M_PI)*((90.f-angle)/360.f));
+        }
     }
 }
 
@@ -366,6 +395,18 @@
     CGFloat x2 = radius*cosf(angle*M_PI/180.f);
     CGFloat y2 = radius*sinf(angle*M_PI/180.f);
     return CGPointMake(center.x+x2, center.y-y2);
+}
+//保护数组不越界
+-(NSInteger)getSafeCountOfAllItems{
+    if (!self.config.icons) {
+        self.config.icons = @[];
+    }
+    if (!self.config.titles) {
+        self.config.titles = @[];
+    }
+    NSInteger deta = self.config.icons.count-self.config.titles.count;
+    NSInteger count = (deta > 0)?self.config.icons.count : self.config.titles.count;
+    return count;
 }
 
 

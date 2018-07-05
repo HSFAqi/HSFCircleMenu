@@ -20,4 +20,7 @@
 //初始化方法
 -(instancetype)initWithTitle:(NSString *)title titleColor:(UIColor *)titleColor icon:(NSString *)icon;
 
+
+
+
 @end

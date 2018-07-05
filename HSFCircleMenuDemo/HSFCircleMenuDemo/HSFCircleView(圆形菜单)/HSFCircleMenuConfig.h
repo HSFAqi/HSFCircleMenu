@@ -40,6 +40,7 @@ typedef NS_ENUM(NSInteger, HSFCircleAnimation) {
 @property (nonatomic,assign) NSInteger repeatCount;//动画次数 （默认：1）
 @property (nonatomic,assign) CGFloat during;//动画时间 （默认：0.5f）
 @property (nonatomic,assign) HSFCircleAnimation animation;//动画方式 （默认：无）
+@property (nonatomic,assign) BOOL isCircleLayout;
 
 
 //待开发。。。敬请期待

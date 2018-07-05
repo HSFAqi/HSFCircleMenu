@@ -22,6 +22,7 @@
         self.repeatCount = 1;
         self.during = 0.5f;
         self.animation = HSFCircleAnimation_none;
+        self.isCircleLayout = NO;
     }
     return self;
 }
