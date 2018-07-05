@@ -23,6 +23,7 @@
 @property (nonatomic,strong) NSMutableArray *openLayerArr;//HSFCircleAnimation_bgCircleOpen时才会用到
 @property (nonatomic,strong) NSMutableArray *items;
 @property (nonatomic,strong) NSMutableArray *itemCenterPointArr;
+@property (nonatomic,strong) UIImageView *bgImgView;
 @property (nonatomic,strong) UIImageView *centerImgView;
 
 @end
@@ -77,6 +78,12 @@
         }
         self.openLayerArr = layerArr.mutableCopy;
     }
+    
+    //添加背景图片
+    self.bgImgView = [[UIImageView alloc]initWithFrame:self.bounds];
+    [self addSubview:self.bgImgView];
+    self.bgImgView.contentMode = UIViewContentModeScaleAspectFill;
+    self.bgImgView.hidden = YES;
     
     //添加item
     [self addItemBtns];
@@ -373,6 +380,12 @@
 }
 
 
+#pragma mark 设置背景图片bgImgView
+-(void)setBgImg:(NSString *)imgName{
+    self.bgImgView.center = self.center;
+    self.bgImgView.image = [UIImage imageNamed:imgName];
+    self.bgImgView.hidden = NO;
+}
 
 #pragma mark 设置中心图片centerImgView
 -(void)setCenterImg:(NSString *)imgName size:(CGSize)size{

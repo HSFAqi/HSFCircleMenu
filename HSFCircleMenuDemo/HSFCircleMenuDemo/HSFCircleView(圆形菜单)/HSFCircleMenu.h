@@ -31,6 +31,8 @@
 -(void)puaseAnimation;
 
 
+#pragma mark 设置背景图片bgImgView
+-(void)setBgImg:(NSString *)imgName;
 #pragma mark 设置中心图片centerImgView
 -(void)setCenterImg:(NSString *)imgName size:(CGSize)size;
 

@@ -27,6 +27,12 @@
 		5103C3C720EC672E006A63B4 /* 手柄.png in Resources */ = {isa = PBXBuildFile; fileRef = 5103C3C620EC672E006A63B4 /* 手柄.png */; };
 		5103C3C920EC6734006A63B4 /* 摇杆.png in Resources */ = {isa = PBXBuildFile; fileRef = 5103C3C820EC6734006A63B4 /* 摇杆.png */; };
 		51C6F90820EDA613006C6831 /* HSFCircleMenuConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C6F90620EDA612006C6831 /* HSFCircleMenuConfig.m */; };
+		51C6F96A20EE1C2F006C6831 /* bg006.png in Resources */ = {isa = PBXBuildFile; fileRef = 51C6F96420EE1C2F006C6831 /* bg006.png */; };
+		51C6F96B20EE1C2F006C6831 /* bg004.png in Resources */ = {isa = PBXBuildFile; fileRef = 51C6F96520EE1C2F006C6831 /* bg004.png */; };
+		51C6F96C20EE1C2F006C6831 /* bg002.png in Resources */ = {isa = PBXBuildFile; fileRef = 51C6F96620EE1C2F006C6831 /* bg002.png */; };
+		51C6F96D20EE1C2F006C6831 /* bg001.png in Resources */ = {isa = PBXBuildFile; fileRef = 51C6F96720EE1C2F006C6831 /* bg001.png */; };
+		51C6F96E20EE1C2F006C6831 /* bg003.png in Resources */ = {isa = PBXBuildFile; fileRef = 51C6F96820EE1C2F006C6831 /* bg003.png */; };
+		51C6F96F20EE1C2F006C6831 /* bg005.png in Resources */ = {isa = PBXBuildFile; fileRef = 51C6F96920EE1C2F006C6831 /* bg005.png */; };
 		8F419C139596D9EF08A47AD1 /* libPods-HSFCircleMenuDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58FE9890E618EB61864F426B /* libPods-HSFCircleMenuDemo.a */; };
 		FDADB612F6995DCA64124E55 /* libPods-HSFCircleMenuDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3CDB1AEDDF860D3F0FFD8E2 /* libPods-HSFCircleMenuDemoTests.a */; };
 /* End PBXBuildFile section */
@@ -83,6 +89,12 @@
 		513A390CCFADC8CED3DE71CF /* Pods-HSFCircleMenuDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSFCircleMenuDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HSFCircleMenuDemoUITests/Pods-HSFCircleMenuDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		51C6F90620EDA612006C6831 /* HSFCircleMenuConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSFCircleMenuConfig.m; sourceTree = "<group>"; };
 		51C6F90720EDA612006C6831 /* HSFCircleMenuConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSFCircleMenuConfig.h; sourceTree = "<group>"; };
+		51C6F96420EE1C2F006C6831 /* bg006.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg006.png; sourceTree = "<group>"; };
+		51C6F96520EE1C2F006C6831 /* bg004.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg004.png; sourceTree = "<group>"; };
+		51C6F96620EE1C2F006C6831 /* bg002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg002.png; sourceTree = "<group>"; };
+		51C6F96720EE1C2F006C6831 /* bg001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg001.png; sourceTree = "<group>"; };
+		51C6F96820EE1C2F006C6831 /* bg003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg003.png; sourceTree = "<group>"; };
+		51C6F96920EE1C2F006C6831 /* bg005.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg005.png; sourceTree = "<group>"; };
 		58FE9890E618EB61864F426B /* libPods-HSFCircleMenuDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HSFCircleMenuDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		638A21A0F57024B308E6B8C6 /* Pods-HSFCircleMenuDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSFCircleMenuDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HSFCircleMenuDemo/Pods-HSFCircleMenuDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		9591262611412EEAC0144B19 /* Pods-HSFCircleMenuDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSFCircleMenuDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HSFCircleMenuDemoTests/Pods-HSFCircleMenuDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -194,6 +206,7 @@
 		5103C3B920EC66E5006A63B4 /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				51C6F96320EE1C22006C6831 /* bg */,
 				5103C3BA20EC6704006A63B4 /* 头戴式耳机.png */,
 				5103C3C620EC672E006A63B4 /* 手柄.png */,
 				5103C3C820EC6734006A63B4 /* 摇杆.png */,
@@ -204,6 +217,19 @@
 				5103C3C420EC6728006A63B4 /* 气球.png */,
 			);
 			path = resource;
+			sourceTree = "<group>";
+		};
+		51C6F96320EE1C22006C6831 /* bg */ = {
+			isa = PBXGroup;
+			children = (
+				51C6F96720EE1C2F006C6831 /* bg001.png */,
+				51C6F96620EE1C2F006C6831 /* bg002.png */,
+				51C6F96820EE1C2F006C6831 /* bg003.png */,
+				51C6F96520EE1C2F006C6831 /* bg004.png */,
+				51C6F96920EE1C2F006C6831 /* bg005.png */,
+				51C6F96420EE1C2F006C6831 /* bg006.png */,
+			);
+			path = bg;
 			sourceTree = "<group>";
 		};
 		8B9E4148D4A9C4A228B814CD /* Frameworks */ = {
@@ -338,13 +364,19 @@
 				5103C3C720EC672E006A63B4 /* 手柄.png in Resources */,
 				5103C3BF20EC6713006A63B4 /* 风筝.png in Resources */,
 				5103C3C120EC671A006A63B4 /* 话筒.png in Resources */,
+				51C6F96A20EE1C2F006C6831 /* bg006.png in Resources */,
 				5103C3BD20EC670C006A63B4 /* 风车.png in Resources */,
+				51C6F96C20EE1C2F006C6831 /* bg002.png in Resources */,
+				51C6F96D20EE1C2F006C6831 /* bg001.png in Resources */,
 				5103C3C920EC6734006A63B4 /* 摇杆.png in Resources */,
+				51C6F96E20EE1C2F006C6831 /* bg003.png in Resources */,
 				5103C3BB20EC6704006A63B4 /* 头戴式耳机.png in Resources */,
 				5103C38920EC637D006A63B4 /* LaunchScreen.storyboard in Resources */,
 				5103C38620EC637D006A63B4 /* Assets.xcassets in Resources */,
 				5103C3C320EC6721006A63B4 /* 魔方.png in Resources */,
+				51C6F96B20EE1C2F006C6831 /* bg004.png in Resources */,
 				5103C38420EC6379006A63B4 /* Main.storyboard in Resources */,
+				51C6F96F20EE1C2F006C6831 /* bg005.png in Resources */,
 				5103C3C520EC6728006A63B4 /* 气球.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

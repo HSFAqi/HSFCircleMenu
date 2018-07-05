@@ -86,8 +86,7 @@
     sender.backgroundColor = [[UIColor orangeColor] colorWithAlphaComponent:0.5];
     
     self.config = [[HSFCircleMenuConfig alloc]init];
-    self.config.icons = @[@"风车", @"风筝"];
-    self.config.titles = @[@"风车", @"风筝", @"话筒", @"魔方", @"摇杆", @"气球"];
+    
     switch (sender.tag) {
         case 100:
         {
@@ -146,10 +145,13 @@
         default:
             break;
     }
-//    self.config.direction = HSFCircleDirection_anticlockwise;
+    self.config.icons = @[@"风车", @"风筝"];
+    self.config.titles = @[@"风车", @"风筝", @"话筒", @"魔方", @"摇杆", @"气球"];
+    self.config.direction = HSFCircleDirection_anticlockwise;
     self.config.isCircleLayout = YES;
     self.circleView = [HSFCircleMenu menuWithConfig:self.config];
     [self.circleView setCenterImg:@"world" size:CGSizeMake(100.f, 100.f)];
+    [self.circleView setBgImg:@"bg002"];
     
     //弹框
     self.alertC = [TYAlertController alertControllerWithAlertView:self.circleView];
