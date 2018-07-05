@@ -14,11 +14,12 @@
 
 @property (nonatomic,strong) NSString *title;
 @property (nonatomic,strong) UIColor *titleColor;
+@property (nonatomic,assign) CGFloat fontSize;
 @property (nonatomic,strong) NSString *icon;
 
 
 //初始化方法
--(instancetype)initWithTitle:(NSString *)title titleColor:(UIColor *)titleColor icon:(NSString *)icon;
+-(instancetype)initWithTitle:(NSString *)title titleColor:(UIColor *)titleColor fontSize:(CGFloat)fontSize icon:(NSString *)icon;
 
 
 

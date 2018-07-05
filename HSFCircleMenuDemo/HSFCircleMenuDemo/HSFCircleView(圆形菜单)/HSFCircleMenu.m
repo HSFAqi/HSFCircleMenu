@@ -127,13 +127,7 @@
         }else{
             icon = self.config.icons[i];
         }
-        item = [[HSFCircleMenuItem alloc]initWithTitle:title titleColor:[UIColor whiteColor] icon:icon];
-        
-//        if (self.config.titles.count == self.config.icons.count) {
-//            item = [[HSFCircleMenuItem alloc]initWithTitle:self.config.titles[i] titleColor:[UIColor whiteColor] icon:self.config.icons[i]];
-//        }else{
-//            item = [[HSFCircleMenuItem alloc]initWithTitle:@"" titleColor:[UIColor whiteColor] icon:self.config.icons[i]];
-//        }
+        item = [[HSFCircleMenuItem alloc]initWithTitle:title titleColor:self.config.titleColor fontSize:self.config.fontSize icon:icon];
         if (self.config.direction == HSFCircleDirection_clockwise) {
             angle = -perAngle*i + 90.f;
         }else{

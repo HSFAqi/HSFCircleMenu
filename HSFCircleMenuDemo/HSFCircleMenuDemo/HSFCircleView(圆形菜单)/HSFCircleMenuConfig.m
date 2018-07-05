@@ -15,6 +15,8 @@
         //设置默认值
         self.radius = 150.f;
         self.titles = @[];
+        self.titleColor = [UIColor whiteColor];
+        self.fontSize = 10.f;
         self.bgColor = [UIColor orangeColor];
         self.space = 10.f;
         self.itemW = 40.f;

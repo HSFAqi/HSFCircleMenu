@@ -33,6 +33,8 @@ typedef NS_ENUM(NSInteger, HSFCircleAnimation) {
 //可选
 @property (nonatomic,assign) CGFloat radius;//圆半径
 @property (nonatomic,strong) NSArray *titles;//标题数组 （默认：@[]）
+@property (nonatomic,strong) UIColor *titleColor;//标题颜色 （默认：白色）
+@property (nonatomic,assign) CGFloat fontSize;//标题字体大小 (默认：10)
 @property (nonatomic,strong) UIColor *bgColor;//背景色 （默认：[UIColor orangeColor]）
 @property (nonatomic,assign) CGFloat space;//item距离圆周边的距离 （默认：10.f）
 @property (nonatomic,assign) CGFloat itemW;//item宽度 宽=高 （默认：40.f）

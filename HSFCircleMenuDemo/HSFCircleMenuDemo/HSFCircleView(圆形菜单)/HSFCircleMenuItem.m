@@ -19,15 +19,18 @@
 @end
 
 @implementation HSFCircleMenuItem
+
 //初始化方法
--(instancetype)initWithTitle:(NSString *)title titleColor:(UIColor *)titleColor icon:(NSString *)icon{
+-(instancetype)initWithTitle:(NSString *)title titleColor:(UIColor *)titleColor fontSize:(CGFloat)fontSize icon:(NSString *)icon{
     if (self = [super init]) {
         self.title = title;
         self.titleColor = titleColor;
+        self.fontSize = fontSize;
         self.icon = icon;
         if (!kStringIsEmpty(self.title)) {
             self.titleLabel.text = title;
             self.titleLabel.textColor = titleColor;
+            self.titleLabel.font = [UIFont systemFontOfSize:fontSize];
             [self addSubview:self.titleLabel];
         }
         if (!kStringIsEmpty(self.icon)) {
