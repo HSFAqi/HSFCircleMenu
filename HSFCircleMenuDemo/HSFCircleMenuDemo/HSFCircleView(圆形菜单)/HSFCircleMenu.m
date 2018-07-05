@@ -49,6 +49,12 @@
 
 #pragma mark 不推荐初始化方法：初始化后在对所有属性逐一赋值，最后setUp
 -(void)setUp{
+    //添加背景图片
+    self.bgImgView = [[UIImageView alloc]initWithFrame:self.bounds];
+    self.bgImgView.image = [UIImage imageNamed:self.config.bgImgName];
+    self.bgImgView.contentMode = UIViewContentModeScaleAspectFill;
+    [self addSubview:self.bgImgView];
+    
     //仅用于HSFCircleAnimation_bgCircleOpen
     if (self.config.animation == HSFCircleAnimation_bgCircleOpen) {
         if (self.openLayerArr.count > 0) {
@@ -64,9 +70,17 @@
         for (int i = 0; i < count; i++) {
             UIBezierPath *path_layer;
             if (self.config.direction == HSFCircleDirection_clockwise) {//顺时针
-                path_layer = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.config.radius, self.config.radius) radius:self.config.radius/2.f startAngle:perAngle*i+startAngel endAngle:perAngle*(i+1.1)+startAngel clockwise:YES];
+                if (kStringIsEmpty(self.config.bgImgName)) {
+                    path_layer = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.config.radius, self.config.radius) radius:self.config.radius/2.f startAngle:perAngle*i+startAngel endAngle:perAngle*(i+1.1)+startAngel clockwise:NO];
+                }else{
+                    path_layer = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.config.radius, self.config.radius) radius:self.config.radius/2.f startAngle:perAngle*i+startAngel endAngle:perAngle*(i+1.1)+startAngel clockwise:YES];
+                }
             }else{//逆时针
-                path_layer = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.config.radius, self.config.radius) radius:self.config.radius/2.f startAngle:perAngle*i+startAngel endAngle:perAngle*(i+1.1)+startAngel clockwise:NO];
+                if (kStringIsEmpty(self.config.bgImgName)) {
+                    path_layer = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.config.radius, self.config.radius) radius:self.config.radius/2.f startAngle:perAngle*i+startAngel endAngle:perAngle*(i+1.1)+startAngel clockwise:YES];
+                }else{
+                    path_layer = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.config.radius, self.config.radius) radius:self.config.radius/2.f startAngle:perAngle*i+startAngel endAngle:perAngle*(i+1.1)+startAngel clockwise:NO];
+                }
             }
             CAShapeLayer *layer = [CAShapeLayer layer];
             layer.path = path_layer.CGPath;
@@ -78,21 +92,16 @@
         }
         self.openLayerArr = layerArr.mutableCopy;
     }
-    
-    //添加背景图片
-    self.bgImgView = [[UIImageView alloc]initWithFrame:self.bounds];
-    [self addSubview:self.bgImgView];
-    self.bgImgView.contentMode = UIViewContentModeScaleAspectFill;
-    self.bgImgView.hidden = YES;
-    
+        
     //添加item
     [self addItemBtns];
     
     //添加中心图片
-    self.centerImgView = [[UIImageView alloc]initWithFrame:CGRectZero];
-    [self addSubview:self.centerImgView];
+    self.centerImgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.config.centerImgSize.width, self.config.centerImgSize.height)];
+    self.centerImgView.center = self.center;
     self.centerImgView.contentMode = UIViewContentModeScaleAspectFit;
-    self.centerImgView.hidden = YES;
+    self.centerImgView.image = [UIImage imageNamed:self.config.centerImgName];
+    [self addSubview:self.centerImgView];
     
     //遮罩
     UIBezierPath *path;
@@ -151,7 +160,7 @@
         item.layer.masksToBounds = YES;
         item.layer.cornerRadius = w/2.f;
         //item背景色
-        item.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5];
+        item.backgroundColor = self.config.itemBgColor;
         //添加
         [self addSubview:item];
         //添加点击事件
@@ -245,12 +254,18 @@
 }
 -(void)animationACTION_bgCircleOpen{
     self.backgroundColor = [UIColor clearColor];
+    __block typeof(self) weakSelf = self;
     [self.openLayerArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         CALayer *layer = (CALayer *)obj;
         //动画
         CABasicAnimation *animation_normal = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-        animation_normal.fromValue = @0;
-        animation_normal.toValue = @1;
+        if (kStringIsEmpty(weakSelf.config.bgImgName)) {
+            animation_normal.fromValue = @0;
+            animation_normal.toValue = @1;
+        }else{
+            animation_normal.fromValue = @1;
+            animation_normal.toValue = @0;
+        }
         animation_normal.duration = self.config.during;
         animation_normal.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
         animation_normal.repeatCount = self.config.repeatCount;
@@ -380,20 +395,7 @@
 }
 
 
-#pragma mark 设置背景图片bgImgView
--(void)setBgImg:(NSString *)imgName{
-    self.bgImgView.center = self.center;
-    self.bgImgView.image = [UIImage imageNamed:imgName];
-    self.bgImgView.hidden = NO;
-}
 
-#pragma mark 设置中心图片centerImgView
--(void)setCenterImg:(NSString *)imgName size:(CGSize)size{
-    self.centerImgView.frame = CGRectMake(0, 0, size.width, size.height);
-    self.centerImgView.center = self.center;
-    self.centerImgView.image = [UIImage imageNamed:imgName];
-    self.centerImgView.hidden = NO;
-}
 
 
 #pragma mark 辅助方法

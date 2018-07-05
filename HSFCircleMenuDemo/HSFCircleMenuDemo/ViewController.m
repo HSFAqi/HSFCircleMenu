@@ -145,13 +145,16 @@
         default:
             break;
     }
-    self.config.icons = @[@"风车", @"风筝"];
-    self.config.titles = @[@"风车", @"风筝", @"话筒", @"魔方", @"摇杆", @"气球"];
+    self.config.icons = @[@"风车", @"风筝", @"话筒", @"魔方", @"摇杆", @"气球"];
+//    self.config.titles = @[@"风车", @"风筝", @"话筒", @"魔方", @"摇杆", @"气球"];
     self.config.direction = HSFCircleDirection_anticlockwise;
-    self.config.isCircleLayout = YES;
+//    self.config.isCircleLayout = YES;
+//    self.config.during = 1.5f;
+    self.config.bgImgName = @"bg001";
+    self.config.centerImgName = @"world";
+    self.config.centerImgSize = CGSizeMake(100.f, 100.f);
     self.circleView = [HSFCircleMenu menuWithConfig:self.config];
-    [self.circleView setCenterImg:@"world" size:CGSizeMake(100.f, 100.f)];
-    [self.circleView setBgImg:@"bg002"];
+    
     
     //弹框
     self.alertC = [TYAlertController alertControllerWithAlertView:self.circleView];

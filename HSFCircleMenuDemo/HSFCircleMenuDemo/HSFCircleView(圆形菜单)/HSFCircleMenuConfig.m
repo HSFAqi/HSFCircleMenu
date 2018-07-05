@@ -20,11 +20,15 @@
         self.bgColor = [UIColor orangeColor];
         self.space = 10.f;
         self.itemW = 40.f;
+        self.itemBgColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5];
         self.direction = HSFCircleDirection_clockwise;
         self.repeatCount = 1;
         self.during = 0.5f;
         self.animation = HSFCircleAnimation_none;
         self.isCircleLayout = NO;
+        self.bgImgName = @"";
+        self.centerImgName = @"";
+        self.centerImgSize = CGSizeMake(80.f, 80.f);
     }
     return self;
 }
