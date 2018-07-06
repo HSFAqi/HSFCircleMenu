@@ -14,6 +14,8 @@
 #import "HSFTool.h"
 //config
 #import "HSFCircleMenuConfig.h"
+//animation
+#import "HSFAnimationHelper.h"
 
 
 @interface HSFCircleMenu ()<CAAnimationDelegate>
@@ -25,6 +27,9 @@
 @property (nonatomic,strong) NSMutableArray *itemCenterPointArr;
 @property (nonatomic,strong) UIImageView *bgImgView;
 @property (nonatomic,strong) UIImageView *centerImgView;
+
+//动画
+@property (nonatomic,strong) HSFAnimationHelper *animationHelper;
 
 @end
 
@@ -49,48 +54,22 @@
 
 #pragma mark 不推荐初始化方法：初始化后在对所有属性逐一赋值，最后setUp
 -(void)setUp{
+    //初始化动画helper
+    self.animationHelper = [[HSFAnimationHelper alloc]init];
+    self.animationHelper.config = self.config;
     //添加背景图片
     self.bgImgView = [[UIImageView alloc]initWithFrame:self.bounds];
     self.bgImgView.image = [UIImage imageNamed:self.config.bgImgName];
     self.bgImgView.contentMode = UIViewContentModeScaleAspectFill;
     [self addSubview:self.bgImgView];
     
-    //仅用于HSFCircleAnimation_bgCircleOpen
-    if (self.config.animation == HSFCircleAnimation_bgCircleOpen) {
-        if (self.openLayerArr.count > 0) {
-            [self.openLayerArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                [obj removeFromSuperlayer];
-            }];
+    //仅用于bgCircleOpen动画时
+    if (self.config.useNewAnimationWay && self.config.animation_bg == HSFCircleBgAnimation_bgCircleOpen) {
+        [self addBgCircleOpenLayers];
+    }else{
+        if (self.config.animation == HSFCircleAnimation_bgCircleOpen) {
+            [self addBgCircleOpenLayers];
         }
-        
-        NSInteger count = [self getSafeCountOfAllItems];
-        CGFloat perAngle = (M_PI * 2)/count;
-        CGFloat startAngel = -perAngle/2.f;
-        NSMutableArray *layerArr = [NSMutableArray array];
-        for (int i = 0; i < count; i++) {
-            UIBezierPath *path_layer;
-            if (self.config.direction == HSFCircleDirection_clockwise) {//顺时针
-                if (kStringIsEmpty(self.config.bgImgName)) {
-                    path_layer = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.config.radius, self.config.radius) radius:self.config.radius/2.f startAngle:perAngle*i+startAngel endAngle:perAngle*(i+1.1)+startAngel clockwise:NO];
-                }else{
-                    path_layer = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.config.radius, self.config.radius) radius:self.config.radius/2.f startAngle:perAngle*i+startAngel endAngle:perAngle*(i+1.1)+startAngel clockwise:YES];
-                }
-            }else{//逆时针
-                if (kStringIsEmpty(self.config.bgImgName)) {
-                    path_layer = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.config.radius, self.config.radius) radius:self.config.radius/2.f startAngle:perAngle*i+startAngel endAngle:perAngle*(i+1.1)+startAngel clockwise:YES];
-                }else{
-                    path_layer = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.config.radius, self.config.radius) radius:self.config.radius/2.f startAngle:perAngle*i+startAngel endAngle:perAngle*(i+1.1)+startAngel clockwise:NO];
-                }
-            }
-            CAShapeLayer *layer = [CAShapeLayer layer];
-            layer.path = path_layer.CGPath;
-            layer.fillColor = [UIColor clearColor].CGColor;
-            layer.strokeColor = self.config.bgColor.CGColor;
-            layer.lineWidth = self.config.radius;
-            [layerArr addObject:layer];
-            [self.layer addSublayer:layer];
-        }
-        self.openLayerArr = layerArr.mutableCopy;
     }
         
     //添加item
@@ -117,6 +96,43 @@
     maskLayer.lineWidth = self.config.radius;
     self.layer.mask = maskLayer;
     self.maskLayer = maskLayer;
+}
+#pragma mark 背景圆形动画时添加layer
+-(void)addBgCircleOpenLayers{
+    if (self.openLayerArr.count > 0) {
+        [self.openLayerArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [obj removeFromSuperlayer];
+        }];
+    }
+    
+    NSInteger count = [self getSafeCountOfAllItems];
+    CGFloat perAngle = (M_PI * 2)/count;
+    CGFloat startAngel = -perAngle/2.f;
+    NSMutableArray *layerArr = [NSMutableArray array];
+    for (int i = 0; i < count; i++) {
+        UIBezierPath *path_layer;
+        if (self.config.direction == HSFCircleDirection_clockwise) {//顺时针
+            if (kStringIsEmpty(self.config.bgImgName)) {
+                path_layer = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.config.radius, self.config.radius) radius:self.config.radius/2.f startAngle:perAngle*i+startAngel endAngle:perAngle*(i+1.1)+startAngel clockwise:NO];
+            }else{
+                path_layer = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.config.radius, self.config.radius) radius:self.config.radius/2.f startAngle:perAngle*i+startAngel endAngle:perAngle*(i+1.1)+startAngel clockwise:YES];
+            }
+        }else{//逆时针
+            if (kStringIsEmpty(self.config.bgImgName)) {
+                path_layer = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.config.radius, self.config.radius) radius:self.config.radius/2.f startAngle:perAngle*i+startAngel endAngle:perAngle*(i+1.1)+startAngel clockwise:YES];
+            }else{
+                path_layer = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.config.radius, self.config.radius) radius:self.config.radius/2.f startAngle:perAngle*i+startAngel endAngle:perAngle*(i+1.1)+startAngel clockwise:NO];
+            }
+        }
+        CAShapeLayer *layer = [CAShapeLayer layer];
+        layer.path = path_layer.CGPath;
+        layer.fillColor = [UIColor clearColor].CGColor;
+        layer.strokeColor = self.config.bgColor.CGColor;
+        layer.lineWidth = self.config.radius;
+        [layerArr addObject:layer];
+        [self.layer addSublayer:layer];
+    }
+    self.openLayerArr = layerArr.mutableCopy;
 }
 
 #pragma mark 添加item
@@ -201,25 +217,62 @@
 -(void)startAnimaiton {
     self.backgroundColor = self.config.bgColor;
     self.hidden = NO;
-    //开始执行动画
-    if (self.config.animation == HSFCircleAnimation_bgCircleMove) {
-        [self animationACTION_bgCircleMove];
-    }
-    else if (self.config.animation == HSFCircleAnimation_itemCircleMove) {
-        [self animationACTION_itemCircleMove];
-    }
-    else if (self.config.animation == HSFCircleAnimation_followMove) {
-        [self animationACTION_bgCircleMove];
-        [self animationACTION_itemCircleMove];
-    }
-    else if (self.config.animation == HSFCircleAnimation_bgCircleOpen) {
-        [self animationACTION_bgCircleOpen];
-    }
-    else if (self.config.animation == HSFCircleAnimation_itemShoot) {
-        [self animationACTION_itemShoot];
-    }
-    else if (self.config.animation == HSFCircleAnimation_itemShootBy) {
-        [self animationACTION_itemShootBy];
+    
+    if (self.config.useNewAnimationWay) {
+        //bg动画
+        if (self.config.animation_bg == HSFCircleBgAnimation_none) {
+            //...
+        }
+        else if (self.config.animation_bg == HSFCircleBgAnimation_bgCircleMove) {
+            [self.animationHelper animation_bgCircleMove_for:self.maskLayer];
+        }
+        else if (self.config.animation_bg == HSFCircleBgAnimation_bgCircleOpen) {
+            self.backgroundColor = [UIColor clearColor];
+            [self.animationHelper animation_bgCircleOpen_withOpenLayerArr:self.openLayerArr];
+        }
+        //item动画
+        if (self.config.animation_item == HSFCircleItemAnimation_none) {
+            //...
+        }
+        else if (self.config.animation_item == HSFCircleItemAnimation_itemCircleMove) {
+            [self.animationHelper animation_itemCircleMove_for:self.layer];
+        }
+        else if (self.config.animation_item == HSFCircleItemAnimation_itemShoot) {
+            [self.animationHelper animation_itemShoot_withItems:self.items itemCenterPointArr:self.itemCenterPointArr];
+        }
+        else if (self.config.animation_item == HSFCircleItemAnimation_itemShootBy) {
+            [self.animationHelper animation_itemShootBy_withItems:self.items itemCenterPointArr:self.itemCenterPointArr];
+        }
+    }else{
+        if (self.config.animation == HSFCircleAnimation_bgCircleMove) {
+//            [self animationACTION_bgCircleMove];
+            [self.animationHelper animation_bgCircleMove_for:self.maskLayer];
+        }
+        else if (self.config.animation == HSFCircleAnimation_itemCircleMove) {
+//            [self animationACTION_itemCircleMove];
+            [self.animationHelper animation_itemCircleMove_for:self.layer];
+        }
+        else if (self.config.animation == HSFCircleAnimation_followMove) {
+//            [self animationACTION_bgCircleMove];
+//            [self animationACTION_itemCircleMove];
+            
+            [self.animationHelper animation_bgCircleMove_for:self.maskLayer];
+            [self.animationHelper animation_itemCircleMove_for:self.layer];
+        }
+        else if (self.config.animation == HSFCircleAnimation_bgCircleOpen) {
+//            [self animationACTION_bgCircleOpen];
+            
+            self.backgroundColor = [UIColor clearColor];
+            [self.animationHelper animation_bgCircleOpen_withOpenLayerArr:self.openLayerArr];
+        }
+        else if (self.config.animation == HSFCircleAnimation_itemShoot) {
+//            [self animationACTION_itemShoot];
+            [self.animationHelper animation_itemShoot_withItems:self.items itemCenterPointArr:self.itemCenterPointArr];
+        }
+        else if (self.config.animation == HSFCircleAnimation_itemShootBy) {
+//            [self animationACTION_itemShootBy];
+            [self.animationHelper animation_itemShootBy_withItems:self.items itemCenterPointArr:self.itemCenterPointArr];
+        }
     }
 }
 
@@ -371,10 +424,6 @@
             [weakSelf itemShootBy:index];
         }
     }];
-    
-    
-    
-    
 }
 
 

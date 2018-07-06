@@ -85,7 +85,7 @@
     self.btn109.backgroundColor = [UIColor orangeColor];
     sender.backgroundColor = [[UIColor orangeColor] colorWithAlphaComponent:0.5];
     
-    self.config = [[HSFCircleMenuConfig alloc]init];
+    
     
     switch (sender.tag) {
         case 100:
@@ -145,6 +145,8 @@
         default:
             break;
     }
+    
+    self.config = [[HSFCircleMenuConfig alloc]init];
     self.config.icons = @[@"风车", @"风筝", @"话筒", @"魔方", @"摇杆", @"气球"];
 //    self.config.titles = @[@"风车", @"风筝", @"话筒", @"魔方", @"摇杆", @"气球"];
     self.config.direction = HSFCircleDirection_anticlockwise;
@@ -153,6 +155,9 @@
     self.config.bgImgName = @"bg001";
     self.config.centerImgName = @"world";
     self.config.centerImgSize = CGSizeMake(100.f, 100.f);
+    self.config.animation_item = HSFCircleItemAnimation_itemCircleMove;
+    self.config.animation_bg = HSFCircleBgAnimation_bgCircleOpen;
+    self.config.useNewAnimationWay = NO;
     self.circleView = [HSFCircleMenu menuWithConfig:self.config];
     
     

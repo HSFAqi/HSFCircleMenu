@@ -26,6 +26,8 @@
 		5103C3C520EC6728006A63B4 /* 气球.png in Resources */ = {isa = PBXBuildFile; fileRef = 5103C3C420EC6728006A63B4 /* 气球.png */; };
 		5103C3C720EC672E006A63B4 /* 手柄.png in Resources */ = {isa = PBXBuildFile; fileRef = 5103C3C620EC672E006A63B4 /* 手柄.png */; };
 		5103C3C920EC6734006A63B4 /* 摇杆.png in Resources */ = {isa = PBXBuildFile; fileRef = 5103C3C820EC6734006A63B4 /* 摇杆.png */; };
+		5125F2AA20EF16AF004C9178 /* NewVersionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5125F2A920EF16AF004C9178 /* NewVersionVC.m */; };
+		51454F5A20EE70810058AB9B /* HSFAnimationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 51454F5920EE70810058AB9B /* HSFAnimationHelper.m */; };
 		51C6F90820EDA613006C6831 /* HSFCircleMenuConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C6F90620EDA612006C6831 /* HSFCircleMenuConfig.m */; };
 		51C6F96A20EE1C2F006C6831 /* bg006.png in Resources */ = {isa = PBXBuildFile; fileRef = 51C6F96420EE1C2F006C6831 /* bg006.png */; };
 		51C6F96B20EE1C2F006C6831 /* bg004.png in Resources */ = {isa = PBXBuildFile; fileRef = 51C6F96520EE1C2F006C6831 /* bg004.png */; };
@@ -86,7 +88,11 @@
 		5103C3C420EC6728006A63B4 /* 气球.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "气球.png"; sourceTree = "<group>"; };
 		5103C3C620EC672E006A63B4 /* 手柄.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "手柄.png"; sourceTree = "<group>"; };
 		5103C3C820EC6734006A63B4 /* 摇杆.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "摇杆.png"; sourceTree = "<group>"; };
+		5125F2A820EF16AF004C9178 /* NewVersionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewVersionVC.h; sourceTree = "<group>"; };
+		5125F2A920EF16AF004C9178 /* NewVersionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewVersionVC.m; sourceTree = "<group>"; };
 		513A390CCFADC8CED3DE71CF /* Pods-HSFCircleMenuDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSFCircleMenuDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HSFCircleMenuDemoUITests/Pods-HSFCircleMenuDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		51454F5820EE70810058AB9B /* HSFAnimationHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSFAnimationHelper.h; sourceTree = "<group>"; };
+		51454F5920EE70810058AB9B /* HSFAnimationHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSFAnimationHelper.m; sourceTree = "<group>"; };
 		51C6F90620EDA612006C6831 /* HSFCircleMenuConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSFCircleMenuConfig.m; sourceTree = "<group>"; };
 		51C6F90720EDA612006C6831 /* HSFCircleMenuConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSFCircleMenuConfig.h; sourceTree = "<group>"; };
 		51C6F96420EE1C2F006C6831 /* bg006.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg006.png; sourceTree = "<group>"; };
@@ -161,6 +167,8 @@
 				5103C37D20EC6379006A63B4 /* AppDelegate.m */,
 				5103C37F20EC6379006A63B4 /* ViewController.h */,
 				5103C38020EC6379006A63B4 /* ViewController.m */,
+				5125F2A820EF16AF004C9178 /* NewVersionVC.h */,
+				5125F2A920EF16AF004C9178 /* NewVersionVC.m */,
 				5103C38220EC6379006A63B4 /* Main.storyboard */,
 				5103C38520EC637D006A63B4 /* Assets.xcassets */,
 				5103C38720EC637D006A63B4 /* LaunchScreen.storyboard */,
@@ -194,6 +202,8 @@
 				5103C3B520EC63E5006A63B4 /* HSFTool.h */,
 				51C6F90720EDA612006C6831 /* HSFCircleMenuConfig.h */,
 				51C6F90620EDA612006C6831 /* HSFCircleMenuConfig.m */,
+				51454F5820EE70810058AB9B /* HSFAnimationHelper.h */,
+				51454F5920EE70810058AB9B /* HSFAnimationHelper.m */,
 				5103C3AF20EC6398006A63B4 /* HSFCircleMenu.h */,
 				5103C3B220EC6398006A63B4 /* HSFCircleMenu.m */,
 				5103C3B020EC6398006A63B4 /* HSFCircleMenuItem.h */,
@@ -461,8 +471,10 @@
 			files = (
 				5103C38120EC6379006A63B4 /* ViewController.m in Sources */,
 				5103C3B420EC6399006A63B4 /* HSFCircleMenu.m in Sources */,
+				5125F2AA20EF16AF004C9178 /* NewVersionVC.m in Sources */,
 				5103C3B320EC6399006A63B4 /* HSFCircleMenuItem.m in Sources */,
 				5103C38C20EC637D006A63B4 /* main.m in Sources */,
+				51454F5A20EE70810058AB9B /* HSFAnimationHelper.m in Sources */,
 				51C6F90820EDA613006C6831 /* HSFCircleMenuConfig.m in Sources */,
 				5103C37E20EC6379006A63B4 /* AppDelegate.m in Sources */,
 			);
