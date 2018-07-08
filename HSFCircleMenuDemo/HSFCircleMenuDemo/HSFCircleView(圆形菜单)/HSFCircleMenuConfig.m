@@ -22,8 +22,8 @@
         self.itemW = 40.f;
         self.itemBgColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5];
         self.isCircleLayout = NO;
-        self.bgImgName = @"";
-        self.centerImgName = @"";
+        self.bgImg = nil;
+        self.centerImg = nil;
         self.centerImgSize = CGSizeMake(80.f, 80.f);
         self.direction = HSFCircleDirection_clockwise;
         self.repeatCount = 1;

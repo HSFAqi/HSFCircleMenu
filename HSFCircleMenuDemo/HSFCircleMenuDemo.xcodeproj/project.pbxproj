@@ -18,7 +18,7 @@
 		5103C3A120EC637D006A63B4 /* HSFCircleMenuDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5103C3A020EC637D006A63B4 /* HSFCircleMenuDemoUITests.m */; };
 		5103C3B320EC6399006A63B4 /* HSFCircleMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5103C3B120EC6398006A63B4 /* HSFCircleMenuItem.m */; };
 		5103C3B420EC6399006A63B4 /* HSFCircleMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 5103C3B220EC6398006A63B4 /* HSFCircleMenu.m */; };
-		5103C3BB20EC6704006A63B4 /* 头戴式耳机.png in Resources */ = {isa = PBXBuildFile; fileRef = 5103C3BA20EC6704006A63B4 /* 头戴式耳机.png */; };
+		5103C3BB20EC6704006A63B4 /* 耳机.png in Resources */ = {isa = PBXBuildFile; fileRef = 5103C3BA20EC6704006A63B4 /* 耳机.png */; };
 		5103C3BD20EC670C006A63B4 /* 风车.png in Resources */ = {isa = PBXBuildFile; fileRef = 5103C3BC20EC670C006A63B4 /* 风车.png */; };
 		5103C3BF20EC6713006A63B4 /* 风筝.png in Resources */ = {isa = PBXBuildFile; fileRef = 5103C3BE20EC6713006A63B4 /* 风筝.png */; };
 		5103C3C120EC671A006A63B4 /* 话筒.png in Resources */ = {isa = PBXBuildFile; fileRef = 5103C3C020EC671A006A63B4 /* 话筒.png */; };
@@ -27,6 +27,14 @@
 		5103C3C720EC672E006A63B4 /* 手柄.png in Resources */ = {isa = PBXBuildFile; fileRef = 5103C3C620EC672E006A63B4 /* 手柄.png */; };
 		5103C3C920EC6734006A63B4 /* 摇杆.png in Resources */ = {isa = PBXBuildFile; fileRef = 5103C3C820EC6734006A63B4 /* 摇杆.png */; };
 		5125F2AA20EF16AF004C9178 /* NewVersionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5125F2A920EF16AF004C9178 /* NewVersionVC.m */; };
+		5125F2B220EF4F05004C9178 /* HSFSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5125F2B020EF4F05004C9178 /* HSFSettingCell.m */; };
+		5125F2B320EF4F05004C9178 /* HSFSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5125F2B120EF4F05004C9178 /* HSFSettingCell.xib */; };
+		5142866920EFBEA9004C4713 /* palette.png in Resources */ = {isa = PBXBuildFile; fileRef = 5142866620EFBEA8004C4713 /* palette.png */; };
+		5142866A20EFBEA9004C4713 /* WSColorImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5142866820EFBEA9004C4713 /* WSColorImageView.m */; };
+		5142866E20EFBEDB004C4713 /* ColorSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5142866C20EFBEDB004C4713 /* ColorSettingVC.m */; };
+		5142866F20EFBEDB004C4713 /* ColorSettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5142866D20EFBEDB004C4713 /* ColorSettingVC.xib */; };
+		5142867320F078B0004C4713 /* HSFSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5142867120F078B0004C4713 /* HSFSettingVC.m */; };
+		5142867420F078B0004C4713 /* HSFSettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5142867220F078B0004C4713 /* HSFSettingVC.xib */; };
 		51454F5A20EE70810058AB9B /* HSFAnimationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 51454F5920EE70810058AB9B /* HSFAnimationHelper.m */; };
 		51C6F90820EDA613006C6831 /* HSFCircleMenuConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C6F90620EDA612006C6831 /* HSFCircleMenuConfig.m */; };
 		51C6F96A20EE1C2F006C6831 /* bg006.png in Resources */ = {isa = PBXBuildFile; fileRef = 51C6F96420EE1C2F006C6831 /* bg006.png */; };
@@ -80,7 +88,7 @@
 		5103C3B120EC6398006A63B4 /* HSFCircleMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSFCircleMenuItem.m; sourceTree = "<group>"; };
 		5103C3B220EC6398006A63B4 /* HSFCircleMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSFCircleMenu.m; sourceTree = "<group>"; };
 		5103C3B520EC63E5006A63B4 /* HSFTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSFTool.h; sourceTree = "<group>"; };
-		5103C3BA20EC6704006A63B4 /* 头戴式耳机.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "头戴式耳机.png"; sourceTree = "<group>"; };
+		5103C3BA20EC6704006A63B4 /* 耳机.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "耳机.png"; sourceTree = "<group>"; };
 		5103C3BC20EC670C006A63B4 /* 风车.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "风车.png"; sourceTree = "<group>"; };
 		5103C3BE20EC6713006A63B4 /* 风筝.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "风筝.png"; sourceTree = "<group>"; };
 		5103C3C020EC671A006A63B4 /* 话筒.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "话筒.png"; sourceTree = "<group>"; };
@@ -90,7 +98,19 @@
 		5103C3C820EC6734006A63B4 /* 摇杆.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "摇杆.png"; sourceTree = "<group>"; };
 		5125F2A820EF16AF004C9178 /* NewVersionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewVersionVC.h; sourceTree = "<group>"; };
 		5125F2A920EF16AF004C9178 /* NewVersionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewVersionVC.m; sourceTree = "<group>"; };
+		5125F2AF20EF4F05004C9178 /* HSFSettingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSFSettingCell.h; sourceTree = "<group>"; };
+		5125F2B020EF4F05004C9178 /* HSFSettingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSFSettingCell.m; sourceTree = "<group>"; };
+		5125F2B120EF4F05004C9178 /* HSFSettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HSFSettingCell.xib; sourceTree = "<group>"; };
 		513A390CCFADC8CED3DE71CF /* Pods-HSFCircleMenuDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSFCircleMenuDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HSFCircleMenuDemoUITests/Pods-HSFCircleMenuDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5142866620EFBEA8004C4713 /* palette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = palette.png; sourceTree = "<group>"; };
+		5142866720EFBEA9004C4713 /* WSColorImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSColorImageView.h; sourceTree = "<group>"; };
+		5142866820EFBEA9004C4713 /* WSColorImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSColorImageView.m; sourceTree = "<group>"; };
+		5142866B20EFBEDB004C4713 /* ColorSettingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorSettingVC.h; sourceTree = "<group>"; };
+		5142866C20EFBEDB004C4713 /* ColorSettingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorSettingVC.m; sourceTree = "<group>"; };
+		5142866D20EFBEDB004C4713 /* ColorSettingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorSettingVC.xib; sourceTree = "<group>"; };
+		5142867020F078B0004C4713 /* HSFSettingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSFSettingVC.h; sourceTree = "<group>"; };
+		5142867120F078B0004C4713 /* HSFSettingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSFSettingVC.m; sourceTree = "<group>"; };
+		5142867220F078B0004C4713 /* HSFSettingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HSFSettingVC.xib; sourceTree = "<group>"; };
 		51454F5820EE70810058AB9B /* HSFAnimationHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSFAnimationHelper.h; sourceTree = "<group>"; };
 		51454F5920EE70810058AB9B /* HSFAnimationHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSFAnimationHelper.m; sourceTree = "<group>"; };
 		51C6F90620EDA612006C6831 /* HSFCircleMenuConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSFCircleMenuConfig.m; sourceTree = "<group>"; };
@@ -169,6 +189,7 @@
 				5103C38020EC6379006A63B4 /* ViewController.m */,
 				5125F2A820EF16AF004C9178 /* NewVersionVC.h */,
 				5125F2A920EF16AF004C9178 /* NewVersionVC.m */,
+				5125F2AE20EF4EDC004C9178 /* Setting设置 */,
 				5103C38220EC6379006A63B4 /* Main.storyboard */,
 				5103C38520EC637D006A63B4 /* Assets.xcassets */,
 				5103C38720EC637D006A63B4 /* LaunchScreen.storyboard */,
@@ -217,7 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				51C6F96320EE1C22006C6831 /* bg */,
-				5103C3BA20EC6704006A63B4 /* 头戴式耳机.png */,
+				5103C3BA20EC6704006A63B4 /* 耳机.png */,
 				5103C3C620EC672E006A63B4 /* 手柄.png */,
 				5103C3C820EC6734006A63B4 /* 摇杆.png */,
 				5103C3BC20EC670C006A63B4 /* 风车.png */,
@@ -227,6 +248,33 @@
 				5103C3C420EC6728006A63B4 /* 气球.png */,
 			);
 			path = resource;
+			sourceTree = "<group>";
+		};
+		5125F2AE20EF4EDC004C9178 /* Setting设置 */ = {
+			isa = PBXGroup;
+			children = (
+				5142867020F078B0004C4713 /* HSFSettingVC.h */,
+				5142867120F078B0004C4713 /* HSFSettingVC.m */,
+				5142867220F078B0004C4713 /* HSFSettingVC.xib */,
+				5125F2AF20EF4F05004C9178 /* HSFSettingCell.h */,
+				5125F2B020EF4F05004C9178 /* HSFSettingCell.m */,
+				5125F2B120EF4F05004C9178 /* HSFSettingCell.xib */,
+				5142866520EFBE7F004C4713 /* ColorSetting */,
+			);
+			path = "Setting设置";
+			sourceTree = "<group>";
+		};
+		5142866520EFBE7F004C4713 /* ColorSetting */ = {
+			isa = PBXGroup;
+			children = (
+				5142866620EFBEA8004C4713 /* palette.png */,
+				5142866720EFBEA9004C4713 /* WSColorImageView.h */,
+				5142866820EFBEA9004C4713 /* WSColorImageView.m */,
+				5142866B20EFBEDB004C4713 /* ColorSettingVC.h */,
+				5142866C20EFBEDB004C4713 /* ColorSettingVC.m */,
+				5142866D20EFBEDB004C4713 /* ColorSettingVC.xib */,
+			);
+			path = ColorSetting;
 			sourceTree = "<group>";
 		};
 		51C6F96320EE1C22006C6831 /* bg */ = {
@@ -276,6 +324,7 @@
 				5103C37520EC6379006A63B4 /* Sources */,
 				5103C37620EC6379006A63B4 /* Frameworks */,
 				5103C37720EC6379006A63B4 /* Resources */,
+				0373975DBE28424EB4C88D81 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -371,18 +420,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5142867420F078B0004C4713 /* HSFSettingVC.xib in Resources */,
 				5103C3C720EC672E006A63B4 /* 手柄.png in Resources */,
 				5103C3BF20EC6713006A63B4 /* 风筝.png in Resources */,
 				5103C3C120EC671A006A63B4 /* 话筒.png in Resources */,
 				51C6F96A20EE1C2F006C6831 /* bg006.png in Resources */,
 				5103C3BD20EC670C006A63B4 /* 风车.png in Resources */,
+				5142866F20EFBEDB004C4713 /* ColorSettingVC.xib in Resources */,
 				51C6F96C20EE1C2F006C6831 /* bg002.png in Resources */,
+				5142866920EFBEA9004C4713 /* palette.png in Resources */,
 				51C6F96D20EE1C2F006C6831 /* bg001.png in Resources */,
 				5103C3C920EC6734006A63B4 /* 摇杆.png in Resources */,
 				51C6F96E20EE1C2F006C6831 /* bg003.png in Resources */,
-				5103C3BB20EC6704006A63B4 /* 头戴式耳机.png in Resources */,
+				5103C3BB20EC6704006A63B4 /* 耳机.png in Resources */,
 				5103C38920EC637D006A63B4 /* LaunchScreen.storyboard in Resources */,
 				5103C38620EC637D006A63B4 /* Assets.xcassets in Resources */,
+				5125F2B320EF4F05004C9178 /* HSFSettingCell.xib in Resources */,
 				5103C3C320EC6721006A63B4 /* 魔方.png in Resources */,
 				51C6F96B20EE1C2F006C6831 /* bg004.png in Resources */,
 				5103C38420EC6379006A63B4 /* Main.storyboard in Resources */,
@@ -408,6 +461,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0373975DBE28424EB4C88D81 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HSFCircleMenuDemo/Pods-HSFCircleMenuDemo-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HSFCircleMenuDemo/Pods-HSFCircleMenuDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		13A881559551B68E8F479887 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -469,12 +540,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5125F2B220EF4F05004C9178 /* HSFSettingCell.m in Sources */,
 				5103C38120EC6379006A63B4 /* ViewController.m in Sources */,
 				5103C3B420EC6399006A63B4 /* HSFCircleMenu.m in Sources */,
 				5125F2AA20EF16AF004C9178 /* NewVersionVC.m in Sources */,
 				5103C3B320EC6399006A63B4 /* HSFCircleMenuItem.m in Sources */,
+				5142867320F078B0004C4713 /* HSFSettingVC.m in Sources */,
+				5142866A20EFBEA9004C4713 /* WSColorImageView.m in Sources */,
 				5103C38C20EC637D006A63B4 /* main.m in Sources */,
 				51454F5A20EE70810058AB9B /* HSFAnimationHelper.m in Sources */,
+				5142866E20EFBEDB004C4713 /* ColorSettingVC.m in Sources */,
 				51C6F90820EDA613006C6831 /* HSFCircleMenuConfig.m in Sources */,
 				5103C37E20EC6379006A63B4 /* AppDelegate.m in Sources */,
 			);

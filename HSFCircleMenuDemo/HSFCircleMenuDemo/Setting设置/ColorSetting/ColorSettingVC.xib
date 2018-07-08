@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ColorSettingVC">
+            <connections>
+                <outlet property="saveBtn" destination="LxW-hS-QQM" id="K3g-OH-fc0"/>
+                <outlet property="selectColorView" destination="Idr-2J-CMO" id="I7X-JA-Uq5"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Idr-2J-CMO">
+                    <rect key="frame" x="50" y="196" width="275" height="275"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Idr-2J-CMO" secondAttribute="height" multiplier="1:1" id="nya-53-osF"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LxW-hS-QQM">
+                    <rect key="frame" x="50" y="501" width="275" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="jl2-op-DaE"/>
+                    </constraints>
+                    <state key="normal" title="保存"/>
+                    <connections>
+                        <action selector="saveACTION:" destination="-1" eventType="touchUpInside" id="JB5-e0-Lax"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Idr-2J-CMO" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="193-xz-VTf"/>
+                <constraint firstAttribute="trailing" secondItem="LxW-hS-QQM" secondAttribute="trailing" constant="50" id="E5D-B0-iOS"/>
+                <constraint firstItem="LxW-hS-QQM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="HQ0-Mf-oQc"/>
+                <constraint firstItem="Idr-2J-CMO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="XuM-Hg-oWi"/>
+                <constraint firstAttribute="trailing" secondItem="Idr-2J-CMO" secondAttribute="trailing" constant="50" id="fVx-ks-vzg"/>
+                <constraint firstItem="LxW-hS-QQM" firstAttribute="top" secondItem="Idr-2J-CMO" secondAttribute="bottom" constant="30" id="nZ9-48-gf1"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

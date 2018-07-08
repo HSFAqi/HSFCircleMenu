@@ -69,8 +69,8 @@ typedef NS_ENUM(NSInteger, HSFCircleItemAnimation) {
 @property (nonatomic,assign) CGFloat itemW;//item宽度 宽=高 （默认：40.f）
 @property (nonatomic,strong) UIColor *itemBgColor;//item背景色 （默认：白色+alpha=0.5）
 @property (nonatomic,assign) BOOL isCircleLayout;//是否基于圆周布局 （默认：否）
-@property (nonatomic,strong) NSString *bgImgName;//背景图
-@property (nonatomic,strong) NSString *centerImgName;//中心图
+@property (nonatomic,strong) UIImage *bgImg;//背景图
+@property (nonatomic,strong) UIImage *centerImg;//中心图
 @property (nonatomic,assign) CGSize centerImgSize;//中心图大小 （默认：CGSizeMake(80.f, 80.f)）
 
 //动画相关

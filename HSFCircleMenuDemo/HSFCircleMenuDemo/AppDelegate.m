@@ -8,15 +8,27 @@
 
 #import "AppDelegate.h"
 
+/* 键盘 */
+#import <IQKeyboardManager/IQKeyboardManager.h>
+
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-
+#pragma mark -配置键盘
+-(void)setUpSDK_IQKeyboardManager{
+    [IQKeyboardManager sharedManager].enable = YES;//自动键盘处理事件在整个项目内是否启用。
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;//需要当键盘弹起时，点击背景收起键盘
+    [IQKeyboardManager sharedManager].enableAutoToolbar = YES;//需要支持内联编辑(Inline Editing), 这就需要隐藏键盘上的工具条(默认打开)
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    
+    [self setUpSDK_IQKeyboardManager];
+    
+    
     return YES;
 }
 

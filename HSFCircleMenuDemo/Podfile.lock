@@ -1,20 +1,24 @@
 PODS:
+  - IQKeyboardManager (6.0.3)
   - Masonry (1.1.0)
   - TYAlertController (1.2.0)
 
 DEPENDENCIES:
+  - IQKeyboardManager
   - Masonry
   - TYAlertController
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - IQKeyboardManager
     - Masonry
     - TYAlertController
 
 SPEC CHECKSUMS:
+  IQKeyboardManager: c390e612f4b98c8fd748016470138537dc163ead
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   TYAlertController: c121090edb0bea7426f987da94cdddd81eef4231
 
-PODFILE CHECKSUM: 358050a4878e48def0ba6c18fe7bb537a7f37306
+PODFILE CHECKSUM: 8646a1921697f118793f3a460eda3f32cbcf6f0a
 
 COCOAPODS: 1.5.2

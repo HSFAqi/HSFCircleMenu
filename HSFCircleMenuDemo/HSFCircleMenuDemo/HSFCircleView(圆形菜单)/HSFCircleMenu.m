@@ -59,7 +59,9 @@
     self.animationHelper.config = self.config;
     //添加背景图片
     self.bgImgView = [[UIImageView alloc]initWithFrame:self.bounds];
-    self.bgImgView.image = [UIImage imageNamed:self.config.bgImgName];
+    if (self.config.bgImg) {
+        self.bgImgView.image = self.config.bgImg;
+    }
     self.bgImgView.contentMode = UIViewContentModeScaleAspectFill;
     [self addSubview:self.bgImgView];
     
@@ -79,7 +81,9 @@
     self.centerImgView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.config.centerImgSize.width, self.config.centerImgSize.height)];
     self.centerImgView.center = self.center;
     self.centerImgView.contentMode = UIViewContentModeScaleAspectFit;
-    self.centerImgView.image = [UIImage imageNamed:self.config.centerImgName];
+    if (self.config.centerImg) {
+        self.centerImgView.image = self.config.centerImg;
+    }
     [self addSubview:self.centerImgView];
     
     //遮罩
@@ -112,13 +116,13 @@
     for (int i = 0; i < count; i++) {
         UIBezierPath *path_layer;
         if (self.config.direction == HSFCircleDirection_clockwise) {//顺时针
-            if (kStringIsEmpty(self.config.bgImgName)) {
+            if (self.config.bgImg) {
                 path_layer = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.config.radius, self.config.radius) radius:self.config.radius/2.f startAngle:perAngle*i+startAngel endAngle:perAngle*(i+1.1)+startAngel clockwise:NO];
             }else{
                 path_layer = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.config.radius, self.config.radius) radius:self.config.radius/2.f startAngle:perAngle*i+startAngel endAngle:perAngle*(i+1.1)+startAngel clockwise:YES];
             }
         }else{//逆时针
-            if (kStringIsEmpty(self.config.bgImgName)) {
+            if (self.config.bgImg) {
                 path_layer = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.config.radius, self.config.radius) radius:self.config.radius/2.f startAngle:perAngle*i+startAngel endAngle:perAngle*(i+1.1)+startAngel clockwise:YES];
             }else{
                 path_layer = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.config.radius, self.config.radius) radius:self.config.radius/2.f startAngle:perAngle*i+startAngel endAngle:perAngle*(i+1.1)+startAngel clockwise:NO];
@@ -312,7 +316,7 @@
         CALayer *layer = (CALayer *)obj;
         //动画
         CABasicAnimation *animation_normal = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-        if (kStringIsEmpty(weakSelf.config.bgImgName)) {
+        if (weakSelf.config.bgImg) {
             animation_normal.fromValue = @0;
             animation_normal.toValue = @1;
         }else{

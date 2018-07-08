@@ -20,6 +20,7 @@ target 'HSFCircleMenuDemo' do
   
   pod 'Masonry'#布局
   pod 'TYAlertController'#提示框
+  pod 'IQKeyboardManager'#键盘
   
 
 end

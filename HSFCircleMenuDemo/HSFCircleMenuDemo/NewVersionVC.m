@@ -11,8 +11,9 @@
 #import "HSFTool.h"
 #import "HSFCircleMenu.h"
 #import "HSFCircleMenuConfig.h"
+#import "HSFSettingVC.h"
 
-@interface NewVersionVC ()
+@interface NewVersionVC ()<HSFSettingVCDelegate, UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *bgBtn001;
 @property (weak, nonatomic) IBOutlet UIButton *bgBtn002;
@@ -40,6 +41,8 @@
 @property (nonatomic,strong) HSFCircleMenu *circleView;
 @property (nonatomic,strong) HSFCircleMenuConfig *config;
 
+@property (weak, nonatomic) IBOutlet UITextField *duringTF;
+@property (weak, nonatomic) IBOutlet UITextField *repeatCountTF;
 
 
 @end
@@ -49,6 +52,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"新版动画方式";
+    self.duringTF.delegate = self;
+    self.repeatCountTF.delegate = self;
+    
     //默认
     
     self.bgBtn001.backgroundColor = [kRGBColor(255, 172, 47) colorWithAlphaComponent:0.5];
@@ -73,10 +79,10 @@
     self.itemBtn009.backgroundColor = kRGBColor(77, 147, 225);
     
     self.config = [[HSFCircleMenuConfig alloc]init];
-    self.config.icons = @[@"风车", @"风筝", @"话筒", @"魔方", @"摇杆", @"气球"];
-//    self.config.titles = @[@"风车", @"风筝", @"话筒", @"魔方", @"摇杆", @"气球"];
-    self.config.bgImgName = @"bg001";
-    self.config.centerImgName = @"world";
+    self.config.icons = @[@"耳机", @"手柄", @"摇杆", @"风车", @"风筝", @"话筒", @"魔方", @"气球"];
+    self.config.titles = @[@"耳机", @"手柄", @"摇杆", @"风车", @"风筝", @"话筒", @"魔方", @"气球"];
+    self.config.bgImg = [UIImage imageNamed:@"bg001"];
+    self.config.centerImg = [UIImage imageNamed:@"world"];
     self.config.centerImgSize = CGSizeMake(100.f, 100.f);
     self.config.useNewAnimationWay = YES;
     self.config.animation_item = HSFCircleItemAnimation_none;
@@ -161,20 +167,7 @@
         default:
             break;
     }
-    
-    //创建菜单
-    self.circleView = [HSFCircleMenu menuWithConfig:self.config];
-    
-    //弹框
-    self.alertC = [TYAlertController alertControllerWithAlertView:self.circleView];
-    self.alertC.backgoundTapDismissEnable = YES;
-    
-    //点击item
-    __block typeof(self) weakSelf = self;
-    self.circleView.HSFCircleMenuClickItemBlock = ^(NSInteger tag) {
-        [weakSelf.alertC dismissViewControllerAnimated:YES completion:nil];
-    };
-    
+    [self createCircleMenuAlert];
 }
 
 
@@ -242,14 +235,72 @@
         default:
             break;
     }
+    [self createCircleMenuAlert];
 }
 
+#pragma mark 动画方向
+- (IBAction)changeAnimationDirectionACTION:(UISegmentedControl *)sender {
+    if (sender.selectedSegmentIndex == 0) {
+        self.config.direction = HSFCircleDirection_clockwise;
+    }else{
+        self.config.direction = HSFCircleDirection_anticlockwise;
+    }
+    [self createCircleMenuAlert];
+}
 
+#pragma mark UITextFieldDelegate
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    if (textField == self.duringTF) {
+        if (kStringIsEmpty(textField.text)) {
+            self.config.during = 0.5f;
+        }else{
+            self.config.during = textField.text.floatValue;
+        }
+    }else{
+        if (kStringIsEmpty(textField.text)) {
+            self.config.repeatCount = 1;
+        }else{
+            self.config.repeatCount = textField.text.integerValue;
+        }
+    }
+    [self createCircleMenuAlert];
+}
+
+#pragma mark 点击更多设置
+- (IBAction)moreSettingACTION:(UIButton *)sender {
+    HSFSettingVC *vc = [[HSFSettingVC alloc]init];
+    vc.delegate = self;
+    vc.config = self.config;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+#pragma mark HSFSettingVCDelegate
+-(void)saveSettingWithConfig:(HSFCircleMenuConfig *)config{
+    self.config = config;
+    [self createCircleMenuAlert];
+}
 
 #pragma mark 点击show
 - (IBAction)show:(id)sender {
     [self.circleView startAnimaiton];
     [self presentViewController:self.alertC animated:YES completion:nil];
+}
+
+
+#pragma mark 弹框
+-(void)createCircleMenuAlert{
+    //创建菜单
+    self.circleView = [HSFCircleMenu menuWithConfig:self.config];
+    
+    //弹框
+    self.alertC = [TYAlertController alertControllerWithAlertView:self.circleView];
+    self.alertC.backgoundTapDismissEnable = YES;
+    
+    //点击item
+    __block typeof(self) weakSelf = self;
+    self.circleView.HSFCircleMenuClickItemBlock = ^(NSInteger tag) {
+        [weakSelf.alertC dismissViewControllerAnimated:YES completion:nil];
+    };
 }
 
 

@@ -7,180 +7,248 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		100DCBFE39E91CF7A296FABFAB4D7CC6 /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 3237E8AB5BA49B326B51C176C11385DF /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		13635B78121B99E5C03C92506A161607 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EAEE8AC8C3E5EC72081C7B9D8491F46 /* MASViewAttribute.m */; };
-		183BB1B45AEFBDA7671593D5C8E97CE9 /* TYBaseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E42396868D86904917A9B4A6DC89BA /* TYBaseAnimation.m */; };
-		214DF0B6664033C87D6B846599FB477A /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FA42B1CA739F3726D652127F5AA514D /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		214E8783BC2757BB5C95DADBEBD94874 /* TYAlertScaleFadeAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C36C9B3738AAC9C60055021D2AC9F4F /* TYAlertScaleFadeAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		269DE45003F1B3CE62BB69F176E882A9 /* TYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4D85FD3A915510D3AB5EE484D7C1E6 /* TYAlertView.m */; };
-		288EB6381E0B005BDFB4350C8F12C52D /* TYAlertDropDownAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB84B8A90BEAFB81894A7581B6D4926 /* TYAlertDropDownAnimation.m */; };
-		2DBB74B8B5DDB1F621433DD12BF35102 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = AA15121E61DF207A14C892668B6A35E1 /* MASViewConstraint.m */; };
-		31737B7C066616F342287DCF95F98919 /* UIView+TYAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 209A67D3BB54A26277CE9E154C7E6D72 /* UIView+TYAlertView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3E8E6916C563B9CB12AA417275FC6EB3 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A8E7730FC7981C08A17F426EE55079 /* NSLayoutConstraint+MASDebugAdditions.m */; };
-		3FEE1B6ACE675D9D31F03E2918C044D3 /* TYAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 035F165182D96777E77FA41DCFB94296 /* TYAlertView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		46B538AFD3B41E0E9E53F78C76D65AA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
-		496A100FE0B67F00E2C9D3A77F996A41 /* TYAlertFadeAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = D640F8F172A0797131815019AF6E0E54 /* TYAlertFadeAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		523F69012549DCADB26D11EFB6593B5B /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 03AF13DD2F4E6CB3AB56575EB2512C23 /* Masonry.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5AE3D7621DF0F92C9338021B3D529462 /* UIView+TYAutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = B303612CE99C9144663491A0F4FB9C8C /* UIView+TYAutoLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5EBFADB0ACACA114B98082EBD8FDA650 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EC13954BCFC3C837A38ACE300EFF2EB /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		000A160D368A7A776A129AF1695ADAAB /* TYShowAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F53119D7D70CEEC23E1D4AD4FEEF1 /* TYShowAlertView.m */; };
+		0B2AF0C1DB6728C3E5D55FCA0872AF2F /* TYAlertController+TransitionAnimate.m in Sources */ = {isa = PBXBuildFile; fileRef = 858D341C3FFF281197C44A42061AF010 /* TYAlertController+TransitionAnimate.m */; };
+		0CD6A958B421C84959F921143E7662FF /* IQUIViewController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5761E892D6F8DB47BFEA0A3F4F4738B4 /* IQUIViewController+Additions.m */; };
+		100DCBFE39E91CF7A296FABFAB4D7CC6 /* MASViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C831D7F4EBCFE3E7BFFD4F1F94BF32C /* MASViewAttribute.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		13635B78121B99E5C03C92506A161607 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DC383E21048DC523659DBE0E68728A /* MASViewAttribute.m */; };
+		13AA97B9D9B0E943554B3513A9273385 /* IQKeyboardReturnKeyHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E4C67D72EC53959950563CA79338F5D /* IQKeyboardReturnKeyHandler.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1677AC5F2EC328AC82F301A3E84736A0 /* TYBaseAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BE4BD3BF16CDA52C1C32D33932033E7 /* TYBaseAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1AE740CA9DD11A1C662E179F881A7386 /* IQKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6906194E0110CB67B3D9E6C8278369ED /* IQKeyboardManager.m */; };
+		214DF0B6664033C87D6B846599FB477A /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 27F26BE510F5DFBCFD6C2D9F4689D526 /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2474C980446D6CBCE6CCD23A0ED889E1 /* IQUIScrollView+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = A0F6FF0C8E9E45BEF34F1C74504F85D9 /* IQUIScrollView+Additions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2DA0795313E480A80A5A90BB1E9BDDB8 /* IQTitleBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C9AD35F9440242313163F22DA03510 /* IQTitleBarButtonItem.m */; };
+		2DBB74B8B5DDB1F621433DD12BF35102 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C669D4C5009428BFBD2057FA4DEA113 /* MASViewConstraint.m */; };
+		33F1E37B2119A9310621716DF7A81F11 /* UIView+TYAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4ADA76A374D3282B330C361B074CB2 /* UIView+TYAutoLayout.m */; };
+		352427C52DC4C93B0718498D19FFD696 /* IQKeyboardManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E295B540F097A6546AA0DC1A580590 /* IQKeyboardManager-dummy.m */; };
+		3532607142336D3BBA5C7A858496C119 /* TYAlertScaleFadeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F162DD3014FFB63473A769A0CCFF3E2B /* TYAlertScaleFadeAnimation.m */; };
+		362F28F097E4A8F5A2DE89AA956215B9 /* TYAlertScaleFadeAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = C15769E8806E1C90F9E9156B36A1FFA1 /* TYAlertScaleFadeAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3E8E6916C563B9CB12AA417275FC6EB3 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0E089E0A7EC0C44B1D2B0AAFF5A674 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		3FBFF015B78FCB610A10AC30E979D239 /* IQUIView+IQKeyboardToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = C48A7172E80B3E6D746C08AC63F733BC /* IQUIView+IQKeyboardToolbar.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		44C24AF5BABF8F033AF7AF49284834BC /* TYShowAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B9FBA0ECB35F34AFF6D3FCB1FD0B983 /* TYShowAlertView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46B538AFD3B41E0E9E53F78C76D65AA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56348597C0DD615177C5C15A774BCF2 /* Foundation.framework */; };
+		4890B3D3B53F2B2C1BD64E82D94C3019 /* TYAlertFadeAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CB6D687A5134B5E1C8774722AB2475B /* TYAlertFadeAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		523F69012549DCADB26D11EFB6593B5B /* Masonry.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DAF91E130FA490761650CF749BC6543 /* Masonry.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5EBFADB0ACACA114B98082EBD8FDA650 /* MASViewConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 004B3663E8B8975535F94BE383769787 /* MASViewConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5ECB3B4EE63B35693244DC8E476272AF /* IQKeyboardManagerConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = C1FF71E174E1C58744624C5C6FD3AA6E /* IQKeyboardManagerConstants.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5F2BD01363DB33DBAC8ED898164E9E9E /* Pods-HSFCircleMenuDemoUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D5B9F058E3BD8BD97FBBDFEBCE3ADC /* Pods-HSFCircleMenuDemoUITests-dummy.m */; };
-		60A26ADD7C27F878B92B89207C7FECAF /* TYShowAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5622666D7CE77CB90E9D4DCE875E2492 /* TYShowAlertView.m */; };
-		61CCEA01CBE8EFFA5515E7A0D8635AAE /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 73CB6088948DC08DE5F34DA29EFC51C0 /* MASCompositeConstraint.m */; };
-		68F98758BA84B8EC3472A8C6FD646D16 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BED208BE1D68CBBBF290215D38B8C7 /* Masonry-dummy.m */; };
-		6FBEF9BEF976F73220F5EA0246FA6674 /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = C1A13299B9AA0F7063606AC88AE07570 /* MASConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		764805D862968A99FB90C714D63A2AA5 /* UIView+TYAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7FB1B650F710DF5BBDFAA0E54CA849 /* UIView+TYAutoLayout.m */; };
-		7AC0D0965486ED43C064F1BC177ACBC9 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 145A8D41B6AA9DF7CF43184B0813E615 /* MASUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7BDDE51AF16FA53A09506EDB91E1C3C2 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 07856747D5F42C688F3325EA8426D460 /* NSArray+MASAdditions.m */; };
-		7CDA0380DF1620C14083E80B55C7A4F3 /* TYAlertController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F2302BA7F4994768F3926AE1D6FB6078 /* TYAlertController-dummy.m */; };
-		81C1291C7ABA4942277F5756671AEE37 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = E86D22A51ED7E58F16C31D31C7D39B2D /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		84D0259621609B59034229EA5EDE9282 /* TYAlertFadeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3D386D28305B28F8AEF01098C42865 /* TYAlertFadeAnimation.m */; };
-		86B2DF4CC6E598AAA73D0CC6EEBA0E96 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C94B85FDC44A03F52A69CAA03F7EE2A7 /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		89450A58FD91E5B227171FC75160E4EA /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BAB50A0CA9681936DAFD2999DCFFDE9 /* MASConstraint.m */; };
-		89532F29CC565F7E98656DE3D961C9BC /* TYBaseAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 68CEA1768F36F9EB16E9931B29F17E4D /* TYBaseAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		8DC709AEA9C5117112D28B3012CDF6A6 /* TYAlertScaleFadeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5C300DFF1F5F55A6F9CFF815C62B25 /* TYAlertScaleFadeAnimation.m */; };
-		92711327ED7920702A69A828271279AE /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E212CEFD481141F179E975DD673BE4D /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		955BE39896CA35F2A585DC3309E5FDA5 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A519697EE923466F41D539D3FAEE52AA /* MASLayoutConstraint.m */; };
-		9AB27A7F752AB644728D50B0228A070E /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = BF05CB99984F297E0059C67B6192BC23 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9BFAE06AC2F3B426C64EEDBF8C99A69E /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 92D07FC0EAC8FB9DC9741670DF82658A /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A057EA280E39A2269E0B9B6C2E7D2EF6 /* UIView+TYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27002B31FC318BCE4017C51F10EABF77 /* UIView+TYAlertView.m */; };
-		A1FA046FDFC42676D17FEC387B10D24A /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 722CB9F5778FD0E1E23DEF180B82E12C /* View+MASAdditions.m */; };
-		A54D5A3C61D0245B7D8A3A95F09B8248 /* Pods-HSFCircleMenuDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E2363D329A548A72C1E5A71E0FF2D7 /* Pods-HSFCircleMenuDemo-dummy.m */; };
-		B5EC5518E18B05A5334C49ABBF4C78F7 /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E3535197E87C0D8E0543260C8ED4623 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C6E83C10646E2DF6C83A578CE6AF0E5A /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D044B430FD85DD2686E0BD6A55791815 /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		CFEED7836FE414011F946D75DAD4BA4A /* TYAlertController.h in Headers */ = {isa = PBXBuildFile; fileRef = D981D5E2300036AA94C073A1CF25E578 /* TYAlertController.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D7CE05A743B7ACD50796191FA442814C /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EC5FB66F46EE77DB6809D71951D965 /* ViewController+MASAdditions.m */; };
+		61CCEA01CBE8EFFA5515E7A0D8635AAE /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F56141CD16A95BB43742BEE79CD41C /* MASCompositeConstraint.m */; };
+		63391430C243A5D8449DFC2F945455A3 /* IQToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = CA273A497FA5C38BA35AFD37A3620AFA /* IQToolbar.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		657D9B7B34B516C1B059CF1B4D6EB369 /* Pods-HSFCircleMenuDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E2363D329A548A72C1E5A71E0FF2D7 /* Pods-HSFCircleMenuDemo-dummy.m */; };
+		66E3164519B5436903757501E2982E3E /* IQTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = EF05BB2C16C5A58415463184FAF9C9FB /* IQTextView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		68F98758BA84B8EC3472A8C6FD646D16 /* Masonry-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD4EF40E23D80D1109BEB903CA5D670 /* Masonry-dummy.m */; };
+		6FBEF9BEF976F73220F5EA0246FA6674 /* MASConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = DEB4033B4F59ACEFDB72B51016946993 /* MASConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		739ADAF7569E923F69FBF5332A72B036 /* IQToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF9587ECD6E69064807C29FA9D2D1BF /* IQToolbar.m */; };
+		73F8A20273DDD2758D6E74523CD46C9A /* IQUIViewController+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = A81FED08D2DDD3FE375FD31C6F448093 /* IQUIViewController+Additions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		755EF94034BB957C53461BFDC9B7EDD3 /* TYAlertFadeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 184F279FC9BBA786BC0E738A8A9D6975 /* TYAlertFadeAnimation.m */; };
+		7AC0D0965486ED43C064F1BC177ACBC9 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = D7EF1793446913991A54FD6305719AE3 /* MASUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7BDDE51AF16FA53A09506EDB91E1C3C2 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 081631B619606FC34055D15DD05E67DA /* NSArray+MASAdditions.m */; };
+		7F4B3DFF3848E512F7FCFA7B76DA2A9F /* IQUITextFieldView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 57784F4E11F70C2027DDB600299C9A96 /* IQUITextFieldView+Additions.m */; };
+		81C1291C7ABA4942277F5756671AEE37 /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E2AA725F316CA0AD2FF8FF5C01B2698 /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		85D89322451CE3E68557807D935F7579 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C473026796F8AFAA2ECD5A761494CE /* CoreGraphics.framework */; };
+		85F2CF551D90F9D199C0AA0D7E657595 /* TYAlertDropDownAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 26C02FCD672D99BE0C9AEAD774FFCD10 /* TYAlertDropDownAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		86B2DF4CC6E598AAA73D0CC6EEBA0E96 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 56B8E22A512303290C46E486BB5800D8 /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		89450A58FD91E5B227171FC75160E4EA /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3F8C75D1E9CD2F5D25BA449A7E00F9 /* MASConstraint.m */; };
+		8E05402B04BC0FE6DE6998C8288F559B /* IQPreviousNextView.h in Headers */ = {isa = PBXBuildFile; fileRef = B170974F787124D289508A5C4BF0667D /* IQPreviousNextView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		92711327ED7920702A69A828271279AE /* View+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8064B5E92ECF2C9EC6DD8DDA933D4696 /* View+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		955BE39896CA35F2A585DC3309E5FDA5 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CBBD801A0DC1B507BD1AF7B22DED79 /* MASLayoutConstraint.m */; };
+		9684C96FA4DF9CD060BAAD3EF8565DC7 /* UIView+TYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8584E250473C4947A0E3660F0ED53CD /* UIView+TYAlertView.m */; };
+		992887E631F805494A2FE4749A53C620 /* TYAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = BDD62993BEE65F7D0E375727CEB02FCA /* TYAlertView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9AB27A7F752AB644728D50B0228A070E /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = B9102DFCB958ED77598D4B5C3E2D2778 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9BFAE06AC2F3B426C64EEDBF8C99A69E /* NSArray+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CC862F8EBCF371748240BAD37482494 /* NSArray+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9C853E0503634DDBA6DB1123CAAE0DC9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89163E94743FDDD60913C47150E225B /* UIKit.framework */; };
+		9DADA771D05EF0C45355B6544AFB5C16 /* IQKeyboardManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D8F0AF7C6650F0B7D845E0F709D7ED22 /* IQKeyboardManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A1FA046FDFC42676D17FEC387B10D24A /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0713D629922BDC5622C140B4C831D923 /* View+MASAdditions.m */; };
+		A25F51A9A7F5B9539EBC4233A9D89ACC /* TYBaseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E3E222E3C83CFCB3FD95749F6B3F5B /* TYBaseAnimation.m */; };
+		B3954BD0A3F350EDB5DC9B7E895C824B /* IQKeyboardReturnKeyHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F8837A706D7AF6A4ADB7154BA8FB802 /* IQKeyboardReturnKeyHandler.m */; };
+		B55B3B08B15BD33C15D88386F2AD9B9A /* TYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21477917134123899DFFF8780843A90B /* TYAlertView.m */; };
+		B5EC5518E18B05A5334C49ABBF4C78F7 /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FAEA02E4DF7A0074A44F8795D9448F0 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BFE44435DE67E992BC197AA192C1DA88 /* IQUITextFieldView+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A77F0C0B15A47BFD0A2EDB49258366B /* IQUITextFieldView+Additions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C003574556A419434A9DDD5573246609 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65E433A68C225D6FF6B2CE970853F1D /* QuartzCore.framework */; };
+		C0880FB8A5FEBD18937924CB981C5EAB /* IQNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACFD2160F596BDE58F0F1E69FDD7220 /* IQNSArray+Sort.m */; };
+		C4720488CC6D5D454BE0C1AEF554B337 /* IQTitleBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 24D5A7FD720D41F1C26D9C45C30126E8 /* IQTitleBarButtonItem.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C493AB53C8DA1397EB043353081690EE /* IQBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 512EC970F5C9D82321CBBE131F351F75 /* IQBarButtonItem.m */; };
+		C4C42888CE5CBD8662D0B2C6E651AE35 /* UIView+TYAutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 87DE5C029F06140EAE8D35DD4A47A848 /* UIView+TYAutoLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C6E83C10646E2DF6C83A578CE6AF0E5A /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 34EE1B9D1D42284DE8F8797AD88E276A /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CB225303BB0114B9759CBD02722BD9D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56348597C0DD615177C5C15A774BCF2 /* Foundation.framework */; };
+		CD35A1D7AB2C4B9BC871553B7DD83EDC /* UIView+TYAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 86FB32FEF31FD1F532BE156411706196 /* UIView+TYAlertView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D0C5379FB4FD10F1D3AD35849153C42D /* TYAlertController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9588A6459A4C46D086D867F76DAA2CAD /* TYAlertController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D49FF46F3D5BA6EFE0E4A12AF1B8E9A9 /* IQUIView+Hierarchy.h in Headers */ = {isa = PBXBuildFile; fileRef = 973DF9DAAF537744D41AE009842854EB /* IQUIView+Hierarchy.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D7CE05A743B7ACD50796191FA442814C /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1344B22B6C9846A8DF5359CE3D8E9E /* ViewController+MASAdditions.m */; };
+		D8188D3ADB1BB024A8798BBED5593B5E /* IQKeyboardManagerConstantsInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = C095A329D5C80E3034AB8C5DBF5C166F /* IQKeyboardManagerConstantsInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D865F1299909BDA5029ACA535789B510 /* IQBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 767EE7387263A611512D9B9AE41D3428 /* IQBarButtonItem.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DDA5FA56970DEE4B30F1D251398D31E8 /* Pods-HSFCircleMenuDemoTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 25E62E5496AA8E9EB0797E96A4AC8DD6 /* Pods-HSFCircleMenuDemoTests-dummy.m */; };
-		DF7F88B58B564EDF169EC0C9CF8E5124 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7E8930EB57DA43AD8DEF09B405BF83 /* MASConstraintMaker.m */; };
-		E2C37877D59EED2BE17C37B36C7CBA11 /* TYAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 956784D6A3FF2FC4BE360327E0F319A8 /* TYAlertController.m */; };
-		E764F061F9DD7236520E00DC361297B2 /* TYAlertDropDownAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E940F22D0DF61360FB7A7F880486E5E /* TYAlertDropDownAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E98782B7098EEDA182FC3818D07AD300 /* TYShowAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = A763B2AAD9C592442A2F723C3098B172 /* TYShowAlertView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		EAB0CADD055C2AA2A95E0B7E01408989 /* TYAlertController+TransitionAnimate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE95654F24FEBD68E77BC1A57FF623A /* TYAlertController+TransitionAnimate.m */; };
-		F861D2DADCE8A8F94F1DCB22EB8A6CE2 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 6989B03AE0949C6C93C48FB45B06B17E /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		FB2D6684809FC69FE060B456E307F0D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */; };
-		FB415F79751F1A1F2203183C3CEE0723 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 320CFAC0B0C243032A1ABD0AEACE4212 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DF7F88B58B564EDF169EC0C9CF8E5124 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = E380191AB17776CBBA38724AEB370E3A /* MASConstraintMaker.m */; };
+		E07F7C51868A67DD151C337E6F2EA6D6 /* IQPreviousNextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1080B2F637884A7F2121C38DE0377296 /* IQPreviousNextView.m */; };
+		E32307F2F563511737FCD523E9C4D391 /* IQNSArray+Sort.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B276F9DEDDE0F3B8251A3B5122ACFFB /* IQNSArray+Sort.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E74C2BD17215F2B2257B1444C32784BA /* IQUIView+IQKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B714CD4CA72FDE3226E2E5561BBF4D /* IQUIView+IQKeyboardToolbar.m */; };
+		EF23ED9F9BE7443E830973846D7F3480 /* IQUIScrollView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = C87289EC86632D748C9666F4015EC795 /* IQUIScrollView+Additions.m */; };
+		F24F68EC9A514FE5302E3ABCB8CB9D0D /* TYAlertDropDownAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1927C7E082FD139BC841C406A1D2F897 /* TYAlertDropDownAnimation.m */; };
+		F49C9CDB089E8335E0C6593F945E98CE /* IQTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CCBF59E49D6F8E2756352DDA26DAA7 /* IQTextView.m */; };
+		F4E37076158983951363B96E4B63D776 /* IQUIView+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EFF7E9080CFEDECFE147B1292630C91 /* IQUIView+Hierarchy.m */; };
+		F861D2DADCE8A8F94F1DCB22EB8A6CE2 /* MASCompositeConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 3349A3D12DB422DA04D8454C227F936E /* MASCompositeConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F91FEB9AE7D601429F9837DBAC876857 /* TYAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D79BD32647BA841AE9FDA579EDC8ECA /* TYAlertController.m */; };
+		FB2D6684809FC69FE060B456E307F0D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E89163E94743FDDD60913C47150E225B /* UIKit.framework */; };
+		FB415F79751F1A1F2203183C3CEE0723 /* NSArray+MASShorthandAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C34D5D5BEF6AD5140CC776DF949AE382 /* NSArray+MASShorthandAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FF8FE5830FFCBE55EB81B71097B25F62 /* TYAlertController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4D9A769631A229ADF672D20B6539DC /* TYAlertController-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		407C6B9598003D3727B1815665A7CC77 /* PBXContainerItemProxy */ = {
+		6922912E7BB78A8FCB230391DDC42798 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 9DC8D9E02903E93BD0B2FEC9D846EA20;
 			remoteInfo = Masonry;
 		};
-		944780A199CF3186A016EA8FA8402B93 /* PBXContainerItemProxy */ = {
+		9740E5BDAF2214999978CA7C28CF7548 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8505BCB8C71261EB1CC489C2C08E8587;
+			remoteGlobalIDString = 6634B7251D7D15B8EBBBF48DDA560EA1;
 			remoteInfo = TYAlertController;
 		};
 		DF71A813BAAE354BC3E68A72D2956C49 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6D6D3B5E1BC1538A682C8AB125C99D66;
+			remoteGlobalIDString = A5B06280462B10BE30E5375893C49568;
 			remoteInfo = "Pods-HSFCircleMenuDemo";
+		};
+		F35D3F77289AC4DC0B2E5C4AF63576DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6FBFDBC00B388471F2914F736751944;
+			remoteInfo = IQKeyboardManager;
 		};
 		F993B8870D0F55F5A6B5E80DBD4CBD56 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6D6D3B5E1BC1538A682C8AB125C99D66;
+			remoteGlobalIDString = A5B06280462B10BE30E5375893C49568;
 			remoteInfo = "Pods-HSFCircleMenuDemo";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		004B3663E8B8975535F94BE383769787 /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
 		00C94887CF6F89E9D5039F4B7C3318A9 /* Pods-HSFCircleMenuDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HSFCircleMenuDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
 		0126A916924674640137AFF1FB3706E8 /* Pods-HSFCircleMenuDemoTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HSFCircleMenuDemoTests-frameworks.sh"; sourceTree = "<group>"; };
-		01BED208BE1D68CBBBF290215D38B8C7 /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
-		035F165182D96777E77FA41DCFB94296 /* TYAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TYAlertView.h; path = TYAlertControllerDemo/TYAlertController/TYAlertView.h; sourceTree = "<group>"; };
-		03AF13DD2F4E6CB3AB56575EB2512C23 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
-		07856747D5F42C688F3325EA8426D460 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
-		08B7C56BFB319CFDE2062013D8E180E7 /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
-		0A7E8930EB57DA43AD8DEF09B405BF83 /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
-		0D4D85FD3A915510D3AB5EE484D7C1E6 /* TYAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TYAlertView.m; path = TYAlertControllerDemo/TYAlertController/TYAlertView.m; sourceTree = "<group>"; };
-		0E3535197E87C0D8E0543260C8ED4623 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
+		0713D629922BDC5622C140B4C831D923 /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
+		081631B619606FC34055D15DD05E67DA /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		0ACFD2160F596BDE58F0F1E69FDD7220 /* IQNSArray+Sort.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IQNSArray+Sort.m"; path = "IQKeyboardManager/Categories/IQNSArray+Sort.m"; sourceTree = "<group>"; };
+		0BE4BD3BF16CDA52C1C32D33932033E7 /* TYBaseAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TYBaseAnimation.h; path = TYAlertControllerDemo/TYAlertController/TYBaseAnimation.h; sourceTree = "<group>"; };
 		0F0BF4CF64900FB2E0609D6035295B88 /* Pods-HSFCircleMenuDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HSFCircleMenuDemo-resources.sh"; sourceTree = "<group>"; };
+		1080B2F637884A7F2121C38DE0377296 /* IQPreviousNextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQPreviousNextView.m; path = IQKeyboardManager/IQToolbar/IQPreviousNextView.m; sourceTree = "<group>"; };
 		10E2363D329A548A72C1E5A71E0FF2D7 /* Pods-HSFCircleMenuDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HSFCircleMenuDemo-dummy.m"; sourceTree = "<group>"; };
-		145A8D41B6AA9DF7CF43184B0813E615 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
-		1E940F22D0DF61360FB7A7F880486E5E /* TYAlertDropDownAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TYAlertDropDownAnimation.h; path = TYAlertControllerDemo/TYAlertController/TYAlertDropDownAnimation.h; sourceTree = "<group>"; };
-		1EC13954BCFC3C837A38ACE300EFF2EB /* MASViewConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewConstraint.h; path = Masonry/MASViewConstraint.h; sourceTree = "<group>"; };
-		209A67D3BB54A26277CE9E154C7E6D72 /* UIView+TYAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+TYAlertView.h"; path = "TYAlertControllerDemo/TYAlertController/UIView+TYAlertView.h"; sourceTree = "<group>"; };
+		184F279FC9BBA786BC0E738A8A9D6975 /* TYAlertFadeAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TYAlertFadeAnimation.m; path = TYAlertControllerDemo/TYAlertController/TYAlertFadeAnimation.m; sourceTree = "<group>"; };
+		1927C7E082FD139BC841C406A1D2F897 /* TYAlertDropDownAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TYAlertDropDownAnimation.m; path = TYAlertControllerDemo/TYAlertController/TYAlertDropDownAnimation.m; sourceTree = "<group>"; };
+		1DC41BDB4A88D9503E518C2F1FF45A22 /* libPods-HSFCircleMenuDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-HSFCircleMenuDemoTests.a"; path = "libPods-HSFCircleMenuDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21477917134123899DFFF8780843A90B /* TYAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TYAlertView.m; path = TYAlertControllerDemo/TYAlertController/TYAlertView.m; sourceTree = "<group>"; };
+		24D5A7FD720D41F1C26D9C45C30126E8 /* IQTitleBarButtonItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQTitleBarButtonItem.h; path = IQKeyboardManager/IQToolbar/IQTitleBarButtonItem.h; sourceTree = "<group>"; };
 		25E62E5496AA8E9EB0797E96A4AC8DD6 /* Pods-HSFCircleMenuDemoTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HSFCircleMenuDemoTests-dummy.m"; sourceTree = "<group>"; };
 		262CACE98607DF4790293898A7ECEF32 /* Pods-HSFCircleMenuDemoUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HSFCircleMenuDemoUITests-resources.sh"; sourceTree = "<group>"; };
-		27002B31FC318BCE4017C51F10EABF77 /* UIView+TYAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+TYAlertView.m"; path = "TYAlertControllerDemo/TYAlertController/UIView+TYAlertView.m"; sourceTree = "<group>"; };
-		29DFD42E91B1334D27731BA5F9910761 /* libPods-HSFCircleMenuDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-HSFCircleMenuDemoTests.a"; path = "libPods-HSFCircleMenuDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F5C300DFF1F5F55A6F9CFF815C62B25 /* TYAlertScaleFadeAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TYAlertScaleFadeAnimation.m; path = TYAlertControllerDemo/TYAlertController/TYAlertScaleFadeAnimation.m; sourceTree = "<group>"; };
-		320CFAC0B0C243032A1ABD0AEACE4212 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
-		3237E8AB5BA49B326B51C176C11385DF /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
-		4438623069BDB10565BD626DF81FF643 /* TYAlertController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TYAlertController-prefix.pch"; sourceTree = "<group>"; };
+		26C02FCD672D99BE0C9AEAD774FFCD10 /* TYAlertDropDownAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TYAlertDropDownAnimation.h; path = TYAlertControllerDemo/TYAlertController/TYAlertDropDownAnimation.h; sourceTree = "<group>"; };
+		27F26BE510F5DFBCFD6C2D9F4689D526 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		2A0E089E0A7EC0C44B1D2B0AAFF5A674 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		2DF9587ECD6E69064807C29FA9D2D1BF /* IQToolbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQToolbar.m; path = IQKeyboardManager/IQToolbar/IQToolbar.m; sourceTree = "<group>"; };
+		2E2AA725F316CA0AD2FF8FF5C01B2698 /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
+		32DC383E21048DC523659DBE0E68728A /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
+		3349A3D12DB422DA04D8454C227F936E /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
+		34C9AD35F9440242313163F22DA03510 /* IQTitleBarButtonItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQTitleBarButtonItem.m; path = IQKeyboardManager/IQToolbar/IQTitleBarButtonItem.m; sourceTree = "<group>"; };
+		34EE1B9D1D42284DE8F8797AD88E276A /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
+		37C473026796F8AFAA2ECD5A761494CE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		38B714CD4CA72FDE3226E2E5561BBF4D /* IQUIView+IQKeyboardToolbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IQUIView+IQKeyboardToolbar.m"; path = "IQKeyboardManager/IQToolbar/IQUIView+IQKeyboardToolbar.m"; sourceTree = "<group>"; };
+		3D4FBABD18B5A73DCD20D012F8DEF663 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = IQKeyboardManager.bundle; path = IQKeyboardManager/Resources/IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		3D79BD32647BA841AE9FDA579EDC8ECA /* TYAlertController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TYAlertController.m; path = TYAlertControllerDemo/TYAlertController/TYAlertController.m; sourceTree = "<group>"; };
+		3FAEA02E4DF7A0074A44F8795D9448F0 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
 		4474E211C2D47382A2889FCA207D11E7 /* Pods-HSFCircleMenuDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HSFCircleMenuDemo.release.xcconfig"; sourceTree = "<group>"; };
 		47120029DDEAC47F676049DFBCD014B3 /* Pods-HSFCircleMenuDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HSFCircleMenuDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		49CBBD801A0DC1B507BD1AF7B22DED79 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
 		4A646AB93412A373CC5C38AD4DF42195 /* Pods-HSFCircleMenuDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HSFCircleMenuDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		4C7FB1B650F710DF5BBDFAA0E54CA849 /* UIView+TYAutoLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+TYAutoLayout.m"; path = "TYAlertControllerDemo/TYAlertController/UIView+TYAutoLayout.m"; sourceTree = "<group>"; };
+		4A77F0C0B15A47BFD0A2EDB49258366B /* IQUITextFieldView+Additions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IQUITextFieldView+Additions.h"; path = "IQKeyboardManager/Categories/IQUITextFieldView+Additions.h"; sourceTree = "<group>"; };
+		4BF068911193F4D02B91BCCA57DD00D5 /* libMasonry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMasonry.a; path = libMasonry.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C669D4C5009428BFBD2057FA4DEA113 /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
+		4E3F8C75D1E9CD2F5D25BA449A7E00F9 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
+		4E4ADA76A374D3282B330C361B074CB2 /* UIView+TYAutoLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+TYAutoLayout.m"; path = "TYAlertControllerDemo/TYAlertController/UIView+TYAutoLayout.m"; sourceTree = "<group>"; };
+		512EC970F5C9D82321CBBE131F351F75 /* IQBarButtonItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQBarButtonItem.m; path = IQKeyboardManager/IQToolbar/IQBarButtonItem.m; sourceTree = "<group>"; };
 		5234DE32C56A1699391C29F0068CE294 /* Pods-HSFCircleMenuDemoTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HSFCircleMenuDemoTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		54083F3C5A0E7A630489EEA02E27B278 /* libPods-HSFCircleMenuDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-HSFCircleMenuDemo.a"; path = "libPods-HSFCircleMenuDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5622666D7CE77CB90E9D4DCE875E2492 /* TYShowAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TYShowAlertView.m; path = TYAlertControllerDemo/TYAlertController/TYShowAlertView.m; sourceTree = "<group>"; };
-		5DB84B8A90BEAFB81894A7581B6D4926 /* TYAlertDropDownAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TYAlertDropDownAnimation.m; path = TYAlertControllerDemo/TYAlertController/TYAlertDropDownAnimation.m; sourceTree = "<group>"; };
-		64E42396868D86904917A9B4A6DC89BA /* TYBaseAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TYBaseAnimation.m; path = TYAlertControllerDemo/TYAlertController/TYBaseAnimation.m; sourceTree = "<group>"; };
-		68CEA1768F36F9EB16E9931B29F17E4D /* TYBaseAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TYBaseAnimation.h; path = TYAlertControllerDemo/TYAlertController/TYBaseAnimation.h; sourceTree = "<group>"; };
-		6989B03AE0949C6C93C48FB45B06B17E /* MASCompositeConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASCompositeConstraint.h; path = Masonry/MASCompositeConstraint.h; sourceTree = "<group>"; };
+		52CCBF59E49D6F8E2756352DDA26DAA7 /* IQTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQTextView.m; path = IQKeyboardManager/IQTextView/IQTextView.m; sourceTree = "<group>"; };
+		56B8E22A512303290C46E486BB5800D8 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		5761E892D6F8DB47BFEA0A3F4F4738B4 /* IQUIViewController+Additions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IQUIViewController+Additions.m"; path = "IQKeyboardManager/Categories/IQUIViewController+Additions.m"; sourceTree = "<group>"; };
+		57784F4E11F70C2027DDB600299C9A96 /* IQUITextFieldView+Additions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IQUITextFieldView+Additions.m"; path = "IQKeyboardManager/Categories/IQUITextFieldView+Additions.m"; sourceTree = "<group>"; };
+		5B276F9DEDDE0F3B8251A3B5122ACFFB /* IQNSArray+Sort.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IQNSArray+Sort.h"; path = "IQKeyboardManager/Categories/IQNSArray+Sort.h"; sourceTree = "<group>"; };
+		5CB6D687A5134B5E1C8774722AB2475B /* TYAlertFadeAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TYAlertFadeAnimation.h; path = TYAlertControllerDemo/TYAlertController/TYAlertFadeAnimation.h; sourceTree = "<group>"; };
+		5D1344B22B6C9846A8DF5359CE3D8E9E /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		605F53119D7D70CEEC23E1D4AD4FEEF1 /* TYShowAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TYShowAlertView.m; path = TYAlertControllerDemo/TYAlertController/TYShowAlertView.m; sourceTree = "<group>"; };
+		68E295B540F097A6546AA0DC1A580590 /* IQKeyboardManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IQKeyboardManager-dummy.m"; sourceTree = "<group>"; };
+		6906194E0110CB67B3D9E6C8278369ED /* IQKeyboardManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQKeyboardManager.m; path = IQKeyboardManager/IQKeyboardManager.m; sourceTree = "<group>"; };
+		6BBA922E07F1C5DEB5EDB1943C0308D1 /* libPods-HSFCircleMenuDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-HSFCircleMenuDemoUITests.a"; path = "libPods-HSFCircleMenuDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D70B1A0FDB9FF49987D3F73D1EB0CB2 /* Pods-HSFCircleMenuDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HSFCircleMenuDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		6EAEE8AC8C3E5EC72081C7B9D8491F46 /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
-		6FA42B1CA739F3726D652127F5AA514D /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+MASDebugAdditions.h"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		6DAF91E130FA490761650CF749BC6543 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
+		6EFF7E9080CFEDECFE147B1292630C91 /* IQUIView+Hierarchy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IQUIView+Hierarchy.m"; path = "IQKeyboardManager/Categories/IQUIView+Hierarchy.m"; sourceTree = "<group>"; };
+		6F8837A706D7AF6A4ADB7154BA8FB802 /* IQKeyboardReturnKeyHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQKeyboardReturnKeyHandler.m; path = IQKeyboardManager/IQKeyboardReturnKeyHandler.m; sourceTree = "<group>"; };
 		70604264DFA699344EEB55A529120741 /* Pods-HSFCircleMenuDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HSFCircleMenuDemo-frameworks.sh"; sourceTree = "<group>"; };
-		722CB9F5778FD0E1E23DEF180B82E12C /* View+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "View+MASAdditions.m"; path = "Masonry/View+MASAdditions.m"; sourceTree = "<group>"; };
-		73A8E7730FC7981C08A17F426EE55079 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
-		73CB6088948DC08DE5F34DA29EFC51C0 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
-		7F3D386D28305B28F8AEF01098C42865 /* TYAlertFadeAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TYAlertFadeAnimation.m; path = TYAlertControllerDemo/TYAlertController/TYAlertFadeAnimation.m; sourceTree = "<group>"; };
+		70D432DDD4131CDD54BEB5E6E9F05120 /* libTYAlertController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libTYAlertController.a; path = libTYAlertController.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		74B7198E7C5B9DA937C78F4FF2BCF73B /* TYAlertController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TYAlertController.xcconfig; sourceTree = "<group>"; };
+		767EE7387263A611512D9B9AE41D3428 /* IQBarButtonItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQBarButtonItem.h; path = IQKeyboardManager/IQToolbar/IQBarButtonItem.h; sourceTree = "<group>"; };
+		7CC862F8EBCF371748240BAD37482494 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		7E4C67D72EC53959950563CA79338F5D /* IQKeyboardReturnKeyHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQKeyboardReturnKeyHandler.h; path = IQKeyboardManager/IQKeyboardReturnKeyHandler.h; sourceTree = "<group>"; };
+		8064B5E92ECF2C9EC6DD8DDA933D4696 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		8138B3942350E55A2648B13F5DBADF98 /* IQKeyboardManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQKeyboardManager-prefix.pch"; sourceTree = "<group>"; };
 		82096A1C44C0E371B679732955E53F0A /* Pods-HSFCircleMenuDemoUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HSFCircleMenuDemoUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		8BAB50A0CA9681936DAFD2999DCFFDE9 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
-		8C36C9B3738AAC9C60055021D2AC9F4F /* TYAlertScaleFadeAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TYAlertScaleFadeAnimation.h; path = TYAlertControllerDemo/TYAlertController/TYAlertScaleFadeAnimation.h; sourceTree = "<group>"; };
-		8E212CEFD481141F179E975DD673BE4D /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
-		8ED972FA69946175BCD530B3911DC291 /* Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.xcconfig; sourceTree = "<group>"; };
-		908E902E026C5C22904CF9014A5604AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		9114C0C1CB361C37F001A71207A45C25 /* libTYAlertController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libTYAlertController.a; path = libTYAlertController.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		92D07FC0EAC8FB9DC9741670DF82658A /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASAdditions.h"; path = "Masonry/NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		858D341C3FFF281197C44A42061AF010 /* TYAlertController+TransitionAnimate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "TYAlertController+TransitionAnimate.m"; path = "TYAlertControllerDemo/TYAlertController/TYAlertController+TransitionAnimate.m"; sourceTree = "<group>"; };
+		86FB32FEF31FD1F532BE156411706196 /* UIView+TYAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+TYAlertView.h"; path = "TYAlertControllerDemo/TYAlertController/UIView+TYAlertView.h"; sourceTree = "<group>"; };
+		87399DEC99CB62A180CC7CB69A2A6DCF /* Masonry-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Masonry-prefix.pch"; sourceTree = "<group>"; };
+		87DE5C029F06140EAE8D35DD4A47A848 /* UIView+TYAutoLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+TYAutoLayout.h"; path = "TYAlertControllerDemo/TYAlertController/UIView+TYAutoLayout.h"; sourceTree = "<group>"; };
+		87E3E222E3C83CFCB3FD95749F6B3F5B /* TYBaseAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TYBaseAnimation.m; path = TYAlertControllerDemo/TYAlertController/TYBaseAnimation.m; sourceTree = "<group>"; };
+		8E4D9A769631A229ADF672D20B6539DC /* TYAlertController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TYAlertController-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		956784D6A3FF2FC4BE360327E0F319A8 /* TYAlertController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TYAlertController.m; path = TYAlertControllerDemo/TYAlertController/TYAlertController.m; sourceTree = "<group>"; };
-		9AE95654F24FEBD68E77BC1A57FF623A /* TYAlertController+TransitionAnimate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "TYAlertController+TransitionAnimate.m"; path = "TYAlertControllerDemo/TYAlertController/TYAlertController+TransitionAnimate.m"; sourceTree = "<group>"; };
-		A42415566B2C6711B06BF0419D91CEF1 /* TYAlertController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TYAlertController.xcconfig; sourceTree = "<group>"; };
-		A519697EE923466F41D539D3FAEE52AA /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
-		A763B2AAD9C592442A2F723C3098B172 /* TYShowAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TYShowAlertView.h; path = TYAlertControllerDemo/TYAlertController/TYShowAlertView.h; sourceTree = "<group>"; };
-		AA15121E61DF207A14C892668B6A35E1 /* MASViewConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewConstraint.m; path = Masonry/MASViewConstraint.m; sourceTree = "<group>"; };
-		B1DA5679EA3C3ADABE858F113D7E4FDB /* libPods-HSFCircleMenuDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-HSFCircleMenuDemoUITests.a"; path = "libPods-HSFCircleMenuDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9588A6459A4C46D086D867F76DAA2CAD /* TYAlertController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TYAlertController.h; path = TYAlertControllerDemo/TYAlertController/TYAlertController.h; sourceTree = "<group>"; };
+		973DF9DAAF537744D41AE009842854EB /* IQUIView+Hierarchy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IQUIView+Hierarchy.h"; path = "IQKeyboardManager/Categories/IQUIView+Hierarchy.h"; sourceTree = "<group>"; };
+		97791C5A8FC92F89BB804EAD9BFA0594 /* libIQKeyboardManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libIQKeyboardManager.a; path = libIQKeyboardManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B9FBA0ECB35F34AFF6D3FCB1FD0B983 /* TYShowAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TYShowAlertView.h; path = TYAlertControllerDemo/TYAlertController/TYShowAlertView.h; sourceTree = "<group>"; };
+		9C831D7F4EBCFE3E7BFFD4F1F94BF32C /* MASViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASViewAttribute.h; path = Masonry/MASViewAttribute.h; sourceTree = "<group>"; };
+		A0F6FF0C8E9E45BEF34F1C74504F85D9 /* IQUIScrollView+Additions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IQUIScrollView+Additions.h"; path = "IQKeyboardManager/Categories/IQUIScrollView+Additions.h"; sourceTree = "<group>"; };
+		A81FED08D2DDD3FE375FD31C6F448093 /* IQUIViewController+Additions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IQUIViewController+Additions.h"; path = "IQKeyboardManager/Categories/IQUIViewController+Additions.h"; sourceTree = "<group>"; };
+		A8841D7D23A8780CF16749DDEC81E668 /* Masonry.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Masonry.xcconfig; sourceTree = "<group>"; };
+		B170974F787124D289508A5C4BF0667D /* IQPreviousNextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQPreviousNextView.h; path = IQKeyboardManager/IQToolbar/IQPreviousNextView.h; sourceTree = "<group>"; };
 		B2C16265E369C92FBDADB5DC46EF5FE5 /* Pods-HSFCircleMenuDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HSFCircleMenuDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
-		B303612CE99C9144663491A0F4FB9C8C /* UIView+TYAutoLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+TYAutoLayout.h"; path = "TYAlertControllerDemo/TYAlertController/UIView+TYAutoLayout.h"; sourceTree = "<group>"; };
-		BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		BF05CB99984F297E0059C67B6192BC23 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
+		B65E433A68C225D6FF6B2CE970853F1D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		B9102DFCB958ED77598D4B5C3E2D2778 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASLayoutConstraint.h; path = Masonry/MASLayoutConstraint.h; sourceTree = "<group>"; };
+		BDD62993BEE65F7D0E375727CEB02FCA /* TYAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TYAlertView.h; path = TYAlertControllerDemo/TYAlertController/TYAlertView.h; sourceTree = "<group>"; };
 		BF6FC39A4B27917670E6095A8B8339F9 /* Pods-HSFCircleMenuDemoUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HSFCircleMenuDemoUITests-frameworks.sh"; sourceTree = "<group>"; };
-		C1A13299B9AA0F7063606AC88AE07570 /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
+		C095A329D5C80E3034AB8C5DBF5C166F /* IQKeyboardManagerConstantsInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQKeyboardManagerConstantsInternal.h; path = IQKeyboardManager/Constants/IQKeyboardManagerConstantsInternal.h; sourceTree = "<group>"; };
+		C15769E8806E1C90F9E9156B36A1FFA1 /* TYAlertScaleFadeAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TYAlertScaleFadeAnimation.h; path = TYAlertControllerDemo/TYAlertController/TYAlertScaleFadeAnimation.h; sourceTree = "<group>"; };
+		C1FF71E174E1C58744624C5C6FD3AA6E /* IQKeyboardManagerConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQKeyboardManagerConstants.h; path = IQKeyboardManager/Constants/IQKeyboardManagerConstants.h; sourceTree = "<group>"; };
+		C34D5D5BEF6AD5140CC776DF949AE382 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		C48A7172E80B3E6D746C08AC63F733BC /* IQUIView+IQKeyboardToolbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IQUIView+IQKeyboardToolbar.h"; path = "IQKeyboardManager/IQToolbar/IQUIView+IQKeyboardToolbar.h"; sourceTree = "<group>"; };
 		C507D2B590C46F03DA199D0A1483D700 /* Pods-HSFCircleMenuDemoUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HSFCircleMenuDemoUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C94B85FDC44A03F52A69CAA03F7EE2A7 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		C87289EC86632D748C9666F4015EC795 /* IQUIScrollView+Additions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IQUIScrollView+Additions.m"; path = "IQKeyboardManager/Categories/IQUIScrollView+Additions.m"; sourceTree = "<group>"; };
 		CA25B14E6B310264AC84D6E38301F357 /* Pods-HSFCircleMenuDemoTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HSFCircleMenuDemoTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CA273A497FA5C38BA35AFD37A3620AFA /* IQToolbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQToolbar.h; path = IQKeyboardManager/IQToolbar/IQToolbar.h; sourceTree = "<group>"; };
 		CEECAF8AF78972F112FCD0ABF211C018 /* Pods-HSFCircleMenuDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HSFCircleMenuDemoTests.release.xcconfig"; sourceTree = "<group>"; };
-		D044B430FD85DD2686E0BD6A55791815 /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
-		D132B4644559125AFF2A6BDC3E549EE4 /* libMasonry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMasonry.a; path = libMasonry.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D640F8F172A0797131815019AF6E0E54 /* TYAlertFadeAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TYAlertFadeAnimation.h; path = TYAlertControllerDemo/TYAlertController/TYAlertFadeAnimation.h; sourceTree = "<group>"; };
-		D981D5E2300036AA94C073A1CF25E578 /* TYAlertController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TYAlertController.h; path = TYAlertControllerDemo/TYAlertController/TYAlertController.h; sourceTree = "<group>"; };
-		E86D22A51ED7E58F16C31D31C7D39B2D /* MASConstraint+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MASConstraint+Private.h"; path = "Masonry/MASConstraint+Private.h"; sourceTree = "<group>"; };
-		E8EC5FB66F46EE77DB6809D71951D965 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
-		F2302BA7F4994768F3926AE1D6FB6078 /* TYAlertController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TYAlertController-dummy.m"; sourceTree = "<group>"; };
+		D49A72114E817685043268521D8B65B4 /* TYAlertController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TYAlertController-prefix.pch"; sourceTree = "<group>"; };
+		D56348597C0DD615177C5C15A774BCF2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D7EF1793446913991A54FD6305719AE3 /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
+		D8F0AF7C6650F0B7D845E0F709D7ED22 /* IQKeyboardManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQKeyboardManager.h; path = IQKeyboardManager/IQKeyboardManager.h; sourceTree = "<group>"; };
+		DA1FC6BF60F2D3871336D9DC9F0EAE1E /* libPods-HSFCircleMenuDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-HSFCircleMenuDemo.a"; path = "libPods-HSFCircleMenuDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEB4033B4F59ACEFDB72B51016946993 /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
+		E380191AB17776CBBA38724AEB370E3A /* MASConstraintMaker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraintMaker.m; path = Masonry/MASConstraintMaker.m; sourceTree = "<group>"; };
+		E8584E250473C4947A0E3660F0ED53CD /* UIView+TYAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+TYAlertView.m"; path = "TYAlertControllerDemo/TYAlertController/UIView+TYAlertView.m"; sourceTree = "<group>"; };
+		E89163E94743FDDD60913C47150E225B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		ECE038A57A8B509E2B470EA2A12B8ABF /* IQKeyboardManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IQKeyboardManager.xcconfig; sourceTree = "<group>"; };
+		EF05BB2C16C5A58415463184FAF9C9FB /* IQTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQTextView.h; path = IQKeyboardManager/IQTextView/IQTextView.h; sourceTree = "<group>"; };
+		EFD4EF40E23D80D1109BEB903CA5D670 /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
+		F162DD3014FFB63473A769A0CCFF3E2B /* TYAlertScaleFadeAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TYAlertScaleFadeAnimation.m; path = TYAlertControllerDemo/TYAlertController/TYAlertScaleFadeAnimation.m; sourceTree = "<group>"; };
 		F37C0443879448D805037C238FD4A85A /* Pods-HSFCircleMenuDemoTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HSFCircleMenuDemoTests-resources.sh"; sourceTree = "<group>"; };
+		F5F56141CD16A95BB43742BEE79CD41C /* MASCompositeConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASCompositeConstraint.m; path = Masonry/MASCompositeConstraint.m; sourceTree = "<group>"; };
 		F8ECE2688EC78D9A7336C0B3879E7068 /* Pods-HSFCircleMenuDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HSFCircleMenuDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F9D5B9F058E3BD8BD97FBBDFEBCE3ADC /* Pods-HSFCircleMenuDemoUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HSFCircleMenuDemoUITests-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		20BF6981076860759C075CB098E1CB84 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4F315AB3718EBC0190FAEA12BFE82F81 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -204,7 +272,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		78952755A7B91911CFFF508DB60CD2EB /* Frameworks */ = {
+		802C21E77015E32DC1BA7245D7949317 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4817342F231FCE9EA7AEB5EDB33362B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85D89322451CE3E68557807D935F7579 /* CoreGraphics.framework in Frameworks */,
+				CB225303BB0114B9759CBD02722BD9D2 /* Foundation.framework in Frameworks */,
+				C003574556A419434A9DDD5573246609 /* QuartzCore.framework in Frameworks */,
+				9C853E0503634DDBA6DB1123CAAE0DC9 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECFCBDF523B1C74E532C051278C4CEC1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -214,83 +300,107 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */ = {
+		147EBE33AE3F1678F594DD3D57CA927C /* TYAlertController */ = {
 			isa = PBXGroup;
 			children = (
-				908E902E026C5C22904CF9014A5604AD /* Foundation.framework */,
-				BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		1171508DABDB5603C1C0CF019422DB0F /* Masonry */ = {
-			isa = PBXGroup;
-			children = (
-				6989B03AE0949C6C93C48FB45B06B17E /* MASCompositeConstraint.h */,
-				73CB6088948DC08DE5F34DA29EFC51C0 /* MASCompositeConstraint.m */,
-				C1A13299B9AA0F7063606AC88AE07570 /* MASConstraint.h */,
-				8BAB50A0CA9681936DAFD2999DCFFDE9 /* MASConstraint.m */,
-				E86D22A51ED7E58F16C31D31C7D39B2D /* MASConstraint+Private.h */,
-				0E3535197E87C0D8E0543260C8ED4623 /* MASConstraintMaker.h */,
-				0A7E8930EB57DA43AD8DEF09B405BF83 /* MASConstraintMaker.m */,
-				BF05CB99984F297E0059C67B6192BC23 /* MASLayoutConstraint.h */,
-				A519697EE923466F41D539D3FAEE52AA /* MASLayoutConstraint.m */,
-				03AF13DD2F4E6CB3AB56575EB2512C23 /* Masonry.h */,
-				145A8D41B6AA9DF7CF43184B0813E615 /* MASUtilities.h */,
-				3237E8AB5BA49B326B51C176C11385DF /* MASViewAttribute.h */,
-				6EAEE8AC8C3E5EC72081C7B9D8491F46 /* MASViewAttribute.m */,
-				1EC13954BCFC3C837A38ACE300EFF2EB /* MASViewConstraint.h */,
-				AA15121E61DF207A14C892668B6A35E1 /* MASViewConstraint.m */,
-				92D07FC0EAC8FB9DC9741670DF82658A /* NSArray+MASAdditions.h */,
-				07856747D5F42C688F3325EA8426D460 /* NSArray+MASAdditions.m */,
-				320CFAC0B0C243032A1ABD0AEACE4212 /* NSArray+MASShorthandAdditions.h */,
-				6FA42B1CA739F3726D652127F5AA514D /* NSLayoutConstraint+MASDebugAdditions.h */,
-				73A8E7730FC7981C08A17F426EE55079 /* NSLayoutConstraint+MASDebugAdditions.m */,
-				D044B430FD85DD2686E0BD6A55791815 /* View+MASAdditions.h */,
-				722CB9F5778FD0E1E23DEF180B82E12C /* View+MASAdditions.m */,
-				8E212CEFD481141F179E975DD673BE4D /* View+MASShorthandAdditions.h */,
-				C94B85FDC44A03F52A69CAA03F7EE2A7 /* ViewController+MASAdditions.h */,
-				E8EC5FB66F46EE77DB6809D71951D965 /* ViewController+MASAdditions.m */,
-				DFDE7D58B6CC2B50099662A1742B5E49 /* Support Files */,
-			);
-			name = Masonry;
-			path = Masonry;
-			sourceTree = "<group>";
-		};
-		32371DBCCE311EAAF7FC6B74007634D0 /* TYAlertController */ = {
-			isa = PBXGroup;
-			children = (
-				D981D5E2300036AA94C073A1CF25E578 /* TYAlertController.h */,
-				956784D6A3FF2FC4BE360327E0F319A8 /* TYAlertController.m */,
-				9AE95654F24FEBD68E77BC1A57FF623A /* TYAlertController+TransitionAnimate.m */,
-				1E940F22D0DF61360FB7A7F880486E5E /* TYAlertDropDownAnimation.h */,
-				5DB84B8A90BEAFB81894A7581B6D4926 /* TYAlertDropDownAnimation.m */,
-				D640F8F172A0797131815019AF6E0E54 /* TYAlertFadeAnimation.h */,
-				7F3D386D28305B28F8AEF01098C42865 /* TYAlertFadeAnimation.m */,
-				8C36C9B3738AAC9C60055021D2AC9F4F /* TYAlertScaleFadeAnimation.h */,
-				2F5C300DFF1F5F55A6F9CFF815C62B25 /* TYAlertScaleFadeAnimation.m */,
-				035F165182D96777E77FA41DCFB94296 /* TYAlertView.h */,
-				0D4D85FD3A915510D3AB5EE484D7C1E6 /* TYAlertView.m */,
-				68CEA1768F36F9EB16E9931B29F17E4D /* TYBaseAnimation.h */,
-				64E42396868D86904917A9B4A6DC89BA /* TYBaseAnimation.m */,
-				A763B2AAD9C592442A2F723C3098B172 /* TYShowAlertView.h */,
-				5622666D7CE77CB90E9D4DCE875E2492 /* TYShowAlertView.m */,
-				209A67D3BB54A26277CE9E154C7E6D72 /* UIView+TYAlertView.h */,
-				27002B31FC318BCE4017C51F10EABF77 /* UIView+TYAlertView.m */,
-				B303612CE99C9144663491A0F4FB9C8C /* UIView+TYAutoLayout.h */,
-				4C7FB1B650F710DF5BBDFAA0E54CA849 /* UIView+TYAutoLayout.m */,
-				4C11D96688BE194C97C6B8A6DBA033BD /* Support Files */,
+				9588A6459A4C46D086D867F76DAA2CAD /* TYAlertController.h */,
+				3D79BD32647BA841AE9FDA579EDC8ECA /* TYAlertController.m */,
+				858D341C3FFF281197C44A42061AF010 /* TYAlertController+TransitionAnimate.m */,
+				26C02FCD672D99BE0C9AEAD774FFCD10 /* TYAlertDropDownAnimation.h */,
+				1927C7E082FD139BC841C406A1D2F897 /* TYAlertDropDownAnimation.m */,
+				5CB6D687A5134B5E1C8774722AB2475B /* TYAlertFadeAnimation.h */,
+				184F279FC9BBA786BC0E738A8A9D6975 /* TYAlertFadeAnimation.m */,
+				C15769E8806E1C90F9E9156B36A1FFA1 /* TYAlertScaleFadeAnimation.h */,
+				F162DD3014FFB63473A769A0CCFF3E2B /* TYAlertScaleFadeAnimation.m */,
+				BDD62993BEE65F7D0E375727CEB02FCA /* TYAlertView.h */,
+				21477917134123899DFFF8780843A90B /* TYAlertView.m */,
+				0BE4BD3BF16CDA52C1C32D33932033E7 /* TYBaseAnimation.h */,
+				87E3E222E3C83CFCB3FD95749F6B3F5B /* TYBaseAnimation.m */,
+				9B9FBA0ECB35F34AFF6D3FCB1FD0B983 /* TYShowAlertView.h */,
+				605F53119D7D70CEEC23E1D4AD4FEEF1 /* TYShowAlertView.m */,
+				86FB32FEF31FD1F532BE156411706196 /* UIView+TYAlertView.h */,
+				E8584E250473C4947A0E3660F0ED53CD /* UIView+TYAlertView.m */,
+				87DE5C029F06140EAE8D35DD4A47A848 /* UIView+TYAutoLayout.h */,
+				4E4ADA76A374D3282B330C361B074CB2 /* UIView+TYAutoLayout.m */,
+				E7000DD52277AD20FC24F9158F86EE37 /* Support Files */,
 			);
 			name = TYAlertController;
 			path = TYAlertController;
 			sourceTree = "<group>";
 		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */,
+				53C8B4AB97860F06FE722851EA867B18 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		18A3885FD7300395C55C7058794D2DF2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20602FC816B30236BBE926E818C10C8A /* IQKeyboardManager */,
+				92F4F1043C3D2243083A6F34B3FC386F /* Masonry */,
+				147EBE33AE3F1678F594DD3D57CA927C /* TYAlertController */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		20602FC816B30236BBE926E818C10C8A /* IQKeyboardManager */ = {
+			isa = PBXGroup;
+			children = (
+				767EE7387263A611512D9B9AE41D3428 /* IQBarButtonItem.h */,
+				512EC970F5C9D82321CBBE131F351F75 /* IQBarButtonItem.m */,
+				D8F0AF7C6650F0B7D845E0F709D7ED22 /* IQKeyboardManager.h */,
+				6906194E0110CB67B3D9E6C8278369ED /* IQKeyboardManager.m */,
+				C1FF71E174E1C58744624C5C6FD3AA6E /* IQKeyboardManagerConstants.h */,
+				C095A329D5C80E3034AB8C5DBF5C166F /* IQKeyboardManagerConstantsInternal.h */,
+				7E4C67D72EC53959950563CA79338F5D /* IQKeyboardReturnKeyHandler.h */,
+				6F8837A706D7AF6A4ADB7154BA8FB802 /* IQKeyboardReturnKeyHandler.m */,
+				5B276F9DEDDE0F3B8251A3B5122ACFFB /* IQNSArray+Sort.h */,
+				0ACFD2160F596BDE58F0F1E69FDD7220 /* IQNSArray+Sort.m */,
+				B170974F787124D289508A5C4BF0667D /* IQPreviousNextView.h */,
+				1080B2F637884A7F2121C38DE0377296 /* IQPreviousNextView.m */,
+				EF05BB2C16C5A58415463184FAF9C9FB /* IQTextView.h */,
+				52CCBF59E49D6F8E2756352DDA26DAA7 /* IQTextView.m */,
+				24D5A7FD720D41F1C26D9C45C30126E8 /* IQTitleBarButtonItem.h */,
+				34C9AD35F9440242313163F22DA03510 /* IQTitleBarButtonItem.m */,
+				CA273A497FA5C38BA35AFD37A3620AFA /* IQToolbar.h */,
+				2DF9587ECD6E69064807C29FA9D2D1BF /* IQToolbar.m */,
+				A0F6FF0C8E9E45BEF34F1C74504F85D9 /* IQUIScrollView+Additions.h */,
+				C87289EC86632D748C9666F4015EC795 /* IQUIScrollView+Additions.m */,
+				4A77F0C0B15A47BFD0A2EDB49258366B /* IQUITextFieldView+Additions.h */,
+				57784F4E11F70C2027DDB600299C9A96 /* IQUITextFieldView+Additions.m */,
+				973DF9DAAF537744D41AE009842854EB /* IQUIView+Hierarchy.h */,
+				6EFF7E9080CFEDECFE147B1292630C91 /* IQUIView+Hierarchy.m */,
+				C48A7172E80B3E6D746C08AC63F733BC /* IQUIView+IQKeyboardToolbar.h */,
+				38B714CD4CA72FDE3226E2E5561BBF4D /* IQUIView+IQKeyboardToolbar.m */,
+				A81FED08D2DDD3FE375FD31C6F448093 /* IQUIViewController+Additions.h */,
+				5761E892D6F8DB47BFEA0A3F4F4738B4 /* IQUIViewController+Additions.m */,
+				3A4DF8488E5F5F8A41ACF4EC4F4673FA /* Resources */,
+				2C09BD03759289B07921EEAEBF80E804 /* Support Files */,
+			);
+			name = IQKeyboardManager;
+			path = IQKeyboardManager;
+			sourceTree = "<group>";
+		};
+		2C09BD03759289B07921EEAEBF80E804 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				ECE038A57A8B509E2B470EA2A12B8ABF /* IQKeyboardManager.xcconfig */,
+				68E295B540F097A6546AA0DC1A580590 /* IQKeyboardManager-dummy.m */,
+				8138B3942350E55A2648B13F5DBADF98 /* IQKeyboardManager-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/IQKeyboardManager";
+			sourceTree = "<group>";
+		};
+		3A4DF8488E5F5F8A41ACF4EC4F4673FA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3D4FBABD18B5A73DCD20D012F8DEF663 /* IQKeyboardManager.bundle */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		46FBBF7F2AC885B7503507AB8DC8A30B /* Pods-HSFCircleMenuDemo */ = {
@@ -308,24 +418,24 @@
 			path = "Target Support Files/Pods-HSFCircleMenuDemo";
 			sourceTree = "<group>";
 		};
-		4C11D96688BE194C97C6B8A6DBA033BD /* Support Files */ = {
+		53C8B4AB97860F06FE722851EA867B18 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				A42415566B2C6711B06BF0419D91CEF1 /* TYAlertController.xcconfig */,
-				F2302BA7F4994768F3926AE1D6FB6078 /* TYAlertController-dummy.m */,
-				4438623069BDB10565BD626DF81FF643 /* TYAlertController-prefix.pch */,
+				37C473026796F8AFAA2ECD5A761494CE /* CoreGraphics.framework */,
+				D56348597C0DD615177C5C15A774BCF2 /* Foundation.framework */,
+				B65E433A68C225D6FF6B2CE970853F1D /* QuartzCore.framework */,
+				E89163E94743FDDD60913C47150E225B /* UIKit.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/TYAlertController";
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				C93F97E23F84DCF459FBA97ABA87EFF4 /* Pods */,
-				9D7F235676D01B85E2ACF4B2866B8479 /* Products */,
+				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
+				18A3885FD7300395C55C7058794D2DF2 /* Pods */,
+				EC94A9278D83E1A0A9296D817D75804D /* Products */,
 				AFFE71A3B5C1420F6FF0CBB1176DB95C /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -345,16 +455,49 @@
 			path = "Target Support Files/Pods-HSFCircleMenuDemoUITests";
 			sourceTree = "<group>";
 		};
-		9D7F235676D01B85E2ACF4B2866B8479 /* Products */ = {
+		92F4F1043C3D2243083A6F34B3FC386F /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
-				D132B4644559125AFF2A6BDC3E549EE4 /* libMasonry.a */,
-				54083F3C5A0E7A630489EEA02E27B278 /* libPods-HSFCircleMenuDemo.a */,
-				29DFD42E91B1334D27731BA5F9910761 /* libPods-HSFCircleMenuDemoTests.a */,
-				B1DA5679EA3C3ADABE858F113D7E4FDB /* libPods-HSFCircleMenuDemoUITests.a */,
-				9114C0C1CB361C37F001A71207A45C25 /* libTYAlertController.a */,
+				3349A3D12DB422DA04D8454C227F936E /* MASCompositeConstraint.h */,
+				F5F56141CD16A95BB43742BEE79CD41C /* MASCompositeConstraint.m */,
+				DEB4033B4F59ACEFDB72B51016946993 /* MASConstraint.h */,
+				4E3F8C75D1E9CD2F5D25BA449A7E00F9 /* MASConstraint.m */,
+				2E2AA725F316CA0AD2FF8FF5C01B2698 /* MASConstraint+Private.h */,
+				3FAEA02E4DF7A0074A44F8795D9448F0 /* MASConstraintMaker.h */,
+				E380191AB17776CBBA38724AEB370E3A /* MASConstraintMaker.m */,
+				B9102DFCB958ED77598D4B5C3E2D2778 /* MASLayoutConstraint.h */,
+				49CBBD801A0DC1B507BD1AF7B22DED79 /* MASLayoutConstraint.m */,
+				6DAF91E130FA490761650CF749BC6543 /* Masonry.h */,
+				D7EF1793446913991A54FD6305719AE3 /* MASUtilities.h */,
+				9C831D7F4EBCFE3E7BFFD4F1F94BF32C /* MASViewAttribute.h */,
+				32DC383E21048DC523659DBE0E68728A /* MASViewAttribute.m */,
+				004B3663E8B8975535F94BE383769787 /* MASViewConstraint.h */,
+				4C669D4C5009428BFBD2057FA4DEA113 /* MASViewConstraint.m */,
+				7CC862F8EBCF371748240BAD37482494 /* NSArray+MASAdditions.h */,
+				081631B619606FC34055D15DD05E67DA /* NSArray+MASAdditions.m */,
+				C34D5D5BEF6AD5140CC776DF949AE382 /* NSArray+MASShorthandAdditions.h */,
+				27F26BE510F5DFBCFD6C2D9F4689D526 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				2A0E089E0A7EC0C44B1D2B0AAFF5A674 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				34EE1B9D1D42284DE8F8797AD88E276A /* View+MASAdditions.h */,
+				0713D629922BDC5622C140B4C831D923 /* View+MASAdditions.m */,
+				8064B5E92ECF2C9EC6DD8DDA933D4696 /* View+MASShorthandAdditions.h */,
+				56B8E22A512303290C46E486BB5800D8 /* ViewController+MASAdditions.h */,
+				5D1344B22B6C9846A8DF5359CE3D8E9E /* ViewController+MASAdditions.m */,
+				A23D56C13E1B52EAB4653843866A6C65 /* Support Files */,
 			);
-			name = Products;
+			name = Masonry;
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		A23D56C13E1B52EAB4653843866A6C65 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A8841D7D23A8780CF16749DDEC81E668 /* Masonry.xcconfig */,
+				EFD4EF40E23D80D1109BEB903CA5D670 /* Masonry-dummy.m */,
+				87399DEC99CB62A180CC7CB69A2A6DCF /* Masonry-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Masonry";
 			sourceTree = "<group>";
 		};
 		AFFE71A3B5C1420F6FF0CBB1176DB95C /* Targets Support Files */ = {
@@ -367,24 +510,28 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		C93F97E23F84DCF459FBA97ABA87EFF4 /* Pods */ = {
+		E7000DD52277AD20FC24F9158F86EE37 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1171508DABDB5603C1C0CF019422DB0F /* Masonry */,
-				32371DBCCE311EAAF7FC6B74007634D0 /* TYAlertController */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		DFDE7D58B6CC2B50099662A1742B5E49 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				8ED972FA69946175BCD530B3911DC291 /* Masonry.xcconfig */,
-				01BED208BE1D68CBBBF290215D38B8C7 /* Masonry-dummy.m */,
-				08B7C56BFB319CFDE2062013D8E180E7 /* Masonry-prefix.pch */,
+				74B7198E7C5B9DA937C78F4FF2BCF73B /* TYAlertController.xcconfig */,
+				8E4D9A769631A229ADF672D20B6539DC /* TYAlertController-dummy.m */,
+				D49A72114E817685043268521D8B65B4 /* TYAlertController-prefix.pch */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/Masonry";
+			path = "../Target Support Files/TYAlertController";
+			sourceTree = "<group>";
+		};
+		EC94A9278D83E1A0A9296D817D75804D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				97791C5A8FC92F89BB804EAD9BFA0594 /* libIQKeyboardManager.a */,
+				4BF068911193F4D02B91BCCA57DD00D5 /* libMasonry.a */,
+				DA1FC6BF60F2D3871336D9DC9F0EAE1E /* libPods-HSFCircleMenuDemo.a */,
+				1DC41BDB4A88D9503E518C2F1FF45A22 /* libPods-HSFCircleMenuDemoTests.a */,
+				6BBA922E07F1C5DEB5EDB1943C0308D1 /* libPods-HSFCircleMenuDemoUITests.a */,
+				70D432DDD4131CDD54BEB5E6E9F05120 /* libTYAlertController.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		F06AB17A3B964DC967733944237F1EC3 /* Pods-HSFCircleMenuDemoTests */ = {
@@ -405,6 +552,44 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		A043127A441933984A0BBF7DAA972FF6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D865F1299909BDA5029ACA535789B510 /* IQBarButtonItem.h in Headers */,
+				9DADA771D05EF0C45355B6544AFB5C16 /* IQKeyboardManager.h in Headers */,
+				5ECB3B4EE63B35693244DC8E476272AF /* IQKeyboardManagerConstants.h in Headers */,
+				D8188D3ADB1BB024A8798BBED5593B5E /* IQKeyboardManagerConstantsInternal.h in Headers */,
+				13AA97B9D9B0E943554B3513A9273385 /* IQKeyboardReturnKeyHandler.h in Headers */,
+				E32307F2F563511737FCD523E9C4D391 /* IQNSArray+Sort.h in Headers */,
+				8E05402B04BC0FE6DE6998C8288F559B /* IQPreviousNextView.h in Headers */,
+				66E3164519B5436903757501E2982E3E /* IQTextView.h in Headers */,
+				C4720488CC6D5D454BE0C1AEF554B337 /* IQTitleBarButtonItem.h in Headers */,
+				63391430C243A5D8449DFC2F945455A3 /* IQToolbar.h in Headers */,
+				2474C980446D6CBCE6CCD23A0ED889E1 /* IQUIScrollView+Additions.h in Headers */,
+				BFE44435DE67E992BC197AA192C1DA88 /* IQUITextFieldView+Additions.h in Headers */,
+				D49FF46F3D5BA6EFE0E4A12AF1B8E9A9 /* IQUIView+Hierarchy.h in Headers */,
+				3FBFF015B78FCB610A10AC30E979D239 /* IQUIView+IQKeyboardToolbar.h in Headers */,
+				73F8A20273DDD2758D6E74523CD46C9A /* IQUIViewController+Additions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5774039D4AA1E769A6F351EEB932657 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0C5379FB4FD10F1D3AD35849153C42D /* TYAlertController.h in Headers */,
+				85F2CF551D90F9D199C0AA0D7E657595 /* TYAlertDropDownAnimation.h in Headers */,
+				4890B3D3B53F2B2C1BD64E82D94C3019 /* TYAlertFadeAnimation.h in Headers */,
+				362F28F097E4A8F5A2DE89AA956215B9 /* TYAlertScaleFadeAnimation.h in Headers */,
+				992887E631F805494A2FE4749A53C620 /* TYAlertView.h in Headers */,
+				1677AC5F2EC328AC82F301A3E84736A0 /* TYBaseAnimation.h in Headers */,
+				44C24AF5BABF8F033AF7AF49284834BC /* TYShowAlertView.h in Headers */,
+				CD35A1D7AB2C4B9BC871553B7DD83EDC /* UIView+TYAlertView.h in Headers */,
+				C4C42888CE5CBD8662D0B2C6E651AE35 /* UIView+TYAutoLayout.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BDF73468622762862D2FB76ED4AC0D8E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -427,22 +612,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1D7F32BB032C26C481FA5C2CDA109B9 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CFEED7836FE414011F946D75DAD4BA4A /* TYAlertController.h in Headers */,
-				E764F061F9DD7236520E00DC361297B2 /* TYAlertDropDownAnimation.h in Headers */,
-				496A100FE0B67F00E2C9D3A77F996A41 /* TYAlertFadeAnimation.h in Headers */,
-				214E8783BC2757BB5C95DADBEBD94874 /* TYAlertScaleFadeAnimation.h in Headers */,
-				3FEE1B6ACE675D9D31F03E2918C044D3 /* TYAlertView.h in Headers */,
-				89532F29CC565F7E98656DE3D961C9BC /* TYBaseAnimation.h in Headers */,
-				E98782B7098EEDA182FC3818D07AD300 /* TYShowAlertView.h in Headers */,
-				31737B7C066616F342287DCF95F98919 /* UIView+TYAlertView.h in Headers */,
-				5AE3D7621DF0F92C9338021B3D529462 /* UIView+TYAutoLayout.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -460,34 +629,16 @@
 			);
 			name = "Pods-HSFCircleMenuDemoTests";
 			productName = "Pods-HSFCircleMenuDemoTests";
-			productReference = 29DFD42E91B1334D27731BA5F9910761 /* libPods-HSFCircleMenuDemoTests.a */;
+			productReference = 1DC41BDB4A88D9503E518C2F1FF45A22 /* libPods-HSFCircleMenuDemoTests.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		6D6D3B5E1BC1538A682C8AB125C99D66 /* Pods-HSFCircleMenuDemo */ = {
+		6634B7251D7D15B8EBBBF48DDA560EA1 /* TYAlertController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D87DEDE5477B1367C832CB9FB7B9048A /* Build configuration list for PBXNativeTarget "Pods-HSFCircleMenuDemo" */;
+			buildConfigurationList = 37F5565D2B6B45B35F8B478875C6EDA4 /* Build configuration list for PBXNativeTarget "TYAlertController" */;
 			buildPhases = (
-				F279FFCD46FDF09CD078B4D480905511 /* Sources */,
-				20BF6981076860759C075CB098E1CB84 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E61AE0E085E893E6E8CB47981F53BC7A /* PBXTargetDependency */,
-				C593F8E986B7FE709D1F91C8E5F905D2 /* PBXTargetDependency */,
-			);
-			name = "Pods-HSFCircleMenuDemo";
-			productName = "Pods-HSFCircleMenuDemo";
-			productReference = 54083F3C5A0E7A630489EEA02E27B278 /* libPods-HSFCircleMenuDemo.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		8505BCB8C71261EB1CC489C2C08E8587 /* TYAlertController */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 12BD8C506BC1923472D7DCC8FFF14B35 /* Build configuration list for PBXNativeTarget "TYAlertController" */;
-			buildPhases = (
-				8ED676AC0A1B375C019B2BE876694E63 /* Sources */,
-				78952755A7B91911CFFF508DB60CD2EB /* Frameworks */,
-				E1D7F32BB032C26C481FA5C2CDA109B9 /* Headers */,
+				E96186435EBA4FF84ECF59917F9A6250 /* Sources */,
+				ECFCBDF523B1C74E532C051278C4CEC1 /* Frameworks */,
+				B5774039D4AA1E769A6F351EEB932657 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -495,7 +646,7 @@
 			);
 			name = TYAlertController;
 			productName = TYAlertController;
-			productReference = 9114C0C1CB361C37F001A71207A45C25 /* libTYAlertController.a */;
+			productReference = 70D432DDD4131CDD54BEB5E6E9F05120 /* libTYAlertController.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		9DC8D9E02903E93BD0B2FEC9D846EA20 /* Masonry */ = {
@@ -512,7 +663,26 @@
 			);
 			name = Masonry;
 			productName = Masonry;
-			productReference = D132B4644559125AFF2A6BDC3E549EE4 /* libMasonry.a */;
+			productReference = 4BF068911193F4D02B91BCCA57DD00D5 /* libMasonry.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A5B06280462B10BE30E5375893C49568 /* Pods-HSFCircleMenuDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D38CBB68F6A2F90D5B648C06A686335 /* Build configuration list for PBXNativeTarget "Pods-HSFCircleMenuDemo" */;
+			buildPhases = (
+				30167332A5726075729764FC8F912BB0 /* Sources */,
+				802C21E77015E32DC1BA7245D7949317 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5D81442946E35D4BEBC2EF0239EB828E /* PBXTargetDependency */,
+				F13EC3CB02277909F7C8C63D5A8F14B0 /* PBXTargetDependency */,
+				1AC10066E18FD2E1727897DAEBC0DF84 /* PBXTargetDependency */,
+			);
+			name = "Pods-HSFCircleMenuDemo";
+			productName = "Pods-HSFCircleMenuDemo";
+			productReference = DA1FC6BF60F2D3871336D9DC9F0EAE1E /* libPods-HSFCircleMenuDemo.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		ADFCEB58B91F405237147859C909640C /* Pods-HSFCircleMenuDemoUITests */ = {
@@ -529,7 +699,24 @@
 			);
 			name = "Pods-HSFCircleMenuDemoUITests";
 			productName = "Pods-HSFCircleMenuDemoUITests";
-			productReference = B1DA5679EA3C3ADABE858F113D7E4FDB /* libPods-HSFCircleMenuDemoUITests.a */;
+			productReference = 6BBA922E07F1C5DEB5EDB1943C0308D1 /* libPods-HSFCircleMenuDemoUITests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D6FBFDBC00B388471F2914F736751944 /* IQKeyboardManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2F5879A321802D045C28B34510AF137 /* Build configuration list for PBXNativeTarget "IQKeyboardManager" */;
+			buildPhases = (
+				6A8BDB7FEF8B27DE632778849F68E02D /* Sources */,
+				A4817342F231FCE9EA7AEB5EDB33362B /* Frameworks */,
+				A043127A441933984A0BBF7DAA972FF6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IQKeyboardManager;
+			productName = IQKeyboardManager;
+			productReference = 97791C5A8FC92F89BB804EAD9BFA0594 /* libIQKeyboardManager.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -549,43 +736,55 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 9D7F235676D01B85E2ACF4B2866B8479 /* Products */;
+			productRefGroup = EC94A9278D83E1A0A9296D817D75804D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				D6FBFDBC00B388471F2914F736751944 /* IQKeyboardManager */,
 				9DC8D9E02903E93BD0B2FEC9D846EA20 /* Masonry */,
-				6D6D3B5E1BC1538A682C8AB125C99D66 /* Pods-HSFCircleMenuDemo */,
+				A5B06280462B10BE30E5375893C49568 /* Pods-HSFCircleMenuDemo */,
 				2462CB0D42DB3CB9267CA4B5CD157D10 /* Pods-HSFCircleMenuDemoTests */,
 				ADFCEB58B91F405237147859C909640C /* Pods-HSFCircleMenuDemoUITests */,
-				8505BCB8C71261EB1CC489C2C08E8587 /* TYAlertController */,
+				6634B7251D7D15B8EBBBF48DDA560EA1 /* TYAlertController */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		30167332A5726075729764FC8F912BB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				657D9B7B34B516C1B059CF1B4D6EB369 /* Pods-HSFCircleMenuDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A8BDB7FEF8B27DE632778849F68E02D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C493AB53C8DA1397EB043353081690EE /* IQBarButtonItem.m in Sources */,
+				352427C52DC4C93B0718498D19FFD696 /* IQKeyboardManager-dummy.m in Sources */,
+				1AE740CA9DD11A1C662E179F881A7386 /* IQKeyboardManager.m in Sources */,
+				B3954BD0A3F350EDB5DC9B7E895C824B /* IQKeyboardReturnKeyHandler.m in Sources */,
+				C0880FB8A5FEBD18937924CB981C5EAB /* IQNSArray+Sort.m in Sources */,
+				E07F7C51868A67DD151C337E6F2EA6D6 /* IQPreviousNextView.m in Sources */,
+				F49C9CDB089E8335E0C6593F945E98CE /* IQTextView.m in Sources */,
+				2DA0795313E480A80A5A90BB1E9BDDB8 /* IQTitleBarButtonItem.m in Sources */,
+				739ADAF7569E923F69FBF5332A72B036 /* IQToolbar.m in Sources */,
+				EF23ED9F9BE7443E830973846D7F3480 /* IQUIScrollView+Additions.m in Sources */,
+				7F4B3DFF3848E512F7FCFA7B76DA2A9F /* IQUITextFieldView+Additions.m in Sources */,
+				F4E37076158983951363B96E4B63D776 /* IQUIView+Hierarchy.m in Sources */,
+				E74C2BD17215F2B2257B1444C32784BA /* IQUIView+IQKeyboardToolbar.m in Sources */,
+				0CD6A958B421C84959F921143E7662FF /* IQUIViewController+Additions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7A69AD3E0E2BC8CEAEBF8BA6D8FA9C78 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5F2BD01363DB33DBAC8ED898164E9E9E /* Pods-HSFCircleMenuDemoUITests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8ED676AC0A1B375C019B2BE876694E63 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EAB0CADD055C2AA2A95E0B7E01408989 /* TYAlertController+TransitionAnimate.m in Sources */,
-				7CDA0380DF1620C14083E80B55C7A4F3 /* TYAlertController-dummy.m in Sources */,
-				E2C37877D59EED2BE17C37B36C7CBA11 /* TYAlertController.m in Sources */,
-				288EB6381E0B005BDFB4350C8F12C52D /* TYAlertDropDownAnimation.m in Sources */,
-				84D0259621609B59034229EA5EDE9282 /* TYAlertFadeAnimation.m in Sources */,
-				8DC709AEA9C5117112D28B3012CDF6A6 /* TYAlertScaleFadeAnimation.m in Sources */,
-				269DE45003F1B3CE62BB69F176E882A9 /* TYAlertView.m in Sources */,
-				183BB1B45AEFBDA7671593D5C8E97CE9 /* TYBaseAnimation.m in Sources */,
-				60A26ADD7C27F878B92B89207C7FECAF /* TYShowAlertView.m in Sources */,
-				A057EA280E39A2269E0B9B6C2E7D2EF6 /* UIView+TYAlertView.m in Sources */,
-				764805D862968A99FB90C714D63A2AA5 /* UIView+TYAutoLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,11 +806,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F279FFCD46FDF09CD078B4D480905511 /* Sources */ = {
+		E96186435EBA4FF84ECF59917F9A6250 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A54D5A3C61D0245B7D8A3A95F09B8248 /* Pods-HSFCircleMenuDemo-dummy.m in Sources */,
+				0B2AF0C1DB6728C3E5D55FCA0872AF2F /* TYAlertController+TransitionAnimate.m in Sources */,
+				FF8FE5830FFCBE55EB81B71097B25F62 /* TYAlertController-dummy.m in Sources */,
+				F91FEB9AE7D601429F9837DBAC876857 /* TYAlertController.m in Sources */,
+				F24F68EC9A514FE5302E3ABCB8CB9D0D /* TYAlertDropDownAnimation.m in Sources */,
+				755EF94034BB957C53461BFDC9B7EDD3 /* TYAlertFadeAnimation.m in Sources */,
+				3532607142336D3BBA5C7A858496C119 /* TYAlertScaleFadeAnimation.m in Sources */,
+				B55B3B08B15BD33C15D88386F2AD9B9A /* TYAlertView.m in Sources */,
+				A25F51A9A7F5B9539EBC4233A9D89ACC /* TYBaseAnimation.m in Sources */,
+				000A160D368A7A776A129AF1695ADAAB /* TYShowAlertView.m in Sources */,
+				9684C96FA4DF9CD060BAAD3EF8565DC7 /* UIView+TYAlertView.m in Sources */,
+				33F1E37B2119A9310621716DF7A81F11 /* UIView+TYAutoLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,48 +835,54 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1AC10066E18FD2E1727897DAEBC0DF84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TYAlertController;
+			target = 6634B7251D7D15B8EBBBF48DDA560EA1 /* TYAlertController */;
+			targetProxy = 9740E5BDAF2214999978CA7C28CF7548 /* PBXContainerItemProxy */;
+		};
 		1DD40793DF94D0A20FA171F6762DE502 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-HSFCircleMenuDemo";
-			target = 6D6D3B5E1BC1538A682C8AB125C99D66 /* Pods-HSFCircleMenuDemo */;
+			target = A5B06280462B10BE30E5375893C49568 /* Pods-HSFCircleMenuDemo */;
 			targetProxy = F993B8870D0F55F5A6B5E80DBD4CBD56 /* PBXContainerItemProxy */;
 		};
 		2956DCBB146E5E49F9C7CEC6DAC49276 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-HSFCircleMenuDemo";
-			target = 6D6D3B5E1BC1538A682C8AB125C99D66 /* Pods-HSFCircleMenuDemo */;
+			target = A5B06280462B10BE30E5375893C49568 /* Pods-HSFCircleMenuDemo */;
 			targetProxy = DF71A813BAAE354BC3E68A72D2956C49 /* PBXContainerItemProxy */;
 		};
-		C593F8E986B7FE709D1F91C8E5F905D2 /* PBXTargetDependency */ = {
+		5D81442946E35D4BEBC2EF0239EB828E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = TYAlertController;
-			target = 8505BCB8C71261EB1CC489C2C08E8587 /* TYAlertController */;
-			targetProxy = 944780A199CF3186A016EA8FA8402B93 /* PBXContainerItemProxy */;
+			name = IQKeyboardManager;
+			target = D6FBFDBC00B388471F2914F736751944 /* IQKeyboardManager */;
+			targetProxy = F35D3F77289AC4DC0B2E5C4AF63576DF /* PBXContainerItemProxy */;
 		};
-		E61AE0E085E893E6E8CB47981F53BC7A /* PBXTargetDependency */ = {
+		F13EC3CB02277909F7C8C63D5A8F14B0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Masonry;
 			target = 9DC8D9E02903E93BD0B2FEC9D846EA20 /* Masonry */;
-			targetProxy = 407C6B9598003D3727B1815665A7CC77 /* PBXContainerItemProxy */;
+			targetProxy = 6922912E7BB78A8FCB230391DDC42798 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		06E5BD1F14842DD7473468CD140FF224 /* Release */ = {
+		096735E02D4D503AA68CDEB6130FE58E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A42415566B2C6711B06BF0419D91CEF1 /* TYAlertController.xcconfig */;
+			baseConfigurationReference = ECE038A57A8B509E2B470EA2A12B8ABF /* IQKeyboardManager.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/TYAlertController/TYAlertController-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				GCC_PREFIX_HEADER = "Target Support Files/IQKeyboardManager/IQKeyboardManager-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = TYAlertController;
-				PRODUCT_NAME = TYAlertController;
+				PRODUCT_MODULE_NAME = IQKeyboardManager;
+				PRODUCT_NAME = IQKeyboardManager;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -700,9 +915,9 @@
 			};
 			name = Release;
 		};
-		2562B5F3DBA2E21B7E842933FD1A5CFC /* Debug */ = {
+		172C728307C12860B1F3839BFFCDC585 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A42415566B2C6711B06BF0419D91CEF1 /* TYAlertController.xcconfig */;
+			baseConfigurationReference = 74B7198E7C5B9DA937C78F4FF2BCF73B /* TYAlertController.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -715,6 +930,30 @@
 				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_MODULE_NAME = TYAlertController;
 				PRODUCT_NAME = TYAlertController;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1752AED45DB90F195CC6552D8F206AA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECE038A57A8B509E2B470EA2A12B8ABF /* IQKeyboardManager.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/IQKeyboardManager/IQKeyboardManager-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = IQKeyboardManager;
+				PRODUCT_NAME = IQKeyboardManager;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -788,7 +1027,7 @@
 		};
 		6033A2127E806DD5C86A515742F7445E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8ED972FA69946175BCD530B3911DC291 /* Masonry.xcconfig */;
+			baseConfigurationReference = A8841D7D23A8780CF16749DDEC81E668 /* Masonry.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -811,7 +1050,7 @@
 		};
 		6681B1A324732F8264BB932595DFA69B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8ED972FA69946175BCD530B3911DC291 /* Masonry.xcconfig */;
+			baseConfigurationReference = A8841D7D23A8780CF16749DDEC81E668 /* Masonry.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -832,28 +1071,6 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
-		};
-		7619B908505EBBA5E51141F2A40F7CEC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8ECE2688EC78D9A7336C0B3879E7068 /* Pods-HSFCircleMenuDemo.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
 		};
 		7AAB8749B347F3AD1F14F454277EFC63 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -877,9 +1094,9 @@
 			};
 			name = Debug;
 		};
-		95C223C1FAA92CD3DB78718F3D0EF17A /* Release */ = {
+		919834CCFD1FFD1194D34E42FDC6749E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4474E211C2D47382A2889FCA207D11E7 /* Pods-HSFCircleMenuDemo.release.xcconfig */;
+			baseConfigurationReference = F8ECE2688EC78D9A7336C0B3879E7068 /* Pods-HSFCircleMenuDemo.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -896,9 +1113,8 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 		AC8CF9F010CE7204B5C5BB986CD6026E /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -981,6 +1197,52 @@
 			};
 			name = Release;
 		};
+		CF353A34BC6394169932915C9FDCDE20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74B7198E7C5B9DA937C78F4FF2BCF73B /* TYAlertController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/TYAlertController/TYAlertController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = TYAlertController;
+				PRODUCT_NAME = TYAlertController;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D8EC70651F57D3FA8C561D8147AB2062 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4474E211C2D47382A2889FCA207D11E7 /* Pods-HSFCircleMenuDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		E29D58512928A47BCACFE64767BB104A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4A646AB93412A373CC5C38AD4DF42195 /* Pods-HSFCircleMenuDemoUITests.debug.xcconfig */;
@@ -1006,11 +1268,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		12BD8C506BC1923472D7DCC8FFF14B35 /* Build configuration list for PBXNativeTarget "TYAlertController" */ = {
+		1D38CBB68F6A2F90D5B648C06A686335 /* Build configuration list for PBXNativeTarget "Pods-HSFCircleMenuDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2562B5F3DBA2E21B7E842933FD1A5CFC /* Debug */,
-				06E5BD1F14842DD7473468CD140FF224 /* Release */,
+				919834CCFD1FFD1194D34E42FDC6749E /* Debug */,
+				D8EC70651F57D3FA8C561D8147AB2062 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1033,6 +1295,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		37F5565D2B6B45B35F8B478875C6EDA4 /* Build configuration list for PBXNativeTarget "TYAlertController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF353A34BC6394169932915C9FDCDE20 /* Debug */,
+				172C728307C12860B1F3839BFFCDC585 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		699648F8ABC81900F38E4A50370216DE /* Build configuration list for PBXNativeTarget "Pods-HSFCircleMenuDemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1042,20 +1313,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		A2F5879A321802D045C28B34510AF137 /* Build configuration list for PBXNativeTarget "IQKeyboardManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1752AED45DB90F195CC6552D8F206AA5 /* Debug */,
+				096735E02D4D503AA68CDEB6130FE58E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BDDEC8F0BF7471ADA01CC2BDEE6C34CD /* Build configuration list for PBXNativeTarget "Pods-HSFCircleMenuDemoUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E29D58512928A47BCACFE64767BB104A /* Debug */,
 				AC8CF9F010CE7204B5C5BB986CD6026E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D87DEDE5477B1367C832CB9FB7B9048A /* Build configuration list for PBXNativeTarget "Pods-HSFCircleMenuDemo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7619B908505EBBA5E51141F2A40F7CEC /* Debug */,
-				95C223C1FAA92CD3DB78718F3D0EF17A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

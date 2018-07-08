@@ -152,8 +152,8 @@
     self.config.direction = HSFCircleDirection_anticlockwise;
 //    self.config.isCircleLayout = YES;
 //    self.config.during = 1.5f;
-    self.config.bgImgName = @"bg001";
-    self.config.centerImgName = @"world";
+    self.config.bgImg = [UIImage imageNamed:@"bg001"];
+    self.config.centerImg = [UIImage imageNamed:@"world"];
     self.config.centerImgSize = CGSizeMake(100.f, 100.f);
     self.config.animation_item = HSFCircleItemAnimation_itemCircleMove;
     self.config.animation_bg = HSFCircleBgAnimation_bgCircleOpen;

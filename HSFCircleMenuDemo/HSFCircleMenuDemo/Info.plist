@@ -42,10 +42,10 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>hhhh</string>
+	<string>需要访问相册</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>sss</string>
+	<string>需要访问相册</string>
 	<key>NSCameraUsageDescription</key>
-	<string>sssss</string>
+	<string>需要访问相机</string>
 </dict>
 </plist>

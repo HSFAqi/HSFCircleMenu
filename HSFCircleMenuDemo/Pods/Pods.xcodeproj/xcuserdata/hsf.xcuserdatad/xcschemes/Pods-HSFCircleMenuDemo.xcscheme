@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6D6D3B5E1BC1538A682C8AB125C99D66"
+               BlueprintIdentifier = "A5B06280462B10BE30E5375893C49568"
                BlueprintName = "Pods-HSFCircleMenuDemo"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libPods-HSFCircleMenuDemo.a">
