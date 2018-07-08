@@ -81,7 +81,7 @@
     self.config = [[HSFCircleMenuConfig alloc]init];
     self.config.icons = @[@"耳机", @"手柄", @"摇杆", @"风车", @"风筝", @"话筒", @"魔方", @"气球"];
     self.config.titles = @[@"耳机", @"手柄", @"摇杆", @"风车", @"风筝", @"话筒", @"魔方", @"气球"];
-    self.config.bgImg = [UIImage imageNamed:@"bg001"];
+    self.config.bgImg = [UIImage imageNamed:@"bg002"];
     self.config.centerImg = [UIImage imageNamed:@"world"];
     self.config.centerImgSize = CGSizeMake(100.f, 100.f);
     self.config.useNewAnimationWay = YES;

@@ -43,7 +43,7 @@
         CALayer *layer = (CALayer *)obj;
         //动画
         CABasicAnimation *animation_normal = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-        if (weakSelf.config.bgImg) {
+        if (!weakSelf.config.bgImg) {
             animation_normal.fromValue = @0;
             animation_normal.toValue = @1;
         }else{

@@ -116,13 +116,13 @@
     for (int i = 0; i < count; i++) {
         UIBezierPath *path_layer;
         if (self.config.direction == HSFCircleDirection_clockwise) {//顺时针
-            if (self.config.bgImg) {
+            if (!self.config.bgImg) {
                 path_layer = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.config.radius, self.config.radius) radius:self.config.radius/2.f startAngle:perAngle*i+startAngel endAngle:perAngle*(i+1.1)+startAngel clockwise:NO];
             }else{
                 path_layer = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.config.radius, self.config.radius) radius:self.config.radius/2.f startAngle:perAngle*i+startAngel endAngle:perAngle*(i+1.1)+startAngel clockwise:YES];
             }
         }else{//逆时针
-            if (self.config.bgImg) {
+            if (!self.config.bgImg) {
                 path_layer = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.config.radius, self.config.radius) radius:self.config.radius/2.f startAngle:perAngle*i+startAngel endAngle:perAngle*(i+1.1)+startAngel clockwise:YES];
             }else{
                 path_layer = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.config.radius, self.config.radius) radius:self.config.radius/2.f startAngle:perAngle*i+startAngel endAngle:perAngle*(i+1.1)+startAngel clockwise:NO];
@@ -316,7 +316,7 @@
         CALayer *layer = (CALayer *)obj;
         //动画
         CABasicAnimation *animation_normal = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-        if (weakSelf.config.bgImg) {
+        if (!weakSelf.config.bgImg) {
             animation_normal.fromValue = @0;
             animation_normal.toValue = @1;
         }else{
